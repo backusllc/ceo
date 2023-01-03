@@ -2,10 +2,12 @@
 import { style } from '@vanilla-extract/css';
 
 export const titleContainer: string = style({
-    marginBottom: '4.4rem',
+    marginBottom: '2.7rem',
+    paddingBottom: '3.3rem',
     '@media': {
         'screen and (min-width: 768px)': {
-            marginBottom: '5.5rem',
+            marginBottom: '4.8rem',
+            paddingBottom: '6.1rem',
         }
     },
 })
@@ -21,6 +23,7 @@ export const titleClass: string = style({
     fontFamily: '"Bebas", cursive',
     letterSpacing: '0.25rem',
     fontWeight: '600',
+    margin: '0',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '9rem',

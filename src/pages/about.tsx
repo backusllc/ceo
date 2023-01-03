@@ -16,7 +16,7 @@ export default function service(props: GatsbyLinkProps<{}>) {
     <>
       <Layout >
         <div className='inner'>
-          <Title Tag='h2' title='ABOUT' subTitle='私たちについて' />
+          <Title Tag='h1' title='ABOUT' subTitle='私たちについて' isPageTitle />
         </div>
         <TextImage03 flexDirection={"row-reverse"}
           textAlign={"right"}

@@ -23,40 +23,12 @@ const wrapPageElement: GatsbySSR['wrapPageElement'] = ({
 
     return (
         <>
-            {/* <RecoilRoot>
-                <RootPrivider>
-                    <GatsbyProvider>
-                        <ShopifyProvider> */}
-            {/* <SEO /> */}
             <OgMegaHeader />
-            {/* <Helmet>
-                            <script src="https://platform.twitter.com/widgets.js" />
-                            <script
-                                async
-                                defer
-                                crossOrigin="anonymous"
-                                src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v10.0"
-                                nonce="F5crYADj"
-                            />
-                            <link
-                                rel="preload"
-                                href="/fonts/BebasNeue.woff2"
-                                as="font"
-                                crossOrigin="anonymous"
-                                type="font/woff2"
-                            />
-                            <meta name="robots" content="noindex"></meta>
-                        </Helmet> */}
             <main>
                 {element}
             </main>
             <Footer />
         </>
-        //             </ShopifyProvider>
-        //         </GatsbyProvider>
-        //     </RootPrivider>
-        // </RecoilRoot>
-
     )
 }
 

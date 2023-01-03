@@ -72,7 +72,7 @@ const Activity = React.memo(({ hash }: any) => {
         return result;
     }, [categoryStatus, activityLists]);
 
-    if (activityLoading) { return <div></div>; }
+    if (activityLoading) { return <div className="full-height"></div>; }
 
     const lastBlogIndex = page * blogLimit;
     const firstBlogIndex = lastBlogIndex - blogLimit;

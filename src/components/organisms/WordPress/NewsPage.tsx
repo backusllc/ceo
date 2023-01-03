@@ -74,7 +74,7 @@ const NewsPage = React.memo(() => {
         return result;
     }, [categoryStatus, newsLists]);
 
-    if (newsLoading) { return <div></div>; }
+    if (newsLoading) { return <div className="full-height"></div>; }
 
     const lastBlogIndex = page * blogLimit;
     const firstBlogIndex = lastBlogIndex - blogLimit;
@@ -95,7 +95,7 @@ const NewsPage = React.memo(() => {
     return (
         <>
             <div className={`inner ${blogWrap}`} >
-                <Title Tag='h2' title='NEWS' subTitle='ニュース' isPageTitle={true} />
+                <Title Tag='h1' title='NEWS' subTitle='ニュース' isPageTitle={true} />
                 <div className={filterWrap}
                     data-aos="fade"
                     data-aos-duration="100"

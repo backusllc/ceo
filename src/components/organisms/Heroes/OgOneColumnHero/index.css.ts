@@ -22,9 +22,10 @@ export const section: string = style({
     marginTop: '8rem',
     marginRight: 'auto',
     marginLeft: 'auto',
-    minHeight: '470px',
+    minHeight: '60vh',
     maxWidth: '1200px',
     overflow: 'hidden',
+    // height: '100vh',
     '@media': {
         'screen and (min-width: 768px)': {
             marginTop: '6.1rem',

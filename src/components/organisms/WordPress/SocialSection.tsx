@@ -1,10 +1,23 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import { Link } from 'gatsby';
-
 import { flexDiv, title, topDiv, bottomDiv, topTitleContainer, bottomTitleContainer, topTitle, bottomTitle, topContentContainer, bottomContentContainer } from './SocialSection.css'
-// import { Helmet } from 'react-helmet';
 
 const SocialSection = () => {
+    const ref = useRef(null)
+
+    useEffect(() => {
+        const twitter = document.createElement("script");
+        twitter.setAttribute("src", "https://platform.twitter.com/widgets.js");
+        document.head.appendChild(twitter);
+
+        const facebook = document.createElement("script");
+        facebook.setAttribute("src", "https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v10.0");
+        facebook.setAttribute("nonce", "F5crYADj");
+        facebook.setAttribute("async", "");
+        facebook.setAttribute("defer", "");
+        facebook.setAttribute("crossorigin", "anonymous");
+        document.head.appendChild(facebook);
+
+    }, []);
 
     return (
         <>
@@ -20,7 +33,31 @@ const SocialSection = () => {
                                 <div className={topTitle}>FACEBOOK</div>
                             </div>
                             <div className={topContentContainer}>
-                                <div className="fb-page" data-href="https://www.facebook.com/jceoa2019/" data-tabs="timeline" data-width="350" data-height="580" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/jceoa2019/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jceoa2019/">一般社団法人 日本CEO協会</a></blockquote></div>
+                                {/* <div className="fb-page"
+                                    data-href="https://www.facebook.com/jceoa2019/"
+                                    data-tabs="timeline"
+                                    data-width="350"
+                                    data-height="580"
+                                    data-small-header="false"
+                                    data-adapt-container-width="true"
+                                    data-hide-cover="false"
+                                    data-show-facepile="false"
+                                >
+                                    <blockquote cite="https://www.facebook.com/jceoa2019/" className="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/jceoa2019/">一般社団法人 日本CEO協会</a></blockquote>
+                                </div> */}
+                                <div
+                                    ref={ref}
+                                    className="fb-page"
+                                    data-href="https://www.facebook.com/jceoa2019/"
+                                    data-tabs="timeline"
+                                    data-width={ref?.current?.clientWidth ?? ''}
+                                    data-height=""
+                                    data-small-header="false"
+                                    data-adapt-container-width="true"
+                                    data-hide-cover="false"
+                                    data-show-facepile="false"
+                                />
                             </div>
                         </div>
                         <div className={bottomDiv}>

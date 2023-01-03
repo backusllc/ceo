@@ -27,8 +27,7 @@ const SNS = React.memo(() => {
                             <h3 className={titleClass}>お問い合わせはこちらから</h3>
                             <p className={descriptionClass}>社長輩出に向けて一緒に取り組んでいただける方や社長になりたい方などお気軽にお問い合わせください。</p>
                         </div>
-                        <Link to={'/contact'} className={contactLink}>
-                        </Link>
+                        <Link to={'/contact'} className={contactLink} />
                     </div>
                 </div>
                 <div className={backgroundDiv} />

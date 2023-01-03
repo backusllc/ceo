@@ -7,14 +7,6 @@ import Title from '../WordPress/Title';
 
 const ContactForm = React.memo(() => {
   const [value, setValue] = React.useState({})
-  // const [serverResponse, setServerResponse] = React.useState('')
-
-  // const [val, setVal] = React.useState('cat');
-  // const items = ['アイテム１', 'アイテム２', 'アイテム３', 'その他'];
-
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [message, setMessage] = useState("");
   const [radioStatus, setRadioStatus] = useState('active');
 
   const [setSubmitted] = useState(false);
@@ -51,7 +43,7 @@ const ContactForm = React.memo(() => {
     <>
 
       <div className="inner" style={{ marginTop: '10rem' }}>
-        <Title Tag='h2' title='CONTACT' subTitle='お問い合わせ' />
+        <Title Tag='h1' title='CONTACT' subTitle='お問い合わせ' isPageTitle />
         <form onSubmit={onSubmit} method="POST" action="/api/contact" className={formWrapper}>
           <div className={cautionText}>
             メールでのお問い合わせは、下記フォームに必要事項をご記入のうえ、<br className='pc' />

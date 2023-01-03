@@ -24,10 +24,10 @@ export default function Index() {
   const { loading: customPostLoading, data: customPostLists } = useGetWordpressPostByCustomCategorySettings({ blogCount: 4, eventCount: 3, supportCount: 999, logoCount: 999 });
   const { isSidebarOpen } = useContext(GatsbyContext);
 
-  if (postLoading) { return <div></div>; }
-  if (directorPostLoading) { return <div></div>; }
-  if (supporterPostLoading) { return <div></div>; }
-  if (customPostLoading) { return <div></div>; }
+  if (postLoading) { return <div className="full-height"></div>; }
+  if (directorPostLoading) { return <div className="full-height"></div>; }
+  if (supporterPostLoading) { return <div className="full-height"></div>; }
+  if (customPostLoading) { return <div className="full-height"></div>; }
 
   const postItems = postLists.categories.edges[0].node.posts.edges;
   const directorPostItems = directorPostLists.categories.edges[0].node.supports;

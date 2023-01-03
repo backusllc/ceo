@@ -64,8 +64,8 @@ const Events = React.memo(({ hash }: string) => {
     }, [events, eventStatus, tagIn]);
 
 
-    if (eventLoading) return <></>
-    if (tagLoading) { return <div></div>; }
+    if (eventLoading) return <div className="full-height"></div>
+    if (tagLoading) { return <div className="full-height"></div>; }
 
     const displayTags = tagLists.tags.edges.filter((row: any) => {
         if (row.node.posts.edges.length > 0) {
@@ -94,7 +94,7 @@ const Events = React.memo(({ hash }: string) => {
     return (
         <>
             <div className="inner" >
-                <Title Tag='h2' title='EVENT' subTitle='イベント' isPageTitle={true} />
+                <Title Tag='h1' title='EVENT' subTitle='イベント' isPageTitle={true} />
                 <div className={filterWrap}>
                     <div className={filterContainer}>
                         <div className={filterDiv} >

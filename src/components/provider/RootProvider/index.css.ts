@@ -83,6 +83,10 @@ globalStyle('td', {
   fontSize: '1rem',
 });
 
+globalStyle('.full-height', {
+  height: '100vh',
+});
+
 globalStyle('.fb-page span', {
   width: '350px !important',
 });

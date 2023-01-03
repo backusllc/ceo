@@ -5,7 +5,7 @@ import { CommonRuntimeSettings } from '../../types/SiteSettings';
 
 import CategoryProducts from '../../components/organisms/Shopify/CategoryProducts';
 import Hero from './Hero';
-// import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import TextImage01 from '../../components/organisms/WordPress/TextImage01';
 import TextImage02 from '../../components/organisms/WordPress/TextImage02';
 import News from '../../components/organisms/WordPress/News';
@@ -56,16 +56,6 @@ export const Page = (props: Props) => {
     <>
       {!isSidebarOpen &&
         <>
-          {/* <Helmet>
-            <script src="https://platform.twitter.com/widgets.js" />
-            <script
-              async
-              defer
-              crossOrigin="anonymous"
-              src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v10.0"
-              nonce="F5crYADj"
-            />
-          </Helmet> */}
           <div>
             <Hero settings={props.pageSettings.top} />
             <TextImage01 />

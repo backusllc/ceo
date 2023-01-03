@@ -21,22 +21,12 @@ const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({
 
     return (
         <>
-            {/* <RecoilRoot>
-                <RootPrivider>
-                    <GatsbyProvider>
-                        <ShopifyProvider> */}
-            {/* <SEO /> */}
             <OgMegaHeader />
             <main>
                 {element}
             </main>
             <Footer />
         </>
-        //             </ShopifyProvider>
-        //         </GatsbyProvider>
-        //     </RootPrivider>
-        // </RecoilRoot>
-
     )
 }
 
@@ -47,14 +37,6 @@ const wrapRootElement = ({ element }) => (
                 <ShopifyProvider>
                     <HelmetProvider>
                         <Helmet>
-                            <script src="https://platform.twitter.com/widgets.js" />
-                            <script
-                                async
-                                defer
-                                crossOrigin="anonymous"
-                                src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v10.0"
-                                nonce="F5crYADj"
-                            />
                             <link rel="preconnect" href="https://fonts.googleapis.com" />
                             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='anonymous' />
                             <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Noto+Sans+JP&display=swap" rel="stylesheet" />
@@ -76,47 +58,3 @@ const wrapRootElement = ({ element }) => (
 )
 
 export { wrapPageElement, wrapRootElement }
-
-// export function Head() {
-//     return (
-//         <>
-//             <script src="https://platform.twitter.com/widgets.js" />
-//             <script
-//                 async
-//                 defer
-//                 crossOrigin="anonymous"
-//                 src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v10.0"
-//                 nonce="F5crYADj"
-//             />
-//             <link
-//                 rel="preload"
-//                 href="/fonts/BebasNeue.woff2"
-//                 as="font"
-//                 crossOrigin="anonymous"
-//                 type="font/woff2"
-//             />
-//             <meta name="robots" content="noindex"></meta>
-//         </>
-//     )
-// }
-
-// export const onRenderBody: GatsbyBrowser['onRender'] = (
-//     { setHeadComponents,
-//         setHtmlAttributes,
-//         setBodyAttributes,
-//     },
-//     pluginOptions
-// ) => {
-//     const helmet = Helmet.renderStatic();
-//     setHtmlAttributes(helmet.htmlAttributes.toComponent());
-//     setHtmlAttributes({ lang: "ja" });
-//     setBodyAttributes(helmet.bodyAttributes.toComponent());
-//     setHeadComponents([
-//         helmet.title.toComponent(),
-//         helmet.link.toComponent(),
-//         helmet.meta.toComponent(),
-//         helmet.noscript.toComponent(),
-//         helmet.script.toComponent(),
-//         helmet.style.toComponent(),
-//     ]);
-// };
