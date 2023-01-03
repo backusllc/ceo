@@ -199,6 +199,7 @@ export const OgOneColumnHero = () => {
             <img className={img} height="0" width="0"
               alt={"社長を輩出することが持続可能な社会を作り出す。"}
               src="/images/firstview01.png"
+              loading="lazy"
             />
           </picture>
           <picture>
@@ -206,6 +207,7 @@ export const OgOneColumnHero = () => {
             <img className={img} height="0" width="0"
               alt={"社長を輩出することが持続可能な社会を作り出す。"}
               src="/images/firstview02.png"
+              loading="lazy"
             />
           </picture>
           <picture>
@@ -213,6 +215,7 @@ export const OgOneColumnHero = () => {
             <img className={img} height="0" width="0"
               alt={"社長を輩出することが持続可能な社会を作り出す。"}
               src="/images/firstview03.png"
+              loading="lazy"
             />
           </picture>
           <div id="pagination" className={pagination}>
