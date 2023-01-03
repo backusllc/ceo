@@ -11,7 +11,7 @@ const SNS = React.memo(() => {
                     <div className={multiColumnTileLeft} >
                         <div className={container}>
                             <div className={imageContainer}>
-                                <img src="/images/top_icon_line.png" alt="LINE公式アカウント" />
+                                <img src="/images/top_icon_line.png" alt="LINE公式アカウント" loading="lazy" />
                             </div>
                             <h3 className={titleClass}>LINE公式アカウントにて<br className="sp" />お役立ち情報を配信中！</h3>
                             <p className={descriptionClass}>LINEにて定期的にイベントやニュースなどを配信中。まずは気軽にお友達追加をよろしくお願いします。</p>
@@ -22,7 +22,7 @@ const SNS = React.memo(() => {
                     <div className={multiColumnTileRight} >
                         <div className={container}>
                             <div className={imageContainer}>
-                                <img src="/images/top_icon_mail.png" alt="お問い合わせはこちら" />
+                                <img src="/images/top_icon_mail.png" alt="お問い合わせはこちら" loading="lazy" />
                             </div>
                             <h3 className={titleClass}>お問い合わせはこちらから</h3>
                             <p className={descriptionClass}>社長輩出に向けて一緒に取り組んでいただける方や社長になりたい方などお気軽にお問い合わせください。</p>

@@ -32,7 +32,7 @@ const News = React.memo(({ dataSrc, slug, title, displayCount, isDisplayTitle = 
                                         <div className={imgDiv}>
                                             <picture>
                                                 <source type="image/webp" srcSet={`${item.node.featuredImage?.node.sourceUrl}.webp`} />
-                                                <img className={img} src={item.node.featuredImage?.node.sourceUrl} alt={item.node.title} />
+                                                <img className={img} src={item.node.featuredImage?.node.sourceUrl} alt={item.node.title} loading="lazy" />
                                             </picture>
                                         </div>
                                         {isDisplayTitle && <h3 className={text}>{item.node.title}</h3>}

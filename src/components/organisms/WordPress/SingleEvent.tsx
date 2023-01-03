@@ -67,7 +67,7 @@ const SingleEvent = React.memo(({ post }: Props) => {
                 <div className={bottomDiv}>
                 </div>
                 <div className={thumbnailDiv}>
-                    <img src={post.featuredImage.node.sourceUrl} alt={post.title} />
+                    <img src={post.featuredImage.node.sourceUrl} alt={post.title} loading="lazy" />
                 </div>
                 <p dangerouslySetInnerHTML={{ __html: post.content }}
                 />

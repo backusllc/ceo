@@ -134,7 +134,7 @@ export const McTitle = ({
       >{text1}
       </AtHeading>
       <div className={div}>
-        <img src={imageSrc} alt={imageAlt} className={image} />
+        <img src={imageSrc} alt={imageAlt} className={image} loading="lazy" />
       </div>
       <hr />
     </div >

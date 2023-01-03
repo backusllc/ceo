@@ -65,7 +65,7 @@ const SingleBlog = React.memo(({ blog }: Props) => {
                 <div className={bottomDiv}>
                 </div>
                 <div className={thumbnailDiv}>
-                    <img src={blog.featuredImage.node.sourceUrl} alt={blog.title} />
+                    <img src={blog.featuredImage.node.sourceUrl} alt={blog.title} loading="lazy" />
                 </div>
                 <p dangerouslySetInnerHTML={{ __html: blog.content }}
                 />

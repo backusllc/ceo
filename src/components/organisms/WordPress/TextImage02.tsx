@@ -45,7 +45,7 @@ const TextImage02 = React.memo(({
                         }}>
                             <picture>
                                 <source type="image/webp" srcSet={`${imageSrc}.webp`} />
-                                <img className={image} src={`${imageSrc}.png`} alt={imageAlt} />
+                                <img className={image} src={`${imageSrc}.png`} alt={imageAlt} loading="lazy" />
                             </picture>
                         </div>
                     </div>

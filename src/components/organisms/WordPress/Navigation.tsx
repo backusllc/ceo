@@ -33,7 +33,7 @@ export const Navigation = () => {
             {isSidebarOpen &&
                 <div className={wrap}>
                     <div className={logoDiv} >
-                        <AnchorLink to="/"><img height={28} width={279} src="/images/logo.png" alt="一般社団法人 日本CEO協会" onClick={hideSidebar} /></AnchorLink>
+                        <AnchorLink to="/"><img height={28} width={279} src="/images/logo.png" alt="一般社団法人 日本CEO協会" onClick={hideSidebar} loading="lazy" /></AnchorLink>
                         <AtCloseButton onClick={hideSidebar} />
                     </div>
                     <div className={`inner ${menuContainer}`}>

@@ -14,7 +14,7 @@ const SingleActivity = React.memo(({ post }: Props) => {
     return (
         <>
             <div className={thumbnailDiv}>
-                <img className={img} src={post.featuredImage.node.sourceUrl} alt={post.title} />
+                <img className={img} src={post.featuredImage.node.sourceUrl} alt={post.title} loading="lazy" />
                 <div className={`${topDiv} inner`}>
                     <h1 className={titleText}>{post.title}</h1>
                 </div>
