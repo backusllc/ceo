@@ -2,14 +2,20 @@ import React, { useEffect } from "react"
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 interface Props {
-  lang: string,
-  title: string,
-  description: string,
-  img: string,
-  meta: [],
+  lang?: string,
+  alt?: string,
+  title?: string,
+  description?: string,
+  img?: string,
 }
 
-const SEO = ({ lang, title, alt, description, img, meta = [] }: Props) => {
+const SEO = ({
+  lang = 'ja',
+  title = '一般社団法人日本CEO協会',
+  alt = '一般社団法人日本CEO協会',
+  description = '優秀な経営者・起業家を輩出することで、社会課題を解決し、持続可能な社会の実現を目指す。一般社団法人日本CEO協会のサービスをご紹介します。',
+  img = 'https://ceo.gatsbyjs.io/images/logo.png',
+}: Props) => {
 
   useEffect(() => {
     let parentNode = document.head;
@@ -26,7 +32,7 @@ const SEO = ({ lang, title, alt, description, img, meta = [] }: Props) => {
   }, []);
 
   const displayTitle = title ? `${title} | 一般社団法人日本CEO協会` : "一般社団法人日本CEO協会";
-  const displayDescription = description ? description.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '').substr(0, 80) : "";
+  const displayDescription = description ? description.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '').substr(0, 80) : description;
 
   return (
     <GatsbySeo

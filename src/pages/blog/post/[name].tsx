@@ -12,7 +12,6 @@ const EventPage = ({ serverData: { singleData } }) => {
             <SEO
                 title={singleData.title}
                 lang={'ja'}
-                meta={[]}
                 description={singleData.content}
                 img={singleData.featuredImage.node.sourceUrl}
                 alt={singleData.title}
