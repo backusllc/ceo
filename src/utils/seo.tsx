@@ -1,7 +1,5 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React, { useEffect } from "react"
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
-// import Helmet from "react-helmet"
 
 interface Props {
   lang: string,
@@ -11,42 +9,11 @@ interface Props {
   meta: [],
 }
 
-const SEO = ({ lang, title, description, img, meta = [] }: Props) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          siteUrl
-          description
-        }
-      }
-    }
-  `)
+const SEO = ({ lang, title, alt, description, img, meta = [] }: Props) => {
 
   useEffect(() => {
     let parentNode = document.head;
     var e = parentNode.children;
-
-    // for (let i = 0; i < e.length; i++) {
-    //   const nameVal = e[i].getAttribute('name');
-    //   console.log(e[i].nodeName);
-    //   if (nameVal !== null) {
-    //     // if (nameVal.indexOf('keywords') != -1) {
-    //     //   headData[i].setAttribute('content', keywords);
-    //     // }
-    //     if (nameVal.indexOf('description') != -1) {
-    //       e[i].setAttribute('content', description);
-    //     }
-    //     // OGP(twitter)の設定
-    //     if (nameVal.indexOf('twitter:title') != -1) {
-    //       e[i].setAttribute('content', title);
-    //     }
-    //     if (nameVal.indexOf('twitter:description') != -1) {
-    //       e[i].setAttribute('content', description);
-    //     }
-    //   }
-    // }
 
     [].slice
       .call(e)
@@ -58,27 +25,30 @@ const SEO = ({ lang, title, description, img, meta = [] }: Props) => {
       });
   }, []);
 
+  const displayTitle = title ? `${title} | 一般社団法人日本CEO協会` : "一般社団法人日本CEO協会";
+  const displayDescription = description ? description.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '').substr(0, 80) : "";
+
   return (
     <GatsbySeo
-      title={title}
-      description={title}
+      title={displayTitle}
+      description={displayDescription}
       language={lang}
       openGraph={{
         url: 'https://jceoa.org/',
-        title: title,
-        description: title,
+        title: displayTitle,
+        description: displayDescription,
         images: [
           {
             url: img,
             width: 800,
             height: 600,
-            alt: '画像',
+            alt: alt,
           },
           {
             url: img,
             width: 900,
             height: 800,
-            alt: '画像',
+            alt: alt,
           },
         ],
         site_name: '一般社団法人日本CEO協会',
@@ -89,51 +59,6 @@ const SEO = ({ lang, title, description, img, meta = [] }: Props) => {
         cardType: 'summary_large_image',
       }}
     />
-    // <Helmet
-    //   htmlAttributes={{
-    //     lang,
-    //   }}
-    //   title={`${title} | ${data.site.siteMetadata.title}`}
-    //   titleTemplate={`%s | ${title}`}
-    //   meta={[
-    //     {
-    //       name: `description`,
-    //       content: data.site.siteMetadata.description.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '').substr(0, 60),
-    //     },
-    //     {
-    //       property: `og:image`,
-    //       content: img,
-    //     },
-    //     {
-    //       property: `og:title`,
-    //       content: title,
-    //     },
-    //     {
-    //       property: `og:description`,
-    //       content: data.site.siteMetadata.description.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '').substr(0, 60),
-    //     },
-    //     {
-    //       property: `og:type`,
-    //       content: `website`,
-    //     },
-    //     {
-    //       name: `twitter:card`,
-    //       content: `summary`,
-    //     },
-    //     // {
-    //     //   name: `twitter:creator`,
-    //     //   content: site.siteMetadata.author,
-    //     // },
-    //     {
-    //       name: `twitter:title`,
-    //       content: title,
-    //     },
-    //     {
-    //       name: `twitter:description`,
-    //       content: data.site.siteMetadata.description.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '').substr(0, 60),
-    //     },
-    //   ].concat(meta)}
-    // />
   )
 }
 

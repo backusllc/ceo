@@ -15,6 +15,7 @@ export async function getBlogDataServerSide(slug: string) {
         date
         modified
         content
+        slug
         featuredImage {
           node {
             sourceUrl

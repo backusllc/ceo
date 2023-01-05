@@ -6,25 +6,17 @@ import SingleBlog from '../../../components/organisms/WordPress/SingleBlog';
 import { getBlogDataServerSide } from '../../../ssr/blogClient'
 
 const EventPage = ({ serverData: { singleData } }) => {
-    // const slug = props.params.name;
-    // const { loading: articleLoading, data: blogData } = useWordPressBlogSettings(slug);
-
-    console.log(singleData);
-    // if (articleLoading) return <div></div>;
-    // const blog = blogData.blogBy;
 
     return (
         <>
-            {/* <Head /> */}
             <SEO
                 title={singleData.title}
                 lang={'ja'}
                 meta={[]}
-                // url={`https://xs893709.xsrv.jp/blog/post/${slug}`}
                 description={singleData.content}
                 img={singleData.featuredImage.node.sourceUrl}
+                alt={singleData.title}
             />
-            {/* </Head>  */}
             <SingleBlog blog={singleData} />
         </>
     )
