@@ -61,5 +61,11 @@ module.exports = {
         duration: 5,
       }
     },
+    {
+      resolve: `gatsby-plugin-lodash`,
+      options: {
+        disabledFeatures: [`shorthands`, `cloning`],
+      },
+    },
   ],
 }

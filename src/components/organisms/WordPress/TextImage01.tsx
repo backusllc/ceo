@@ -1,11 +1,6 @@
+import React, { useEffect, useRef, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import gsap from 'gsap';
-import React, { useEffect, useRef, useState } from 'react';
-
-import { style } from '@vanilla-extract/css';
-
-
 import { multiColumnGrid, multiColumnTile, titleContainer, descriptionContainer, bgWrap, title, description, img } from './TextImage01.css'
 import ViewMoreButton from './ViewMoreButton';
 
@@ -15,18 +10,13 @@ const TextImage01 = React.memo(() => {
     const [isVisible, setVisible] = useState(false);
 
     useEffect(() => {
-        // const slideTitleEl = document.querySelector(`.${title}`);
-        // gsap.fromTo(slideTitleEl, { width: "0" }, { width: "100%", duration: 2, stagger: { each: .1, from: "end" } })
-    }, [])
-
-    useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => setVisible(entry.isIntersecting));
         });
         observer.observe(domRef.current);
     }, []);
 
-    const bgStyle = isVisible ? bgWrap : null;
+    const bgStyle = isVisible ? bgWrap : "";
 
     return (
         <>
