@@ -147,8 +147,15 @@ export const OgOneColumnHero = () => {
   const [paginationCount, setPaginationCount] = useState(0);
 
   useEffect(() => {
+    const image1 = document.createElement('img');
+    image1.src = "/images/firstview01.png";
+    const image2 = document.createElement('img');
+    image2.src = "/images/firstview02.png";
+    const image3 = document.createElement('img');
+    image3.src = "/images/firstview03.png";
+
     const el = document.getElementById('slider-wrapper');
-    const imgs = Array.from(el?.querySelectorAll('img'));
+    const imgs: HTMLImageElement[] = [image1, image2, image3];
 
     displacementSlider({
       parent: el,
@@ -194,7 +201,7 @@ export const OgOneColumnHero = () => {
           </div>
         </div>
         <div id="slider-wrapper" className={sliderWrapper}>
-          <picture>
+          {/* <picture>
             <source type="image/webp" srcSet={'/images/firstview01.webp'} />
             <img className={img} height="0" width="0"
               alt={"社長を輩出することが持続可能な社会を作り出す。"}
@@ -217,7 +224,7 @@ export const OgOneColumnHero = () => {
               src="/images/firstview03.png"
               loading="lazy"
             />
-          </picture>
+          </picture> */}
           <div id="pagination" className={pagination}>
             <button id="btn0" className="active" data-slide="0"></button>
             <button id="btn1" data-slide="1"></button>
@@ -225,45 +232,6 @@ export const OgOneColumnHero = () => {
           </div>
         </div>
       </section>
-
-      {/* <section className={section}>
-        <div className={gridDiv} >
-          <div className={topDiv} id="slider">
-            <GatsbyImage
-              image={getImage(data.allFile.edges[0].node.childrenImageSharp[0]) as IGatsbyImageData}
-              alt={"社長を輩出することが持続可能な社会を作り出す。"}
-              className={img}
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-easing="ease"
-            />
-          </div>
-          <div className={bottomDiv}
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-easing="ease"
-          >
-            <div className={title}>Producing presidents<br />
-              creates a sustainable society.</div>
-            <div className={subTitle}>社長を輩出することが<br className="sp" />持続可能な社会を作り出す。</div>
-          </div>
-        </div>
-      </section> */}
     </>
   );
 };
-
-const query = graphql`
-query {
-  allFile (filter: {name:{eq:"firstview_desktop"}}){
-    edges {
-      node {
-        name
-        childrenImageSharp {
-          gatsbyImageData(placeholder: NONE)
-        }
-      }
-    }
-  }
-}
-`
