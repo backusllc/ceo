@@ -22,7 +22,7 @@ const Logos = React.memo(({ dataSrc }: Props) => {
                                     <div className={imgDiv}>
                                         <picture>
                                             <source type="image/webp" srcSet={`${item.node.featuredImage?.node.sourceUrl}.webp`} />
-                                            <img className={img} src={item.node.featuredImage.node.sourceUrl} alt={item.node.title} />
+                                            <img className={img} src={item.node.featuredImage.node.sourceUrl} alt={item.node.title} loading="lazy"/>
                                         </picture>
                                     </div>
                                 </li>

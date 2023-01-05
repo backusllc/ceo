@@ -38,38 +38,38 @@ const AutoSlider = React.memo(() => {
         <Slider {...settings}>
           <div className={imgContainer}>
             <picture>
-            <source type="image/webp" srcSet={'/images/top_slider_img01.webp'} />
-              <img className={img} src="/images/top_slider_img01.png" alt="slider image" />
+              <source type="image/webp" srcSet={'/images/top_slider_img01.webp'} />
+              <img className={img} src="/images/top_slider_img01.png" alt="slider image" loading="lazy" />
             </picture>
           </div>
           <div className={imgContainer}>
-          <picture>
-            <source type="image/webp" srcSet={'/images/top_slider_img02.webp'} />
-              <img className={img} src="/images/top_slider_img02.png" alt="slider image" />
+            <picture>
+              <source type="image/webp" srcSet={'/images/top_slider_img02.webp'} />
+              <img className={img} src="/images/top_slider_img02.png" alt="slider image" loading="lazy" />
             </picture>
           </div>
           <div className={imgContainer}>
-          <picture>
-            <source type="image/webp" srcSet={'/images/top_slider_img03.webp'} />
-              <img className={img} src="/images/top_slider_img03.png" alt="slider image" />
+            <picture>
+              <source type="image/webp" srcSet={'/images/top_slider_img03.webp'} />
+              <img className={img} src="/images/top_slider_img03.png" alt="slider image" loading="lazy" />
             </picture>
           </div>
           <div className={imgContainer}>
-          <picture>
-            <source type="image/webp" srcSet={'/images/top_slider_img04.webp'} />
-              <img className={img} src="/images/top_slider_img04.png" alt="slider image" />
+            <picture>
+              <source type="image/webp" srcSet={'/images/top_slider_img04.webp'} />
+              <img className={img} src="/images/top_slider_img04.png" alt="slider image" loading="lazy" />
             </picture>
           </div>
           <div className={imgContainer}>
-          <picture>
-            <source type="image/webp" srcSet={'/images/top_slider_img05.webp'} />
-              <img className={img} src="/images/top_slider_img05.png" alt="slider image" />
+            <picture>
+              <source type="image/webp" srcSet={'/images/top_slider_img05.webp'} />
+              <img className={img} src="/images/top_slider_img05.png" alt="slider image" loading="lazy" />
             </picture>
           </div>
           <div className={imgContainer}>
-          <picture>
-            <source type="image/webp" srcSet={'/images/top_slider_img06.webp'} />
-              <img className={img} src="/images/top_slider_img06.png" alt="slider image" />
+            <picture>
+              <source type="image/webp" srcSet={'/images/top_slider_img06.webp'} />
+              <img className={img} src="/images/top_slider_img06.png" alt="slider image" loading="lazy" />
             </picture>
           </div>
         </Slider>

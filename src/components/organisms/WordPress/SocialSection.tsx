@@ -7,6 +7,7 @@ const SocialSection = () => {
     useEffect(() => {
         const twitter = document.createElement("script");
         twitter.setAttribute("src", "https://platform.twitter.com/widgets.js");
+        twitter.setAttribute("loading", "lazy");
         document.head.appendChild(twitter);
 
         const facebook = document.createElement("script");
@@ -15,6 +16,7 @@ const SocialSection = () => {
         facebook.setAttribute("async", "");
         facebook.setAttribute("defer", "");
         facebook.setAttribute("crossorigin", "anonymous");
+        facebook.setAttribute("loading", "lazy");
         document.head.appendChild(facebook);
 
     }, []);
@@ -33,19 +35,6 @@ const SocialSection = () => {
                                 <div className={topTitle}>FACEBOOK</div>
                             </div>
                             <div className={topContentContainer}>
-                                {/* <div className="fb-page"
-                                    data-href="https://www.facebook.com/jceoa2019/"
-                                    data-tabs="timeline"
-                                    data-width="350"
-                                    data-height="580"
-                                    data-small-header="false"
-                                    data-adapt-container-width="true"
-                                    data-hide-cover="false"
-                                    data-show-facepile="false"
-                                >
-                                    <blockquote cite="https://www.facebook.com/jceoa2019/" className="fb-xfbml-parse-ignore">
-                                        <a href="https://www.facebook.com/jceoa2019/">一般社団法人 日本CEO協会</a></blockquote>
-                                </div> */}
                                 <div
                                     ref={ref}
                                     className="fb-page"
