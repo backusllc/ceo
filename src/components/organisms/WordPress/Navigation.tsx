@@ -4,10 +4,12 @@ import menus from '../../../constants/navlink'
 
 import { GatsbyContext } from '../../../context/context'
 import { AtCloseButton } from '../../atoms'
-import { wrap, menuWrap, menuContainer, img, logoDiv, logoA, liMenu, aMenu, wrapMegaMenu, liMegaMenu, aMegaMenu, } from './Navigation.css'
+import { wrap, menuWrap, menuContainer, img, logoDiv, logoLink, liMenu, aMenu, wrapMegaMenu, liMegaMenu, aMegaMenu, } from './Navigation.css'
 import Accordion from './Accordion';
+import { graphql, useStaticQuery } from 'gatsby';
 
 export const Navigation = () => {
+    const data = useStaticQuery(query);
     const { hideSidebar, isSidebarOpen, links } = useContext(GatsbyContext)
 
     const insideRef = useRef<HTMLDivElement>(null);
@@ -33,7 +35,9 @@ export const Navigation = () => {
             {isSidebarOpen &&
                 <div className={wrap}>
                     <div className={logoDiv} >
-                        <AnchorLink to="/"><img height={28} width={279} src="/images/logo.png" alt="一般社団法人 日本CEO協会" onClick={hideSidebar} loading="lazy" /></AnchorLink>
+                        <AnchorLink to="/" className={logoLink}>
+                            <img src={data.file.publicURL} alt="一般社団法人 日本CEO協会" onClick={hideSidebar} />
+                        </AnchorLink>
                         <AtCloseButton onClick={hideSidebar} />
                     </div>
                     <div className={`inner ${menuContainer}`}>
@@ -53,3 +57,11 @@ export const Navigation = () => {
         </>
     )
 }
+
+const query = graphql`
+query {
+    file(relativePath: {eq: "logo.svg"}) {
+      publicURL
+    }
+  }
+`

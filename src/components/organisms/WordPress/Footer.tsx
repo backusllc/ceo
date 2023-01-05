@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import { sprinkles } from '../../../styles/sprinkles.css';
 import { footer, footerContainer, topContainer, link, ul, rights, rightsText } from './Footer.css'
 
@@ -7,6 +7,7 @@ import { useGetWordpressMenuSettings } from '../../../hooks/useGetWordpressMenuS
 
 
 const Footer = () => {
+    const data = useStaticQuery(query);
     const { loading: menuLoading, data: menuLists } = useGetWordpressMenuSettings("MAIN");
 
     const termDiv = sprinkles({
@@ -37,7 +38,10 @@ const Footer = () => {
                 <div className="inner">
                     <div className={termDiv}>
                         <div className={topContainer} style={{}}>
-                            <Link to="/"><img src="/images/logo.png" alt="一般社団法人 日本CEO協会" /></Link>
+                            <Link to="/">
+                                {/* <img src="/images/logo.png" alt="一般社団法人 日本CEO協会" /> */}
+                                <img src={data.file.publicURL} alt="一般社団法人 日本CEO協会" />
+                            </Link>
                         </div>
                         <ul className={`${bottomContainer} ${ul}`}>
                             {menus.length > 0 &&
@@ -58,3 +62,11 @@ const Footer = () => {
 };
 
 export default Footer;
+
+const query = graphql`
+query {
+    file(relativePath: {eq: "logo.svg"}) {
+      publicURL
+    }
+  }
+`

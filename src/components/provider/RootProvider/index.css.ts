@@ -19,11 +19,13 @@ globalStyle('html', {
 globalStyle('input, select', {
   appearance: 'none',
   border: 'solid 1px #333',
+  color: '#000',
   borderRadius: '2px',
 });
 
 globalStyle('button', {
   cursor: 'pointer',
+  color: '#000',
 })
 
 globalStyle('iframe', {

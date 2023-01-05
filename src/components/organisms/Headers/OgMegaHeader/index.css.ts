@@ -51,6 +51,13 @@ export const header: string = style({
     }
 })
 
+export const h1: string = style({
+    '@media': {
+        'screen and (min-width: 768px)': {
+            marginLeft: "2rem",
+        }
+    }
+})
 
 export const liMenu: string = style({
     display: "flex",

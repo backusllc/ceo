@@ -78,8 +78,12 @@ export const links: string = style({
 })
 
 
-export const logoA: string = style({
-    width: '80%',
+export const logoLink: string = style({
+    '@media': {
+        'screen and (min-width: 768px)': {
+            marginLeft: '1.5rem',
+        }
+    }
 })
 
 export const clink: string = style({

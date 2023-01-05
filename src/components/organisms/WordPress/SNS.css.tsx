@@ -20,7 +20,7 @@ export const multiColumnTileLeft: string = style({
     flexBasis: '50%',
     zIndex: '1',
     backgroundColor: '#FFFFFF',
-    margin: '2rem 2rem 0.7rem 2rem',
+    margin: '2rem 0 0.7rem 0',
     transition: 'all 0.5s',
     '@media': {
         'screen and (min-width: 768px)': {
@@ -37,7 +37,8 @@ export const multiColumnTileRight: string = style({
     flexBasis: '50%',
     zIndex: '1',
     backgroundColor: '#FFFFFF',
-    margin: '0.7rem 2rem 2rem 2rem',
+    margin: '0.7rem 0 2rem 0',
+    transition: 'all 0.5s',
     '@media': {
         'screen and (min-width: 768px)': {
             margin: '7rem 0',

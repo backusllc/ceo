@@ -1,22 +1,17 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyContext } from "../../../../context/context";
 import { sprinkles } from '../../../../styles/sprinkles.css';
-import { humburgerButton, span, header, divHeader, liMenu, aMenu, navHeader, ulMegaMenu, liMegaMenu, aMegaMenu, quantityDiv } from './index.css';
 import { useGetWordpressMenuSettings } from '../../../../hooks/useGetWordpressMenuSettings';
 import { Navigation } from '../../../../components/organisms/WordPress/Navigation';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { h1, humburgerButton, span, header, divHeader, liMenu, aMenu, navHeader, ulMegaMenu, liMegaMenu, aMegaMenu, quantityDiv } from './index.css';
 
-export const OgMegaHeader = ({ location }) => {
+export const OgMegaHeader = () => {
     const { isSidebarOpen, showSidebar } = useContext(GatsbyContext);
     const [isShowMegaMenu, setIsShowMegaMenu] = useState(false);
-    const [urlPath, setUrlPath] = useState("");
     const { loading: menuLoading, data: menuLists } = useGetWordpressMenuSettings("MAIN");
     const data = useStaticQuery(query);
-
-    useEffect(() => {
-        setUrlPath(window.location.pathname);
-    }, []);
 
     const ulHeader = sprinkles({
         display: {
@@ -37,22 +32,16 @@ export const OgMegaHeader = ({ location }) => {
             {!isSidebarOpen &&
                 <>
                     <div className={navHeader}>
-                        {urlPath === "/" ?
-                            <h1 style={{ marginLeft: '2rem' }}>
+                        {location.pathname === "/" ?
+                            <h1 className={h1}>
                                 <Link to="/">
-                                    <GatsbyImage
-                                        image={getImage(data.allFile.edges[0].node.childrenImageSharp[0]) as IGatsbyImageData}
-                                        alt={"一般社団法人 日本CEO協会"}
-                                    />
+                                    <img src={data.file.publicURL} alt="一般社団法人 日本CEO協会" />
                                 </Link>
                             </h1>
                             :
-                            <div style={{ marginLeft: '2rem' }}>
+                            <div className={h1}>
                                 <Link to="/" onClick={() => setIsShowMegaMenu(false)}>
-                                    <GatsbyImage
-                                        image={getImage(data.allFile.edges[0].node.childrenImageSharp[0]) as IGatsbyImageData}
-                                        alt={"一般社団法人 日本CEO協会"}
-                                    />
+                                    <img src={data.file.publicURL} alt="一般社団法人 日本CEO協会" />
                                 </Link>
                             </div>
                         }
@@ -84,15 +73,8 @@ export const OgMegaHeader = ({ location }) => {
 
 const query = graphql`
 query {
-  allFile (filter: {name:{eq:"logo"}}){
-    edges {
-      node {
-        name
-        childrenImageSharp {
-          gatsbyImageData(placeholder: NONE)
-        }
-      }
+    file(relativePath: {eq: "logo.svg"}) {
+      publicURL
     }
   }
-}
 `
