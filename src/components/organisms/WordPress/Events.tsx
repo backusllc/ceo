@@ -10,7 +10,7 @@ import Tag from '../../../components/organisms/WordPress/Tag';
 import Pagination from './../../../components/organisms/WordPress/Pagenation';
 import SNS from '../../../components/organisms/WordPress/SNS';
 
-import { filterWrap, filterDiv, filterContainer, filter, filterButton, selectedButton, filterTagDiv, filterText, filterTagLists } from './Events.css'
+import { filterWrap, filterDiv, filterContainer, filter, filterButton, selectedButton, filterTagDiv, filterText, eventWrap, filterTagLists } from './Events.css'
 
 const Events = React.memo(({ hash }: string) => {
     const [tagIn, SetTagIn] = useState([]);
@@ -93,7 +93,7 @@ const Events = React.memo(({ hash }: string) => {
 
     return (
         <>
-            <div className="inner" >
+            <div className={`inner ${eventWrap}`}>
                 <Title Tag='h1' title='EVENT' subTitle='イベント' isPageTitle={true} />
                 <div className={filterWrap}>
                     <div className={filterContainer}>

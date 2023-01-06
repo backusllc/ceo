@@ -58,7 +58,7 @@ export const filterButton: string = style({
     display: 'inline-block',
     color: '#999999',
     border: '1px solid #E5E5E5',
-    cursor : 'pointer',
+    cursor: 'pointer',
 
     '@media': {
         'screen and (min-width: 768px)': {
@@ -92,4 +92,14 @@ export const filterText: string = style({
 
 export const filterTagLists: string = style({
     gap: '1.7rem',
+});
+
+export const eventWrap: string = style({
+    marginBottom: '7rem',
+
+    '@media': {
+        'screen and (min-width: 768px)': {
+            marginBottom: '14rem',
+        }
+    }
 });
