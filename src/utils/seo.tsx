@@ -17,19 +17,19 @@ const SEO = ({
   img = 'https://ceo.gatsbyjs.io/images/logo.png',
 }: Props) => {
 
-  useEffect(() => {
-    let parentNode = document.head;
-    var e = parentNode.children;
+  // useEffect(() => {
+  //   let parentNode = document.head;
+  //   var e = parentNode.children;
 
-    [].slice
-      .call(e)
-      .sort((a, b) => {
-        return a.tagName.localeCompare(b.tagName);
-      })
-      .forEach((val, index) => {
-        parentNode.appendChild(val);
-      });
-  }, []);
+  //   [].slice
+  //     .call(e)
+  //     .sort((a, b) => {
+  //       return a.tagName.localeCompare(b.tagName);
+  //     })
+  //     .forEach((val, index) => {
+  //       parentNode.appendChild(val);
+  //     });
+  // }, []);
 
   const displayTitle = title ? `${title} | 一般社団法人日本CEO協会` : "一般社団法人日本CEO協会";
   const displayDescription = description ? description.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '').substr(0, 80) : description;

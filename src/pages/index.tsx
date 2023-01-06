@@ -43,7 +43,7 @@ export default function Index() {
     <>
       {!isSidebarOpen &&
         <>
-          <SEO />
+          {/* <SEO /> */}
           <Layout>
             <div>
               <OgOneColumnHero />

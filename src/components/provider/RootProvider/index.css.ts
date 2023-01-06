@@ -89,15 +89,9 @@ globalStyle('.full-height', {
   height: '100vh',
 });
 
-globalStyle('.fb-page span', {
-  width: '350px !important',
-});
-
-globalStyle('.fb-page iframe', {
-  width: '350px !important',
-});
-globalStyle('._2p3a', {
-  width: '350px !important',
+globalStyle('.fb-page', {
+  borderRadius: '10px',
+  overflow: 'hidden',
 });
 
 const fadeIn = keyframes({

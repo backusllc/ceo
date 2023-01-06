@@ -29,24 +29,27 @@ const SocialSection = () => {
                 data-aos-easing="ease">
                 <div className="inner">
                     <div className={title} >最新の活動は<br className="sp" />SNSよりご確認ください</div>
-                    <div className={flexDiv} >
+                    <div className={flexDiv}>
                         <div className={topDiv}>
-                            <div className={topTitleContainer}>
-                                <div className={topTitle}>FACEBOOK</div>
-                            </div>
                             <div className={topContentContainer}>
+                                <div className={topTitleContainer}>
+                                    <div className={topTitle}>FACEBOOK</div>
+                                </div>
                                 <div
                                     ref={ref}
                                     className="fb-page"
                                     data-href="https://www.facebook.com/jceoa2019/"
-                                    data-tabs="timeline"
-                                    data-width={ref?.current?.clientWidth ?? ''}
-                                    data-height=""
+                                    data-show-posts="true"
+                                    data-width="500"
+                                    data-height="340"
                                     data-small-header="false"
                                     data-adapt-container-width="true"
                                     data-hide-cover="false"
-                                    data-show-facepile="false"
-                                />
+                                    data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/jceoa2019/" className="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/jceoa2019/">一般社団法人 日本CEO協会</a></blockquote>
+                                </div>
+
                             </div>
                         </div>
                         <div className={bottomDiv}>
@@ -56,17 +59,17 @@ const SocialSection = () => {
                             <div className={bottomContentContainer}>
                                 <a
                                     className="twitter-timeline"
-                                    data-height="580"
-                                    data-width="350"
+                                    data-chrome="nofooter"
+                                    data-height="340"
+                                    data-width="480"
                                     data-theme="light"
-                                    data-chrome="noheadernofooter"
                                     href="https://twitter.com/CEO86364606"
-                                />
+                                >Tweets by @CEO86364606</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </div >
+            </section >
         </>
     );
 };
