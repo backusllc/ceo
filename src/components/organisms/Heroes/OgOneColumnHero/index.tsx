@@ -148,11 +148,11 @@ export const OgOneColumnHero = () => {
 
   useEffect(() => {
     const image1 = document.createElement('img');
-    image1.src = "/images/firstview01.png";
+    image1.src = "/images/firstview01.webp";
     const image2 = document.createElement('img');
-    image2.src = "/images/firstview02.png";
+    image2.src = "/images/firstview02.webp";
     const image3 = document.createElement('img');
-    image3.src = "/images/firstview03.png";
+    image3.src = "/images/firstview03.webp";
 
     const el = document.getElementById('slider-wrapper');
     const imgs: HTMLImageElement[] = [image1, image2, image3];
