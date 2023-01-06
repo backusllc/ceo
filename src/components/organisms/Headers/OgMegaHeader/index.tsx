@@ -6,6 +6,7 @@ import { useGetWordpressMenuSettings } from '../../../../hooks/useGetWordpressMe
 import { Navigation } from '../../../../components/organisms/WordPress/Navigation';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { h1, humburgerButton, span, header, divHeader, liMenu, aMenu, navHeader, ulMegaMenu, liMegaMenu, aMegaMenu, quantityDiv } from './index.css';
+import { Helmet } from 'react-helmet-async';
 
 export const OgMegaHeader = () => {
     const { isSidebarOpen, showSidebar } = useContext(GatsbyContext);
@@ -27,6 +28,9 @@ export const OgMegaHeader = () => {
     const menus = menuLists.menuItems.edges
 
     return <>
+        <Helmet>
+            <link rel="preload" href={`${data.file.publicURL}`} as="image" />
+        </Helmet>
         <header className={header}>
             <Navigation />
             {!isSidebarOpen &&
