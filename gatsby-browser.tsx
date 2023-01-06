@@ -5,14 +5,12 @@ import type { GatsbyBrowser } from 'gatsby'
 import { RecoilRoot } from 'recoil';
 import { RootPrivider } from "./src/components/provider/RootProvider/index"
 
-import { GatsbyContext, GatsbyProvider } from "./src/context/context"
+import { GatsbyProvider } from "./src/context/context"
 import { ShopifyProvider } from "./src/context/shopifyContext"
 import { OgMegaHeader } from "./src/components/organisms";
 import Footer from './src/components/organisms/WordPress/Footer';
 // import "@fontsource/noto-sans-jp"
 // import "@fontsource/roboto";
-import SEO from './src/utils/seo';
-import { useWordPressPostSettings } from './src/hooks/useWordPressPostSettings'
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({
