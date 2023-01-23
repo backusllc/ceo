@@ -201,30 +201,6 @@ export const OgOneColumnHero = () => {
           </div>
         </div>
         <div id="slider-wrapper" className={sliderWrapper}>
-          {/* <picture>
-            <source type="image/webp" srcSet={'/images/firstview01.webp'} />
-            <img className={img} height="0" width="0"
-              alt={"社長を輩出することが持続可能な社会を作り出す。"}
-              src="/images/firstview01.png"
-              loading="lazy"
-            />
-          </picture>
-          <picture>
-            <source type="image/webp" srcSet={'/images/firstview02.webp'} />
-            <img className={img} height="0" width="0"
-              alt={"社長を輩出することが持続可能な社会を作り出す。"}
-              src="/images/firstview02.png"
-              loading="lazy"
-            />
-          </picture>
-          <picture>
-            <source type="image/webp" srcSet={'/images/firstview03.webp'} />
-            <img className={img} height="0" width="0"
-              alt={"社長を輩出することが持続可能な社会を作り出す。"}
-              src="/images/firstview03.png"
-              loading="lazy"
-            />
-          </picture> */}
           <div id="pagination" className={pagination}>
             <button id="btn0" className="active" data-slide="0"></button>
             <button id="btn1" data-slide="1"></button>

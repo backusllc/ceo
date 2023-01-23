@@ -47,6 +47,7 @@ export const bottomDiv: string = style({
     flexDirection: 'column',
     flexBasis: '45%',
     maxWidth: '500px',
+    width: '100%',
 });
 
 export const topTitleContainer: string = style({

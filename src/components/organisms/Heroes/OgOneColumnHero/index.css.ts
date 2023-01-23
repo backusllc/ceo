@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { bebas } from '../../../../components/provider/RootProvider/index.css';
+// import { bebas } from '../../../../components/provider/RootProvider/index.css';
 
 export const img: string = style({
     display: 'none',
@@ -25,7 +25,6 @@ export const section: string = style({
     minHeight: '60vh',
     maxWidth: '1200px',
     overflow: 'hidden',
-    // height: '100vh',
     '@media': {
         'screen and (min-width: 981px)': {
             width: '90%',
@@ -69,8 +68,8 @@ export const bottomDiv: string = style({
 
 export const title: string = style({
     fontSize: '3.5rem',
-    lineHeight: '4.3rem',
-    letterSpacing: '0.25rem',
+    lineHeight: '1.22em',
+    letterSpacing: '0.05em',
     marginBottom: '0.5rem',
     fontWeight: '700',
     fontFamily: '"Bebas", cursive',
@@ -78,7 +77,7 @@ export const title: string = style({
     '@media': {
         'screen and (min-width: 981px)': {
             fontSize: '5.5rem',
-            lineHeight: '6.7rem',
+            lineHeight: '1.21em',
             marginBottom: '1.6rem',
         }
     },
@@ -87,7 +86,9 @@ export const title: string = style({
 export const subTitle: string = style({
     fontSize: '1.4rem',
     fontWeight: '600',
-    marginBottom: '4rem',
+    letterSpacing: '0.1em',
+    lineHeight: '1.71em',
+    marginBottom: '3.6rem',
     '@media': {
         'screen and (min-width: 981px)': {
             fontSize: '1.5rem',

@@ -39,9 +39,10 @@ export const header: string = style({
     width: '100%',
     height: '100%',
     backgroundColor: '#FFFFFF',
-    position: 'relative',
+    // position: 'relative',
     zIndex: '999',
-
+    position: 'sticky',
+    top: 0,
     '@media': {
         'screen and (min-width: 768px)': {
             position: 'sticky',
