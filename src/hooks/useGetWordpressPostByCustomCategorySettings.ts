@@ -35,6 +35,14 @@ query GetCustomPostType($blogCount: Int,$supportCount: Int,$logoCount: Int) {
             altText
           }
         }
+        tags {
+          edges {
+            node {
+              name
+              id
+            }
+          }
+        }
       }
     }
   }

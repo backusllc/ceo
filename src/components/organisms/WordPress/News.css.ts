@@ -13,18 +13,19 @@ export const wrapDiv: string = style({
 
 export const imgDiv: string = style({
     position: 'relative',
-    aspectRatio: '16/9',
+    paddingTop: '56.25%',
     marginBottom: '1.4rem',
     overflow: 'hidden',
+    width: '100%',
 })
 
 export const img: string = style({
     position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%,-50%)',
+    top: '0',
+    left: '0',
     width: '100%',
     height: '100%',
+    objectFit: 'cover',
 });
 
 export const link: string = style({
@@ -57,6 +58,7 @@ export const li: string = style({
     display: 'flex',
     // flexWrap: 'wrap',
     flexDirection: 'column',
+    justifyContent: 'space-between',
     position: 'relative',
     marginBottom: '1rem',
     width: '100%',
@@ -84,4 +86,17 @@ export const more: string = style({
     ':hover': {
         opacity: '0.8',
     }
+})
+
+export const tagList: string = style({
+    display: 'flex',
+    gap: '1rem',
+    marginBottom: '1.4rem',
+})
+
+export const tag: string = style({
+    fontFamily: '"Noto Sans JP", sans-serif',
+    border: '1px solid #E0E0E0',
+    borderRadius: '4px',
+    padding: '0.4rem 1rem',
 })

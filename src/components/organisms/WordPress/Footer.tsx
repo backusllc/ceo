@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { sprinkles } from '../../../styles/sprinkles.css';
-import { footer, footerContainer, topContainer, link, ul, rights, rightsText } from './Footer.css'
+import { footer, footerContainer, topContainer, link, ul, rights, privacyText, rightsText, scrollTop, arrow } from './Footer.css'
 
 import { useGetWordpressMenuSettings } from '../../../hooks/useGetWordpressMenuSettings';
 
@@ -9,6 +9,10 @@ import { useGetWordpressMenuSettings } from '../../../hooks/useGetWordpressMenuS
 const Footer = () => {
     const data = useStaticQuery(query);
     const { loading: menuLoading, data: menuLists } = useGetWordpressMenuSettings("MAIN");
+
+    const handleClick = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
 
     const termDiv = sprinkles({
         display: {
@@ -55,7 +59,12 @@ const Footer = () => {
                 </div>
             </div>
             <div className={`inner ${rights}`} >
+                <div className={privacyText}>
+                    <Link to="/policy" >個人情報の取り扱いについて</Link></div>
                 <div className={rightsText}>© 一般社団法人日本CEO協会 All Rights Reserved.</div>
+                <button onClick={handleClick} className={scrollTop}>
+                    <i className={arrow} ></i>
+                </button>
             </div>
         </footer >
     );

@@ -13,18 +13,23 @@ export const wrapDiv: string = style({
 
 export const imgDiv: string = style({
     position: 'relative',
-    aspectRatio: '16/9',
-    marginBottom: '1.4rem',
+    paddingTop: '56.25%',
+    marginBottom: '1.5rem',
     overflow: 'hidden',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            marginBottom: '2rem',
+        }
+    }
 })
 
 export const img: string = style({
     position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%,-50%)',
+    top: '0',
+    left: '0',
     width: '100%',
     height: '100%',
+    objectFit: 'cover',
 });
 
 export const ul: string = style({
@@ -52,7 +57,7 @@ export const link: string = style({
 })
 
 export const li: string = style({
-    flexBasis: '30%',
+    flexBasis: 'calc(33.3% - 2.7rem)',
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
@@ -61,10 +66,19 @@ export const li: string = style({
 })
 
 export const text: string = style({
-    height: '10%',
     minHeight: '0%',
     wordBreak: 'break-all',
-    marginBottom: '1rem',
+    fontSize: '1.5rem',
+    letterSpacing: '0.05em',
+    lineHeight: '1.73em',
+    marginBottom: '1.5rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '1.6rem',
+            lineHeight: '1.75em',
+            marginBottom: '1.5rem',
+        }
+    }
 })
 
 export const activeTag: string = style({
@@ -84,20 +98,31 @@ export const closeTag: string = style({
 export const recruitingTag: string = style({
     display: 'flex',
     gap: '1rem',
-    marginBottom: '1.4rem',
+    marginBottom: '1rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            marginBottom: '1.5rem',
+        }
+    }
 })
 
 export const tagList: string = style({
     display: 'flex',
     gap: '1rem',
-    marginBottom: '1.4rem',
+    marginBottom: '1.7rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            marginBottom: '1.9rem',
+        }
+    }
 })
 
 export const tag: string = style({
     fontFamily: '"Noto Sans JP", sans-serif',
     border: '1px solid #E0E0E0',
-    borderRadius: '4px',
+    borderRadius: '18px',
     padding: '0.4rem 1rem',
+    color: '#999999',
 })
 
 export const pCategory: string = style({

@@ -12,8 +12,10 @@ export const wrapDiv: string = style({
 
 export const imgDiv: string = style({
     position: 'relative',
-    paddingTop: '56.25%',
+    paddingTop: '35%',
     marginBottom: '1.4rem',
+    backgroundColor: '#fff',
+    border: '1px solid #F0F0F0',
 })
 
 export const pageWrap: string = style({
@@ -41,7 +43,7 @@ export const ul: string = style({
     '@media': {
         'screen and (min-width: 768px)': {
             marginBottom: '9.2rem',
-            gap: '4rem',
+            gap: '2rem',
         }
     }
 })
@@ -55,7 +57,7 @@ export const li: string = style({
     width: '100%',
     '@media': {
         'screen and (min-width: 768px)': {
-            flexBasis: '20%',
+            flexBasis: 'calc(25% - 1.5rem)',
         }
     }
 })

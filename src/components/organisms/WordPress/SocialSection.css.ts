@@ -2,7 +2,7 @@ import { style } from '@vanilla-extract/css';
 
 export const flexDiv: string = style({
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     flexWrap: 'wrap',
     gap: '4rem',
     flexDirection: 'column',
@@ -31,9 +31,9 @@ export const title: string = style({
 export const topDiv: string = style({
     display: 'flex',
     flexDirection: 'column',
-    flexBasis: '40%',
+    flexBasis: '45%',
     marginBottom: '4rem',
-    maxWidth: '480px',
+    maxWidth: '500px',
     width: '100%',
     '@media': {
         'screen and (min-width: 768px)': {
@@ -45,8 +45,8 @@ export const topDiv: string = style({
 export const bottomDiv: string = style({
     display: 'flex',
     flexDirection: 'column',
-    flexBasis: '40%',
-    maxWidth: '480px',
+    flexBasis: '45%',
+    maxWidth: '500px',
 });
 
 export const topTitleContainer: string = style({

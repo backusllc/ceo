@@ -27,7 +27,8 @@ export const section: string = style({
     overflow: 'hidden',
     // height: '100vh',
     '@media': {
-        'screen and (min-width: 768px)': {
+        'screen and (min-width: 981px)': {
+            width: '90%',
             marginTop: '6.1rem',
             marginBottom: '13.5rem',
         }
@@ -38,7 +39,7 @@ export const gridDiv: string = style({
     display: 'flex',
     flexDirection: 'column-reverse',
     '@media': {
-        'screen and (min-width: 768px)': {
+        'screen and (min-width: 981px)': {
             flexDirection: 'column',
         }
     }
@@ -49,12 +50,14 @@ export const topDiv: string = style({
 
 export const bottomDiv: string = style({
     position: 'relative',
-    width: 'calc(100% - 2rem)',
+    width: '90%',
+    maxWidth: '1200px',
+    // width: 'calc(100% - 2rem)',
     marginLeft: 'auto',
     marginRight: 'auto',
     marginTop: '0',
     '@media': {
-        'screen and (min-width: 768px)': {
+        'screen and (min-width: 981px)': {
             position: 'absolute',
             top: '50%',
             transform: 'translateY(-50%)',
@@ -73,7 +76,7 @@ export const title: string = style({
     fontFamily: '"Bebas", cursive',
     opacity: 0,
     '@media': {
-        'screen and (min-width: 768px)': {
+        'screen and (min-width: 981px)': {
             fontSize: '5.5rem',
             lineHeight: '6.7rem',
             marginBottom: '1.6rem',
@@ -86,7 +89,7 @@ export const subTitle: string = style({
     fontWeight: '600',
     marginBottom: '4rem',
     '@media': {
-        'screen and (min-width: 768px)': {
+        'screen and (min-width: 981px)': {
             fontSize: '1.5rem',
             marginBottom: '0',
         }

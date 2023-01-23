@@ -21,7 +21,7 @@ const TextImage01 = React.memo(() => {
     return (
         <>
             <section >
-                <div className="inner">
+                <div className="">
                     <div className={multiColumnGrid} >
                         <div className={multiColumnTile} >
                             <div className={titleContainer}

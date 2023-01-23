@@ -16,7 +16,7 @@ interface Props {
     flexDirection: Sprinkles['flexDirection'],
 }
 
-const TextImage02 = React.memo(({
+const TextImage03 = React.memo(({
     title,
     content,
     imageSrc,
@@ -29,7 +29,7 @@ const TextImage02 = React.memo(({
 
     return (
         <>
-            <div className="inner">
+            <div style={{ position: 'relative' }}>
                 <div className={multiColumnGrid}>
                     <div className={multiColumnTileTop} >
                         <div className={imageContainer}
@@ -71,7 +71,7 @@ const TextImage02 = React.memo(({
     );
 });
 
-export default TextImage02;
+export default TextImage03;
 
 const query = graphql`
 query {

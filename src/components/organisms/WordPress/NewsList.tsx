@@ -42,7 +42,7 @@ const NewsList = React.memo(({
 
                                                 })}
                                             </div>
-                                            <div>
+                                            <div style={{ color: "#999999" }}>
                                                 Posted  {dateFormat(item.node.date, "yyyy.mm.dd")}
                                             </div>
                                         </div>

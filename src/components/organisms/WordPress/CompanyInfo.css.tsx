@@ -28,12 +28,15 @@ export const philosophyContainer: string = style({
 
 export const philosophy: string = style({
     fontSize: '2.2rem',
-    fontFamily: '"Bebas", cursive',
+    lineHeight: '0.136em',
+    letterSpacing: '0.05em',
+    fontFamily: '"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif',
     fontWeight: '600',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '3.2rem',
-            lineHeight: '5rem',
+            lineHeight: '1.34em',
+            letterSpacing: '0.1em',
         }
     }
 });
@@ -71,9 +74,11 @@ export const container: string = style({
 export const titleClass: string = style({
     fontSize: '1.3rem',
     fontWeight: '600',
+    letterSpacing: '0.1em',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '1.7rem',
+            letterSpacing: '0.05em',
         }
     }
 });
@@ -81,11 +86,13 @@ export const titleClass: string = style({
 export const description: string = style({
     fontSize: '1.3rem',
     lineHeight: '1.8em',
+    letterSpacing: '0.05em',
     listStyle: 'initial',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '1.8rem',
-            lineHeight: '2.4em',
+            lineHeight: '2em',
+            letterSpacing: '0.05em'
         }
     }
 });
@@ -93,10 +100,12 @@ export const description: string = style({
 export const gridLayout: string = style({
     display: 'grid',
     gridTemplateColumns: '30% 70%',
-    padding: '3.6rem 0',
+    padding: '2.2rem 0 9.6rem 0',
 
     '@media': {
         'screen and (min-width: 768px)': {
+            padding: '3rem 0 18rem 0',
+
         }
     }
 });

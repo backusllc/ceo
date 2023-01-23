@@ -9,23 +9,31 @@ export const ul: string = style({
 export const active: string = style({
     backgroundColor: '#000000',
     color: '#FFFFFF',
+    height: '5rem',
+    width: '5rem',
 })
 
 export const li: string = style({
 })
 
 export const prevButton: string = style({
-    padding: '1rem 1.5rem',
-    border: '1px solid #666666'
+    border: '1px solid #666666',
+    height: '5rem',
+    width: '5rem',
+    fontSize: '2rem',
 });
 
 export const nextButton: string = style({
-    padding: '1rem 1.5rem',
-    border: '1px solid #666666'
+    border: '1px solid #666666',
+    height: '5rem',
+    width: '5rem',
+    fontSize: '2rem',
 });
 
 export const button: string = style({
-    padding: '1rem 1.5rem',
+    height: '5rem',
+    width: '5rem',
+    fontSize: '2rem',
 });
 
 export const i: string = style({

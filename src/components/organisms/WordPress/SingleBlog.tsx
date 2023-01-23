@@ -15,26 +15,18 @@ const SingleBlog = React.memo(({ blog }: Props) => {
         <>
             <div className="inner page">
                 <div className={topDiv}>
-                    <div className={recruitingTag} >
-                        {/* {
-                            (!blog.commonACF?.displayenddate || blog.commonACF?.displayenddate > nowDatetime.toLocaleString().replaceAll('/', '-')) ?
-                                <div className={activeTag}>募集中</div>
-                                :
-                                <div className={closeTag}>終了イベント</div>
-                        } */}
-                    </div>
                     <div className={topInformationDiv}>
-                        <div className={dateText} >
-                            {dateFormat(blog.date, "yyyy.mm.dd")}
+                        <div className={tagList} >
+                            {blog.tags?.edges.map((tagItem: any) => {
+                                return <>
+                                    <div id={tagItem.node.id} className={tag}>{tagItem.node.name}</div>
+                                </>
+
+                            })}
                         </div>
                         <div className={dateTagWrap}>
-                            <div className={tagList} >
-                                {blog.tags?.edges.map((tagItem: any) => {
-                                    return <>
-                                        <div id={tagItem.node.id} className={tag}>{tagItem.node.name}</div>
-                                    </>
-
-                                })}
+                            <div className={dateText} >
+                                {dateFormat(blog.date, "yyyy.mm.dd")}
                             </div>
                             <ol itemScope itemType='https://schema.org/BreadcrumbList' className={`${breadcrumb} breadcrumb`}>
                                 <li itemProp='itemListElement' itemScope
@@ -57,12 +49,7 @@ const SingleBlog = React.memo(({ blog }: Props) => {
                 </div>
 
                 <div className={middleDiv}>
-                    {/* <div className={dateDiv}>
-                        <span className={month}>{months[new Date(blog.commonACF?.displayenddate).getMonth()]}</span><span className={day}>{new Date(blog.commonACF?.displayenddate).getDate()}</span>
-                    </div> */}
-                    <h1 className={titleText}>{blog.title}</h1>
-                </div>
-                <div className={bottomDiv}>
+                    <h1 className={titleText} style={{ margin: 0 }}>{blog.title}</h1>
                 </div>
                 <div className={thumbnailDiv}>
                     <img src={blog.featuredImage.node.sourceUrl} alt={blog.title} loading="lazy" />

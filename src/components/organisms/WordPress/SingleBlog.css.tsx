@@ -63,12 +63,12 @@ export const closeTag: string = style({
 
 export const middleDiv: string = style({
     display: 'flex',
-    marginBottom: '3rem',
+    marginBottom: '8.5rem',
     alignItems: 'center',
     columnGap: '2rem',
     '@media': {
         'screen and (min-width: 768px)': {
-            marginBottom: '6rem',
+            marginBottom: '11rem',
             columnGap: '4rem',
         }
     },
@@ -147,10 +147,11 @@ export const dateText: string = style({
 
 export const titleText: string = style({
     fontSize: '2.2rem',
-    lineHeight: '2em',
+    lineHeight: '1.6em',
     letterSpacing: '0.05em',
     fontWeight: '500',
     fontFamily: '"Noto Sans JP", sans-serif',
+    marginBottom: 0,
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '2.8rem',
@@ -190,10 +191,12 @@ export const tagList: string = style({
 
 export const tag: string = style({
     fontFamily: '"Noto Sans JP", sans-serif',
-    border: '1px solid #E0E0E0',
+    border: '1px solid #CD2C2E',
     borderRadius: '4px',
-    padding: '0.4rem 1rem',
+    padding: '1.2rem 3.6rem',
     whiteSpace: 'nowrap',
+    fontSize: '1.5rem',
+    color: '#CD2C2E',
 })
 
 

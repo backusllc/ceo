@@ -13,7 +13,7 @@ export const wrapDiv: string = style({
 
 export const imgDiv: string = style({
     position: 'relative',
-    aspectRatio: '16/9',
+    paddingTop: '56.25%',
     marginBottom: '1.4rem',
     overflow: 'hidden',
     '@media': {
@@ -25,11 +25,11 @@ export const imgDiv: string = style({
 
 export const img: string = style({
     position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%,-50%)',
+    top: '0',
+    left: '0',
     width: '100%',
     height: '100%',
+    objectFit: 'cover',
 });
 
 export const imageWrap: string = style({

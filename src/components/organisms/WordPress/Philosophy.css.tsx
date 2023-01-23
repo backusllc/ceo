@@ -14,8 +14,17 @@ export const philosophyContainer: string = style({
 
 export const philosophy: string = style({
     fontSize: '2.2rem',
-    fontFamily: '"Bebas", cursive',
+    lineHeight: '0.136em',
+    letterSpacing: '0.05em',
+    fontFamily: '"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif',
     fontWeight: '600',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '3.2rem',
+            lineHeight: '1.34em',
+            letterSpacing: '0.1em',
+        }
+    }
 });
 
 export const multiColumnGrid: string = style({
@@ -53,15 +62,25 @@ export const titleClass: string = style({
     color: '#CD2C2E',
     fontFamily: '"Bebas", cursive',
     fontWeight: '600',
+    letterSpacing: '0.05em',
 });
 
 export const concept: string = style({
     fontSize: '2.4rem',
-    lineHeight: '3rem',
+    lineHeight: '3.2rem',
+    letterSpacing: '0.13em',
     fontWeight: '600',
 });
 
 export const description: string = style({
-    fontSize: '1.6rem',
-    lineHeight: '3rem',
+    fontSize: '1.4rem',
+    lineHeight: '1.7em',
+    letterSpacing: '0.05em',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '1.6rem',
+            lineHeight: '2em',
+            letterSpacing: '0.1em',
+        }
+    }
 });

@@ -32,10 +32,11 @@ interface Props {
 
 const httpLink = createHttpLink({ uri: `` })
 
-const wordPressLink = createHttpLink({ uri: `https://xs893709.xsrv.jp/graphql` })
+const wordPressLink = createHttpLink({ uri: `https://xs893709.xsrv.jp/index.php?graphql` })
 
 const middlewareLink = setContext(() => ({
     headers: {
+        "Content-Type": "application/graphql",
         'X-Shopify-Storefront-Access-Token': process.env.GATSBY_SHOPIFY_STOREFRONT_ACCESS_TOKEN
     }
 }))

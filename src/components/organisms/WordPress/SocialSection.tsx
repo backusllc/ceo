@@ -61,7 +61,7 @@ const SocialSection = () => {
                                     className="twitter-timeline"
                                     data-chrome="nofooter"
                                     data-height="340"
-                                    data-width="480"
+                                    data-width="500"
                                     data-theme="light"
                                     href="https://twitter.com/CEO86364606"
                                 >Tweets by @CEO86364606</a>

@@ -2,6 +2,9 @@
 import { style } from '@vanilla-extract/css';
 
 export const multiColumnGrid: string = style({
+    width: '90%',
+    maxWidth: '1200px',
+    margin: '0 auto',
     display: 'flex',
     justifyContent: 'space-between',
     flexWrap: 'nowrap',
@@ -17,12 +20,12 @@ export const multiColumnGrid: string = style({
 });
 
 export const multiColumnTileBottom: string = style({
-    flexBasis: '70%',
+    flexBasis: '60%',
     zIndex: '1',
 });
 
 export const multiColumnTileTop: string = style({
-    flexBasis: '30%',
+    flexBasis: '40%',
     zIndex: '1',
 });
 
@@ -78,22 +81,28 @@ export const titleClass: string = style({
 export const subTitle: string = style({
     fontSize: '1.6rem',
     color: '#CD2C2E',
+    fontWeight: '900',
+    fontFamily: "YuMincho,'Yu Mincho',serif",
     lineHeight: '2.7rem',
+    letterSpacing: '0.1em',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '3rem',
             lineHeight: '5rem',
+            letterSpacing: '0.2em',
         }
     }
 });
 
 export const descriptionClass: string = style({
     fontSize: '1.4rem',
-    lineHeight: '2.8rem',
+    lineHeight: '2em',
+    letterSpacing: '0.05em',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '1.6rem',
-            lineHeight: '3rem',
+            lineHeight: '2em',
+            letterSpacing: '0.1em',
         }
     }
 });
@@ -112,7 +121,7 @@ export const backgroundDiv: string = style({
     backgroundColor: '#F7F7F7',
     position: 'absolute',
     width: '80%',
-    height: '630px',
+    height: '100%',
     marginTop: '7.5rem',
     paddingLeft: '10rem',
     zIndex: '0',

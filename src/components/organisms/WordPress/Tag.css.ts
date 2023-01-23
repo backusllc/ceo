@@ -9,7 +9,8 @@ export const tagList: string = style({
 export const tag: string = style({
     fontFamily: '"Noto Sans JP", sans-serif',
     border: '1px solid #E0E0E0',
-    borderRadius: '4px',
+    backgroundColor: 'white',
+    borderRadius: '18px',
     padding: '0.4rem 1rem',
     color: '#999999',
 })

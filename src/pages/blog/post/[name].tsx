@@ -39,16 +39,3 @@ export async function getServerData(context: any) {
         };
     }
 }
-
-//Head()の中でコンポーネントを利用
-// export const Head = (props) => {
-//     const slug = props.params.name;
-//     const { loading: articleLoading, data: blogData } = useWordPressBlogSettings(slug);
-
-//     console.log(props);
-//     return (
-//         <>
-//             <title>aaa | 一般社団法人日本CEO協会</title>
-//         </>
-//     )
-// }

@@ -66,7 +66,6 @@ const TextImage02 = React.memo(({
                     <div className={backgroundDiv} style={{ right: right, left: left }} />
                 </div>
             </div>
-            {/* </FadeInOnScroll> */}
         </>
     );
 });

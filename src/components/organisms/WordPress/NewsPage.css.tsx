@@ -18,15 +18,10 @@ export const filterDiv: string = style({
     display: 'flex',
     justifyContent: 'flex-start',
     gap: '1rem',
-    paddingBottom: '2rem',
-    marginBottom: '2rem',
     flexWrap: 'wrap',
-    borderBottom: '1px solid #EAEAEA',
     '@media': {
         'screen and (min-width: 768px)': {
             flexWrap: 'nowrap',
-            paddingBottom: '3rem',
-            marginBottom: '3rem',
         }
     }
 })

@@ -21,9 +21,15 @@ export const multiColumnTile: string = style({
     flexBasis: '50%',
     flexDirection: 'column',
     justifyContent: 'flex-start',
+    margin: '0 auto',
+    width: '90%',
     '@media': {
         'screen and (min-width: 768px)': {
             justifyContent: 'center',
+            width: '100%',
+            ':first-child': {
+                padding: '0 9px 0 10vw',
+            }
         }
     }
 });
@@ -52,14 +58,14 @@ export const title: string = style({
     color: '#ffffff',
     display: 'inline',
     position: 'relative',
-    padding: '.5rem 3rem .5rem 0.8rem',
+    padding: '.5rem 0.8rem .5rem 0.8rem',
     marginBottom: '1rem',
     whiteSpace: 'nowrap',
     boxDecorationBreak: 'clone',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '3rem',
-            padding: '1rem 5.7rem 1rem 1.7rem',
+            padding: '1rem 1.7rem 1rem 1.7rem',
         }
     }
 });

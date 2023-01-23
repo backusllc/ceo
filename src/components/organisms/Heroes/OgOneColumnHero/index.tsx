@@ -192,7 +192,7 @@ export const OgOneColumnHero = () => {
 
   return (
     <>
-      <section className={section}>
+      <section className={`${section}`}>
         <div id="slider" >
           <div className={bottomDiv}>
             <div className={title}>Producing presidents<br />

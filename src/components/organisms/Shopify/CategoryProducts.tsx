@@ -63,12 +63,12 @@ const CollectionSelection = React.memo(({
                                         <div className={tagList} >
                                             {item.node.tags?.edges.map((tagItem: any) => {
                                                 return <>
-                                                    <div id={tagItem.node.id} className={tag}>{tagItem.node.name}</div>
+                                                    <div id={tagItem.node.id} className={tag}>#{tagItem.node.name}</div>
                                                 </>
 
                                             })}
                                         </div>
-                                        <div>
+                                        <div style={{ color: "#999999" }}>
                                             Posted  {dateFormat(item.node.date, "yyyy.mm.dd")}
                                         </div>
                                     </li>

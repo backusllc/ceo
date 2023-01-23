@@ -1,17 +1,23 @@
 import { style } from '@vanilla-extract/css';
 
 export const formWrapper: string = style({
-  backgroundColor: '#F7F7F7',
   '@media': {
     'screen and (min-width: 768px)': {
-      padding: '10rem',
+      backgroundColor: '#F7F7F7',
+      padding: '9rem 10rem 15rem 10rem',
     }
   }
 })
 
 export const cautionText: string = style({
-  fontSize: '1.6rem',
+  fontSize: '1.5rem',
   marginBottom: '6rem',
+  '@media': {
+    'screen and (min-width: 768px)': {
+      fontSize: '1.6rem',
+      marginBottom: '4rem',
+    }
+  }
 })
 
 export const formDiv: string = style({
@@ -49,6 +55,12 @@ export const input: string = style({
   width: '90%',
   animationDuration: '10ms',
   padding: '16.5px 14px',
+})
+
+export const abbr: string = style({
+  color: 'red',
+  textDecorationStyle: 'unset',
+  marginLeft: '0.5rem',
 })
 
 export const radioWrap: string = style({
@@ -96,8 +108,34 @@ export const textarea: string = style({
 export const submitDiv: string = style({
   display: 'flex',
   alignItems: 'center',
-  paddingTop: '14rem',
   justifyContent: 'center',
+})
+
+export const checkWrap: string = style({
+  textAlign: 'center',
+  padding: '5rem 0 6rem 0',
+  borderTop: '1px solid #E0E0E0',
+  '@media': {
+    'screen and (min-width: 768px)': {
+      padding: '9rem 0 14rem 0',
+    }
+  }
+})
+
+export const check: string = style({
+  width: '2rem',
+  height: '2rem',
+  marginRight: '1.1rem',
+  appearance: 'auto',
+})
+
+export const checkLabel: string = style({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: '#999999',
+  fontSize: '1.4rem',
+  whiteSpace: 'nowrap',
 })
 
 export const submit: string = style({
@@ -108,4 +146,10 @@ export const submit: string = style({
   color: '#FFFFFF',
   fontWeight: '500',
   cursor: 'pointer',
+  ':disabled': {
+    pointerEvents: 'none',
+    color: 'none',
+    border: 'none',
+    backgroundColor: '#cccccc',
+  }
 })

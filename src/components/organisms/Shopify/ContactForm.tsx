@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
-import { formWrapper, cautionText, label, formDiv, input, radioWrap, radio, radioLabel, textarea, submitDiv, submit } from './ContactForm.css'
+import { formWrapper, cautionText, label, formDiv, input, abbr, radioWrap, radio, radioLabel, textarea, submitDiv, checkWrap, check, checkLabel, submit } from './ContactForm.css'
 import { navigate } from 'gatsby';
 
 import Title from '../WordPress/Title';
@@ -8,17 +7,21 @@ import Title from '../WordPress/Title';
 const ContactForm = React.memo(() => {
   const [value, setValue] = React.useState({})
   const [radioStatus, setRadioStatus] = useState('active');
+  const [checkboxStatus, setCheckboxStatus] = useState(false);
 
   const [setSubmitted] = useState(false);
 
   function handleChange(e: any) {
     value[e.target.id] = e.target.value
-    // setServerResponse('')
     setValue({ ...value })
   }
 
   function handleRadioChange(e: any) {
     setRadioStatus(e.target.value);
+  }
+
+  function handleCheckboxChange(e: any) {
+    setCheckboxStatus(!checkboxStatus);
   }
 
   async function onSubmit(e: any) {
@@ -75,7 +78,7 @@ const ContactForm = React.memo(() => {
           </div>
           <div className={formDiv}>
             <label className={label}>
-              お名前
+              お名前<span className={abbr} title="required">*</span>
             </label>
             <input
               name="name"
@@ -84,11 +87,12 @@ const ContactForm = React.memo(() => {
               placeholder="山田 太郎"
               onChange={handleChange}
               className={input}
+              required
             />
           </div>
           <div className={formDiv}>
             <label className={label}>
-              ふりがな
+              ふりがな<span className={abbr} title="required">*</span>
             </label>
             <input
               name="ruby"
@@ -97,11 +101,12 @@ const ContactForm = React.memo(() => {
               placeholder="やまだ　たろう"
               onChange={handleChange}
               className={input}
+              required
             />
           </div>
           <div className={formDiv}>
             <label className={label}>
-              メールアドレス
+              メールアドレス<span className={abbr} title="required">*</span>
             </label>
             <input
               type="email"
@@ -111,7 +116,9 @@ const ContactForm = React.memo(() => {
               placeholder="sample@jceoa.org"
               value={value['email'] || ``}
               className={input}
-              onChange={handleChange} />
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className={formDiv}>
             <label className={label}>
@@ -128,7 +135,7 @@ const ContactForm = React.memo(() => {
           </div>
           <div className={formDiv}>
             <label className={label}>
-              お問い合わせ内容
+              お問い合わせ内容<span className={abbr} title="required">*</span>
             </label>
             <textarea
               name="message"
@@ -136,10 +143,17 @@ const ContactForm = React.memo(() => {
               placeholder="こちらにご記入ください"
               value={value['message'] || ``}
               className={textarea}
-              onChange={handleChange} />
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className={checkWrap}>
+            <label htmlFor='agreement' className={checkLabel} >
+              <input type="checkbox" value="agreement" name="agreement" id="agreement" className={check} checked={checkboxStatus} onChange={handleCheckboxChange} />個人情報の取り扱いについて同意する
+            </label>
           </div>
           <div className={submitDiv}>
-            <input className={submit} type="submit" value="上記の内容で送信する" />
+            <input className={submit} disabled={!checkboxStatus} type="submit" value="上記の内容で送信する" />
           </div>
         </form>
       </div>
