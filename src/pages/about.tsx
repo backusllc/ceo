@@ -1,4 +1,4 @@
-import { GatsbyLinkProps, graphql } from 'gatsby';
+import { GatsbyLinkProps } from 'gatsby';
 import React from 'react';
 
 import Title from '../components/organisms/WordPress/Title';
@@ -17,7 +17,7 @@ export default function service(props: GatsbyLinkProps<{}>) {
         title={"私たちについて"}
       />
       <Layout >
-        <div className='inner'>
+        <div className='inner' id="greeting">
           <Title Tag='h1' title='ABOUT' subTitle='私たちについて' isPageTitle />
         </div>
         <TextImage03 flexDirection={"row-reverse"}

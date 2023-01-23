@@ -31,17 +31,17 @@ export default [
             {
                 "id": 2.1,
                 "text": "教育",
-                "link": "/activity#education",
+                "link": "/activity/#education",
             },
             {
                 "id": 2.2,
                 "text": "イベント",
-                "link": "/activity#event",
+                "link": "/activity/#event",
             },
             {
                 "id": 2.3,
                 "text": "コミュニティ",
-                "link": "/activity#community",
+                "link": "/activity/#community",
             },
         ],
     },
@@ -58,12 +58,12 @@ export default [
             {
                 "id": 3.2,
                 "text": "開催前イベント",
-                "link": "/event#before",
+                "link": "/event/#before",
             },
             {
                 "id": 3.3,
                 "text": "終了イベント",
-                "link": "/event#end",
+                "link": "/event/#end",
             },
         ],
     },
@@ -75,17 +75,17 @@ export default [
             {
                 "id": 4.1,
                 "text": "お知らせ",
-                "link": "/blog#information",
+                "link": "/blog/#information",
             },
             {
                 "id": 4.2,
                 "text": "プレスリリース",
-                "link": "/blog#release",
+                "link": "/blog/#release",
             },
             {
                 "id": 4.3,
                 "text": "活動報告",
-                "link": "/blog#report",
+                "link": "/blog/#report",
             },
         ],
     },

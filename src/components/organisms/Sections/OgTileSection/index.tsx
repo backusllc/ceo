@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+// import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 import { svg, grid, itemDiv, titleDiv, title } from './index.css'
 import { sprinkles } from '../../../../styles/sprinkles.css';
@@ -18,7 +18,7 @@ export const OgTileSection = (props: TileSectionProps) => {
 
   return (
     <>
-      <section>
+      {/* <section>
         <div className="inner">
           <div className={`${grid} ${sprinkles({
             gridTemplateColumns: {
@@ -53,7 +53,7 @@ export const OgTileSection = (props: TileSectionProps) => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

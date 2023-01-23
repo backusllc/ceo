@@ -118,6 +118,7 @@ export const li: string = style({
 export const link: string = style({
     fontSize: '1.4rem',
     color: '#999999',
+    cursor: 'pointer',
     '@media': {
         'screen and (min-width: 768px)': {
             // display: 'none',

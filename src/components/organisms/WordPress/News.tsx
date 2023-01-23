@@ -38,7 +38,6 @@ const News = React.memo(({ dataSrc, slug, title, displayCount, isDisplayTitle = 
                                         </div>
                                         {isDisplayTitle && <h3 className={text}>{item.node.title}</h3>}
                                         <div className={tagList} >
-                                            {console.log(item.node.tags)}
                                             {item.node.tags?.edges.map((tagItem: any) => {
                                                 return <>
                                                     <div id={tagItem.node.id} className={tag}>{tagItem.node.name}</div>

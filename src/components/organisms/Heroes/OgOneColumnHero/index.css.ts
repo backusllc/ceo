@@ -55,6 +55,7 @@ export const bottomDiv: string = style({
     marginLeft: 'auto',
     marginRight: 'auto',
     marginTop: '0',
+    opacity: 0,
     '@media': {
         'screen and (min-width: 981px)': {
             position: 'absolute',
@@ -73,7 +74,7 @@ export const title: string = style({
     marginBottom: '0.5rem',
     fontWeight: '700',
     fontFamily: '"Bebas", cursive',
-    opacity: 0,
+    // opacity: 0,
     '@media': {
         'screen and (min-width: 981px)': {
             fontSize: '5.5rem',
@@ -89,6 +90,7 @@ export const subTitle: string = style({
     letterSpacing: '0.1em',
     lineHeight: '1.71em',
     marginBottom: '3.6rem',
+    // opacity: 0,
     '@media': {
         'screen and (min-width: 981px)': {
             fontSize: '1.5rem',

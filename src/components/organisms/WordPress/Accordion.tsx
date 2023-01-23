@@ -1,5 +1,6 @@
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
+// import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import React, { useState } from 'react'
+import { Link, navigate } from 'gatsby';
 
 import { titleWrapClose, titleWrapOpen, title, ul, li, link, accordionHeightActive, accordionHeightNotActive } from './Accordion.css'
 
@@ -14,6 +15,11 @@ const Accordion = React.memo(({ menu, hideSidebar }: Props) => {
   const toggleAccordion = (e: any) => {
     setActiveState(!setActive);
   };
+
+  const handleClick = (link: any) => {
+    navigate(link);
+  }
+
   const accordionHeight = setActive ? accordionHeightActive : accordionHeightNotActive;
 
   const titleWrap = setActive ? titleWrapOpen : titleWrapClose;
@@ -22,11 +28,11 @@ const Accordion = React.memo(({ menu, hideSidebar }: Props) => {
     <>
       <div className={titleWrap}>
         <div className={`${title} sp`} onClick={toggleAccordion}>{menu.title}</div>
-        <AnchorLink to={menu.link} className={`${title} pc`} onAnchorLinkClick={hideSidebar}>{menu.title}</AnchorLink>
+        <Link to={menu.link} className={`${title} pc`} >{menu.title}</Link>
       </div>
       <ul className={`${ul} ${accordionHeight}`} onClick={toggleAccordion}>
         {menu.listMenu.map((item) => (
-          <li key={item.id} className={li} onClick={hideSidebar}><AnchorLink className={link} to={item.link} >{item.text}</AnchorLink></li>
+          <li key={item.id} className={li} ><div className={link} onClick={() => { handleClick(item.link) }}>{item.text}</div></li>
         ))
         }
       </ul>

@@ -123,8 +123,6 @@ const displacementSlider = function (opts) {
   };
   addEvents();
   window.addEventListener('resize', () => {
-    // renderer.setSize(renderW, renderH);
-    // サイズを取得
     let width = window.innerWidth <= 1200 ? window.innerWidth : 850;
     let height = window.innerWidth <= 1200 ? renderWidth * 470 / 850 : 470;
 
@@ -172,21 +170,33 @@ export const OgOneColumnHero = () => {
     let i = 1;
     let timer = setInterval(func, interval);
 
+    const canvasEl = document.querySelector('canvas');
+    const slideTitleEl = document.querySelector(`.${bottomDiv}`);
 
-    //animation
-    const slideTitleEl = document.querySelector(`.${title}`);
-    gsap.fromTo(slideTitleEl,
-      {
-        autoAlpha: 0,
-        y: 20,
-        ease: 'Expo.easeIn',
-      },
-      {
-        autoAlpha: 1,
-        y: 0,
-        duration: .5,
-      }
-    )
+    gsap.timeline().fromTo
+      ("canvas",
+        {
+          autoAlpha: 0,
+          y: 20,
+          ease: 'Expo.easeIn',
+        },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.5,
+        }
+      ).fromTo(slideTitleEl,
+        {
+          autoAlpha: 0,
+          y: 20,
+          ease: 'Expo.easeIn',
+        },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.5,
+        }
+      )
     return () => clearInterval(timer);
   }, []);
 

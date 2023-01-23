@@ -26,21 +26,22 @@ const Activity = React.memo(({ hash }: any) => {
 
     useEffect(() => {
         let defaultCategoryStatus = 0;
-        const hashSave = window.location.hash;
 
-        switch (hashSave) {
+        switch (hash) {
             case "#education":
                 defaultCategoryStatus = 1;
                 break;
             case "#event":
                 defaultCategoryStatus = 2;
+                break;
             case "#community":
                 defaultCategoryStatus = 3;
+                break;
             default:
                 break;
         };
         setCategoryStatus(defaultCategoryStatus);
-    }, [])
+    }, [hash])
 
     useEffect(() => {
         setActivity(activityLists?.allActivity.edges);
@@ -77,8 +78,6 @@ const Activity = React.memo(({ hash }: any) => {
     const lastBlogIndex = page * blogLimit;
     const firstBlogIndex = lastBlogIndex - blogLimit;
     const currentActivity = filteredEvents?.slice(firstBlogIndex, lastBlogIndex);
-
-    console.log(currentActivity);
 
     const changeEvent = (status: number) => {
         setCategoryStatus(status);

@@ -55,13 +55,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-anchor-links",
-      options: {
-        offset: -100,
-        duration: 5,
-      }
-    },
-    {
       resolve: `gatsby-plugin-lodash`,
       options: {
         disabledFeatures: [`shorthands`, `cloning`],

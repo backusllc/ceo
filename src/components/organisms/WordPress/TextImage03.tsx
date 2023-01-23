@@ -44,7 +44,7 @@ const TextImage03 = React.memo(({
                             />
                         </div>
                     </div>
-                    <div className={multiColumnTileBottom} id="greeting">
+                    <div className={multiColumnTileBottom}>
                         <div className={container}
                             data-aos="fade"
                             data-aos-duration="1000"

@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useRef } from 'react'
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+// import { AnchorLink } from "gatsby-plugin-anchor-links";
 import menus from '../../../constants/navlink'
 
 import { GatsbyContext } from '../../../context/context'
 import { AtCloseButton } from '../../atoms'
 import { wrap, menuWrap, menuContainer, img, logoDiv, logoLink, liMenu, aMenu, wrapMegaMenu, liMegaMenu, aMegaMenu, } from './Navigation.css'
 import Accordion from './Accordion';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 
 export const Navigation = () => {
     const data = useStaticQuery(query);
@@ -35,9 +35,9 @@ export const Navigation = () => {
             {isSidebarOpen &&
                 <div className={wrap}>
                     <div className={logoDiv} >
-                        <AnchorLink to="/" className={logoLink}>
-                            <img src={data.file.publicURL} alt="一般社団法人 日本CEO協会" onClick={hideSidebar} />
-                        </AnchorLink>
+                        <Link to="/" className={logoLink} onClick={hideSidebar}>
+                            <img src={data.file.publicURL} alt="一般社団法人 日本CEO協会" />
+                        </Link>
                         <AtCloseButton onClick={hideSidebar} />
                     </div>
                     <div className={`inner ${menuContainer}`}>

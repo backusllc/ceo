@@ -28,7 +28,10 @@ const NewsList = React.memo(({
                                         <Link className={link} to={`/blog/post/${item.node.slug}`}></Link>
                                         <div className={imageWrap}>
                                             <div className={imgDiv}>
-                                                <img className={img} src={item.node.featuredImage.node.sourceUrl} alt={item.node.title} loading="lazy" />
+                                                <picture>
+                                                    <source type="image/webp" srcSet={`${item.node.featuredImage?.node.sourceUrl}.webp`} />
+                                                    <img className={img} src={item.node.featuredImage.node.sourceUrl} alt={item.node.title} loading="lazy" />
+                                                </picture>
                                             </div>
                                         </div>
                                         <div className={textDiv}>

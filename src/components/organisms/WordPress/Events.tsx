@@ -37,7 +37,7 @@ const Events = React.memo(({ hash }: string) => {
                 break;
         };
         SetEventStatus(defaultEventStatus);
-    }, [])
+    }, [hash])
 
     useEffect(() => {
         setEvents(eventLists?.posts?.edges);

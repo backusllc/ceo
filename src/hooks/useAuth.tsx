@@ -85,7 +85,6 @@ const useProvideAuth = (): UseAuth => {
             setSubdomain(subdomain);
             return { success: true, message: '' };
         } catch (error) {
-            console.log(error)
             return {
                 success: false,
                 message: 'メールアドレスは既に登録済みです',

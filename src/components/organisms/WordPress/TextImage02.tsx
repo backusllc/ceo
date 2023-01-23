@@ -40,9 +40,7 @@ const TextImage02 = React.memo(({
             <div className="">
                 <div className={`${multiColumnGrid} ${spMultiColumnGrid}`}>
                     <div className={multiColumnTile}>
-                        <div className={imageContainer} style={{
-
-                        }}>
+                        <div className={imageContainer}>
                             <picture>
                                 <source type="image/webp" srcSet={`${imageSrc}.webp`} />
                                 <img className={image} src={`${imageSrc}.png`} alt={imageAlt} loading="lazy" />

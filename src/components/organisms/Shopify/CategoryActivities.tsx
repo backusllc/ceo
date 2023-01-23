@@ -30,7 +30,6 @@ const CategoryActivities = React.memo(({
                                         data-aos-duration="1000"
                                         data-aos-easing="ease"
                                     >
-                                        {console.log(item.node)}
                                         <Link className={link} to={item.node.uri}></Link>
                                         <div className={imgDiv}>
                                             <img className={img} src={item.node.featuredImage?.node.sourceUrl} alt={item.node.title} />
