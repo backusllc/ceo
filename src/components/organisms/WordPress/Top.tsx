@@ -10,7 +10,7 @@ import Member from '../../../components/organisms/WordPress/Member';
 import Logos from '../../../components/organisms/WordPress/Logos';
 import AutoSlider from '../../../components/organisms/WordPress/AutoSlider';
 import SNS from '../../../components/organisms/WordPress/SNS';
-import Title from '../../../components/organisms/WordPress/Title';
+import TopTitle from '../../../components/organisms/WordPress/TopTitle';
 import { useGetWordpressPostByCustomCategorySettings } from '../../../hooks/useGetWordpressPostByCustomCategorySettings';
 import { useGetWordpressPostByCategorySettings } from '../../../hooks/useGetWordpressPostByCategorySettings';
 import SocialSection from '../../../components/organisms/WordPress/SocialSection';
@@ -55,7 +55,7 @@ export default function Index() {
                                 <TextImage01 />
                                 <AutoSlider />
                                 <div className="inner" >
-                                    <Title Tag='h2' title='ACTIVITY' subTitle='活動概要' />
+                                    <TopTitle Tag='h2' title='ACTIVITY' subTitle='活動概要' />
                                 </div>
                                 <TextImage02 flexDirection={"row"}
                                     textAlign={"right"}
@@ -83,19 +83,19 @@ export default function Index() {
                                     description="この激しい変化の真っ只中にある現代社会に必要とされるのは、変化を好機ととらえ、主体的に考え実践、実装していく人間だ。" />
                                 <section className={eventSection}>
                                     <div className="inner">
-                                        <Title Tag='h2' title='EVENT' subTitle='イベント情報' />
+                                        <TopTitle Tag='h2' title='EVENT' subTitle='イベント情報' />
                                         <CategoryProducts dataSrc={postItems} title={"イベント"} slug="event" displayCount={3} />
                                     </div>
                                 </section>
                                 <section className={newsSection}>
                                     <div className="inner">
-                                        <Title Tag='h2' title='NEWS' subTitle='お知らせ' />
+                                        <TopTitle Tag='h2' title='NEWS' subTitle='お知らせ' />
                                     </div>
                                     <News dataSrc={blogItems} title={"イベント"} slug="event" displayCount={4} />
                                 </section>
                                 <section className={memberSection} >
                                     <div className="inner">
-                                        <Title Tag='h2' title='MEMBER' subTitle='メンバー一覧' />
+                                        <TopTitle Tag='h2' title='MEMBER' subTitle='メンバー一覧' />
                                     </div>
                                     <Member categoryName={directorName} dataSrc={directorPostItems} />
                                     <Member categoryName={supporterName} dataSrc={supporterPostItems} />
