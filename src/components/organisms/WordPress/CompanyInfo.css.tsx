@@ -113,7 +113,7 @@ export const gridLayout: string = style({
 
     '@media': {
         'screen and (min-width: 768px)': {
-            padding: '3rem 0 18rem 0',
+            padding: '3rem 0 20rem 0',
 
         }
     }
