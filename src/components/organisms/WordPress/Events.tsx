@@ -18,7 +18,7 @@ const Events = React.memo(({ hash }: string) => {
     const [events, setEvents] = useState();
     const [page, setPage] = useState(1);
 
-    const nowDatetime = new Date();
+    const nowDatetime = Date.parse(new Date());
     const { loading: tagLoading, data: tagLists } = useGetWordpressTags();
     const { loading: eventLoading, data: eventLists } = useGetWordpressEvents();
     const initialData = eventLists?.posts?.edges;
@@ -51,10 +51,10 @@ const Events = React.memo(({ hash }: string) => {
             if (eventStatus == 0) {
                 return true;
             }
-            else if (eventStatus == 1 && (!row.node.commonACF.displayenddate || row.node.commonACF.displayenddate < nowDatetime.toLocaleString().replaceAll('/', '-'))) {
+            else if (eventStatus == 1 && (!row.node.commonACF.displayenddate || Date.parse(row.node.commonACF.displayenddate) < nowDatetime)) {
                 return false;
             }
-            else if (eventStatus == 2 && (!row.node.commonACF.displayenddate || row.node.commonACF.displayenddate >= nowDatetime.toLocaleString().replaceAll('/', '-'))) {
+            else if (eventStatus == 2 && (!row.node.commonACF.displayenddate || Date.parse(row.node.commonACF.displayenddate) >= nowDatetime)) {
                 return false;
             }
             return row;

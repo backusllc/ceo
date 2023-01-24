@@ -25,7 +25,7 @@ const CollectionSelection = React.memo(({
 }: Props) => {
 
     const months = ["JAN.", "FEB.", "MAR.", "APR.", "MAY.", "JUN.", "JUL.", "AUG.", "SEP.", "OCT.", "NOV.", "DEC."];
-    const nowDatetime = new Date();
+    const nowDatetime = Date.parse(new Date());
 
     return (
         <>
@@ -53,7 +53,7 @@ const CollectionSelection = React.memo(({
                                         </div>
                                         <div className={recruitingTag} >
                                             {
-                                                (!item.node.commonACF?.displayenddate || item.node.commonACF?.displayenddate > nowDatetime.toLocaleString().replaceAll('/', '-')) ?
+                                                (!item.node.commonACF?.displayenddate || Date.parse(item.node.commonACF?.displayenddate) > nowDatetime) ?
                                                     <div className={activeTag}>募集中</div>
                                                     :
                                                     <div className={closeTag}>終了</div>

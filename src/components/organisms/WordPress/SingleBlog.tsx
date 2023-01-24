@@ -1,7 +1,6 @@
 import React from 'react';
 
 import dateFormat from "dateformat";
-
 import { topDiv, topInformationDiv, breadcrumb, activeTag, closeTag, middleDiv, dateDiv, dateTagWrap, dateText, titleText, bottomDiv, thumbnailDiv, tag, tagList, month, day, recruitingTag, titleContainer, titleBorder, titleClass, subTitleClass } from './SingleBlog.css'
 import { Link } from 'gatsby';
 
@@ -66,11 +65,3 @@ const SingleBlog = React.memo(({ blog }: Props) => {
 });
 
 export default SingleBlog;
-
-// export const Head = () => {
-//     return (
-//         <>
-//             <title>aaaaa</title>
-//         </>
-//     )
-// }

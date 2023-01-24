@@ -11,7 +11,7 @@ interface Props {
 
 const SingleEvent = React.memo(({ post }: Props) => {
     const months = ["JAN.", "FEB.", "MAR.", "APR.", "MAY.", "JUN.", "JUL.", "AUG.", "SEP.", "OCT.", "NOV.", "DEC."];
-    const nowDatetime = new Date();
+    const nowDatetime = Date.parse(new Date());
 
     return (
         <>
@@ -19,7 +19,7 @@ const SingleEvent = React.memo(({ post }: Props) => {
                 <div className={topDiv}>
                     <div className={recruitingTag} >
                         {
-                            (!post.commonACF?.displayenddate || post.commonACF?.displayenddate > nowDatetime.toLocaleString().replaceAll('/', '-')) ?
+                            (!post.commonACF?.displayenddate || Date.parse(post.commonACF?.displayenddate) > nowDatetime) ?
                                 <div className={activeTag}>募集中</div>
                                 :
                                 <div className={closeTag}>終了イベント</div>
