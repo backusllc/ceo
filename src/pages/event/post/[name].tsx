@@ -20,6 +20,9 @@ export async function getServerData(context: any) {
         return {
             props: { singlePost: res },
             status: 200,
+            headers: {
+                "Cache-Control": "public, max-age=120",
+            },
         };
     } catch {
         return {
@@ -27,4 +30,12 @@ export async function getServerData(context: any) {
             status: 500,
         };
     }
+}
+
+export async function config() {
+    return (props) => {
+        return {
+            defer: true,
+        };
+    };
 }
