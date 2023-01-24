@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 
 import { pageWrap } from './Layout.css'
+import { useLocation } from "@reach/router"
 import { GatsbyContext } from '../../../context/context'
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 
 const Layout = React.memo(({ children }: Props) => {
   const { hideSidebar } = useContext(GatsbyContext)
+  const location = useLocation();
 
   useEffect(() => {
     hideSidebar();
