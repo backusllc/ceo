@@ -51,6 +51,7 @@ export const imageContainer: string = style({
     '@media': {
         'screen and (min-width: 768px)': {
             marginBottom: '1rem',
+            paddingTop: '56.25%',
         }
     }
 })
