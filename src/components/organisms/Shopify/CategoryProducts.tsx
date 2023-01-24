@@ -39,7 +39,7 @@ const CollectionSelection = React.memo(({
                                     <li key={item.node.id} className={li}
                                         data-aos="fade"
                                         data-aos-delay={`${index % 3 * 100}`}
-                                        data-aos-duration="1000"
+                                        data-aos-duration="500"
                                         data-aos-easing="ease"
 
                                     >
