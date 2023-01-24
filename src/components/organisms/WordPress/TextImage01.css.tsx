@@ -16,13 +16,31 @@ export const multiColumnGrid: string = style({
     }
 });
 
-export const multiColumnTile: string = style({
+export const multiColumnTileTop: string = style({
     display: 'flex',
     flexBasis: '50%',
     flexDirection: 'column',
     justifyContent: 'flex-start',
     margin: '0 auto',
     width: '90%',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            justifyContent: 'center',
+            width: '100%',
+            ':first-child': {
+                padding: '0 9px 0 10vw',
+            }
+        }
+    }
+});
+
+export const multiColumnTileBottom: string = style({
+    display: 'flex',
+    flexBasis: '50%',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    margin: '0 0 0 auto',
+    width: '95%',
     '@media': {
         'screen and (min-width: 768px)': {
             justifyContent: 'center',
@@ -71,9 +89,24 @@ export const title: string = style({
 });
 
 export const description: string = style({
-    fontSize: '1.5rem',
-    lineHeight: '3rem',
+    fontSize: '1.4rem',
+    lineHeight: '2em',
+    letterSpacing: '0.05em',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '1.5rem',
+            letterSpacing: '0.1em',
+            padding: '1rem 1.7rem 1rem 1.7rem',
+        }
+    }
 });
+
+export const imageContainer: string = style({
+    overflow: 'hidden',
+    maxWidth: '100%',
+    maxHeight: '100%',
+    marginBottom: '1rem',
+})
 
 export const img: string = style({
     width: '100%',

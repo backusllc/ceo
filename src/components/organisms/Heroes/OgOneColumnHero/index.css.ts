@@ -19,17 +19,38 @@ export const img: string = style({
 
 export const section: string = style({
     position: 'relative',
-    marginTop: '8rem',
+    marginTop: '6.8rem',
     marginRight: 'auto',
     marginLeft: 'auto',
-    minHeight: '60vh',
+    minHeight: 'calc(100vh - 6rem - 6.8rem)',
     maxWidth: '1200px',
     overflow: 'hidden',
+    marginBottom: 0,
     '@media': {
         'screen and (min-width: 981px)': {
             width: '90%',
             marginTop: '6.1rem',
-            marginBottom: '13.5rem',
+            minHeight: 'calc(100vh - 6.1rem - 6.8rem)',
+            // marginBottom: '13.5rem',
+        }
+    }
+})
+
+export const sectionInner: string = style({
+    position: 'relative',
+    // marginTop: '6.8rem',
+    // marginRight: 'auto',
+    // marginLeft: 'auto',
+    // minHeight: 'calc(100vh - 6rem - 6.8rem)',
+    // maxWidth: '1200px',
+    // overflow: 'hidden',
+    // marginBottom: 0,
+    '@media': {
+        'screen and (min-width: 981px)': {
+            // width: '90%',
+            // marginTop: '6.1rem',
+            // minHeight: 'calc(100vh - 6.1rem - 6.8rem)',
+            // marginBottom: '13.5rem',
         }
     }
 })

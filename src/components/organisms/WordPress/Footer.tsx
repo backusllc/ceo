@@ -59,8 +59,8 @@ const Footer = () => {
                 </div>
             </div>
             <div className={`inner ${rights}`} >
-                <div className={privacyText}>
-                    <Link to="/policy" >個人情報の取り扱いについて</Link></div>
+                <div>
+                    <Link to="/policy" className={privacyText}>個人情報の取り扱いについて</Link></div>
                 <div className={rightsText}>© 一般社団法人日本CEO協会 All Rights Reserved.</div>
                 <button onClick={handleClick} className={scrollTop}>
                     <i className={arrow} ></i>

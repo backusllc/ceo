@@ -18,22 +18,30 @@ export const textWrap: string = style({
 
 export const title: string = style({
   marginBottom: '4.1rem',
-  fontSize: '2.4rem',
+  fontSize: '1.8rem',
   fontWeight: 'bold',
   letterSpacing: '0.05em',
   lineHeight: '1.5em',
   '@media': {
     'screen and (min-width: 768px)': {
+      marginBottom: '4.1rem',
+      fontSize: '2.4rem',
+      fontWeight: 'bold',
+      letterSpacing: '0.05em',
+      lineHeight: '1.5em',
     }
   }
 })
 
 export const text: string = style({
-  fontSize: '1.5rem',
-  letterSpacing: '0.1em',
-  lineHeight: '2.33em',
+  fontSize: '1.4rem',
+  letterSpacing: '0.05em',
+  lineHeight: '2em',
   '@media': {
     'screen and (min-width: 768px)': {
+      fontSize: '1.5rem',
+      letterSpacing: '0.1em',
+      lineHeight: '2.33em',
     }
   }
 })
@@ -48,27 +56,33 @@ export const ol: string = style({
 })
 
 export const li: string = style({
-  fontSize: '1.5rem',
-  letterSpacing: '0.1em',
-  lineHeight: '2.33em',
+  fontSize: '1.4rem',
+  letterSpacing: '0.05em',
+  lineHeight: '2em',
   marginBottom: '3rem',
   ':last-child': {
     marginBottom: '0',
   },
   '@media': {
     'screen and (min-width: 768px)': {
+      fontSize: '1.5rem',
+      letterSpacing: '0.1em',
+      lineHeight: '2.33em',
     }
   }
 })
 
 export const revisionDate: string = style({
-  fontSize: '1.5rem',
-  letterSpacing: '0.1em',
-  lineHeight: '2.33em',
+  fontSize: '1.4rem',
+  letterSpacing: '0.05em',
+  lineHeight: '2em',
   marginTop: '2.4rem',
   marginBottom: '10.1rem',
   '@media': {
     'screen and (min-width: 768px)': {
+      fontSize: '1.5rem',
+      letterSpacing: '0.1em',
+      lineHeight: '2.33em',
     }
   }
 })

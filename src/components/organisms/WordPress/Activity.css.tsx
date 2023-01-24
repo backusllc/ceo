@@ -38,10 +38,12 @@ export const filterContainer: string = style({
 
 export const filter: string = style({
     textAlign: 'center',
-    flexBasis: '47%',
+    flexBasis: 'calc(50% - 0.5rem)',
+    height: '40px',
     '@media': {
         'screen and (min-width: 768px)': {
             flexBasis: '47%',
+            height: '59px',
         }
     }
 })
@@ -49,12 +51,14 @@ export const filter: string = style({
 export const filterButton: string = style({
     fontSize: '1.3rem',
     width: '100%',
+    height: '100%',
     fontWeight: 'bold',
-    padding: '2rem 0',
-    display: 'inline-block',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     color: '#999999',
     border: '1px solid #E5E5E5',
-    cursor : 'pointer',
+    cursor: 'pointer',
 
     '@media': {
         'screen and (min-width: 768px)': {

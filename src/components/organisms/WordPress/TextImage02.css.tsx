@@ -25,9 +25,16 @@ export const multiColumnTile: string = style({
 });
 
 export const container: string = style({
-    marginTop: '-2.5rem',
+    marginTop: '-3em',
+    // '@media': {
+    // op: '-6.5em'
+    //     }
+    // },
     '@media': {
         'screen and (min-width: 768px)': {
+            marginTop: '-6.5em',
+        },
+        'screen and (min-width: 1200px)': {
             marginTop: '3rem'
         }
     }
@@ -38,8 +45,8 @@ export const textContainer: string = style({
 
 export const imageContainer: string = style({
     overflow: 'hidden',
-    maxWidth: '100%',
-    maxHeight: '100%',
+    position: 'relative',
+    paddingTop: '52%',
     marginBottom: '0',
     '@media': {
         'screen and (min-width: 768px)': {
@@ -49,10 +56,16 @@ export const imageContainer: string = style({
 })
 
 export const image: string = style({
+    position: 'absolute',
+    top: '0',
+    left: '0',
     width: '100%',
-    height: '100%',
+    height: 'auto',
     objectFit: 'cover',
-    objectPosition: 'center'
+    // width: '100%',
+    // height: '100%',
+    // objectFit: 'cover',
+    // objectPosition: 'center'
 })
 
 export const titleClass: string = style({
@@ -87,11 +100,14 @@ export const contentClass: string = style({
 export const descriptionClass: string = style({
     fontSize: '1.4rem',
     lineHeight: '2.4rem',
-    marginBottom: '3.1rem',
+    letterSpacing: '0.05em',
+    marginBottom: '3.7rem',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '1.5rem',
             lineHeight: '3rem',
+            letterSpacing: '0.1em',
+            marginBottom: '3.1rem',
         }
     }
 });
@@ -108,6 +124,24 @@ export const backgroundDiv: string = style({
         'screen and (min-width: 768px)': {
             width: '80%',
             height: '350px',
+        }
+    }
+});
+
+export const marginLeft: string = style({
+    marginLeft: 'calc(100vw / 2* -0.1 )',
+    '@media': {
+        'screen and (min-width: 1200px)': {
+            marginLeft: 0,
+        }
+    }
+});
+
+export const marginRight: string = style({
+    marginRight: 'calc(100vw / 2* -0.1 )',
+    '@media': {
+        'screen and (min-width: 1200px)': {
+            marginRight: 0,
         }
     }
 });

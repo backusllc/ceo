@@ -2,12 +2,12 @@
 import { style } from '@vanilla-extract/css';
 
 export const titleContainer: string = style({
-    marginBottom: '2.7rem',
     paddingBottom: '3.3rem',
+    marginBottom: '3.4rem',
     '@media': {
         'screen and (min-width: 768px)': {
-            marginBottom: '4.8rem',
             paddingBottom: '6.1rem',
+            marginBottom: '10.8rem',
         }
     },
 })
@@ -35,7 +35,9 @@ export const titleClass: string = style({
 export const subTitleClass: string = style({
     fontSize: '1.4rem',
     fontWeight: '600',
+    letterSpacing: '0.03em',
     color: '#CD2C2E',
+    fontFamily: '"Noto Sans JP", sans-serif',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '1.5rem',

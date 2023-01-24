@@ -57,16 +57,29 @@ export const li: string = style({
 })
 
 export const text: string = style({
-    height: '10%',
     minHeight: '0%',
     wordBreak: 'break-all',
-    marginBottom: '1rem',
-    fontSize: '1.3rem',
+    marginBottom: '1.2rem',
+    lineHeight: '1.5em',
+    fontSize: '1.2rem',
+    letterSpacing: '0.015rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '1.3rem',
+        }
+    }
 })
 
 export const postTitle: string = style({
-    fontSize: '1.6rem',
+    fontSize: '1.4rem',
+    letterSpacing: '0.015em',
+    lineHeight: '1.35em',
     fontWeight: '600',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '1.6rem',
+        }
+    }
 })
 
 export const titleContainer: string = style({

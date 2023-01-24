@@ -47,11 +47,16 @@ export const multiColumnGrid: string = style({
     flexDirection: 'row',
     justifyContent: 'space-between',
     flexWrap: 'nowrap',
-    padding: '3.6rem 0',
+    padding: '1.7rem 0',
     borderBottom: '1px solid #E5E5E5',
     borderTop: '1px solid #E5E5E5',
     ':last-child': {
         marginBottom: '14rem',
+    },
+    '@media': {
+        'screen and (min-width: 768px)': {
+            padding: '3.6rem 0',
+        }
     }
 });
 
@@ -75,6 +80,8 @@ export const titleClass: string = style({
     fontSize: '1.3rem',
     fontWeight: '600',
     letterSpacing: '0.1em',
+    padding: 0,
+    margin: 0,
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '1.7rem',
@@ -88,6 +95,8 @@ export const description: string = style({
     lineHeight: '1.8em',
     letterSpacing: '0.05em',
     listStyle: 'initial',
+    padding: 0,
+    margin: 0,
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '1.8rem',
@@ -134,6 +143,7 @@ export const gridText: string = style({
 });
 
 export const gridMap: string = style({
+    marginTop: '2.3rem',
     gridColumnStart: 1,
     gridColumnEnd: 3,
     gridRowStart: 2,

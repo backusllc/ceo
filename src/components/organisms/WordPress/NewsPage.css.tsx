@@ -38,7 +38,7 @@ export const filterContainer: string = style({
 
 export const filter: string = style({
     textAlign: 'center',
-    flexBasis: '47%',
+    flexBasis: 'calc(50% - 0.5rem)',
     '@media': {
         'screen and (min-width: 768px)': {
             flexBasis: '33%',

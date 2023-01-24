@@ -62,9 +62,7 @@ const SingleEvent = React.memo(({ post }: Props) => {
                     <div className={dateDiv}>
                         <span className={month}>{months[new Date(post.commonACF?.displayenddate).getMonth()]}</span><span className={day}>{new Date(post.commonACF?.displayenddate).getDate()}</span>
                     </div>
-                    <h1 className={titleText}>{post.title}</h1>
-                </div>
-                <div className={bottomDiv}>
+                    <h1 className={titleText} style={{ marginBottom: 0 }}>{post.title}</h1>
                 </div>
                 <div className={thumbnailDiv}>
                     <img src={post.featuredImage.node.sourceUrl} alt={post.title} loading="lazy" />

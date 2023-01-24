@@ -1,5 +1,5 @@
 import React from 'react';
-import { multiColumnGrid, multiColumnTile, container, textContainer, imageContainer, image, titleClass, contentClass, descriptionClass, backgroundDiv } from './TextImage02.css'
+import { multiColumnGrid, multiColumnTile, container, textContainer, imageContainer, image, titleClass, contentClass, descriptionClass, backgroundDiv, marginLeft, marginRight } from './TextImage02.css'
 import { sprinkles, Sprinkles } from '../../../styles/sprinkles.css';
 import ViewMoreButton from './ViewMoreButton';
 import { FadeInOnScroll } from '../../../hooks/FadeInOnScroll';
@@ -30,16 +30,18 @@ const TextImage02 = React.memo(({
     const spMultiColumnGrid = sprinkles({
         flexDirection: {
             mobile: 'column',
+            tablet: flexDirection,
             desktop: flexDirection,
         }
     })
 
+    const imageMargin = right === 0 ? marginLeft : marginRight;
+
     return (
         <>
-            {/* <FadeInOnScroll duration={1}> */}
             <div className="">
                 <div className={`${multiColumnGrid} ${spMultiColumnGrid}`}>
-                    <div className={multiColumnTile}>
+                    <div className={`${multiColumnTile} ${imageMargin}`}>
                         <div className={imageContainer}>
                             <picture>
                                 <source type="image/webp" srcSet={`${imageSrc}.webp`} />

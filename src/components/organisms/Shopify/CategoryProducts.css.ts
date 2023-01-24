@@ -38,7 +38,7 @@ export const ul: string = style({
     flexDirection: 'column',
     flexWrap: 'wrap',
     gap: '4rem',
-    marginBottom: '4.8rem',
+    marginBottom: '8.7rem',
     '@media': {
         'screen and (min-width: 768px)': {
             flexDirection: 'row',
@@ -63,6 +63,9 @@ export const li: string = style({
     position: 'relative',
     marginBottom: '1rem',
     width: '100%',
+    ':last-child': {
+        marginBottom: '0',
+    }
 })
 
 export const text: string = style({

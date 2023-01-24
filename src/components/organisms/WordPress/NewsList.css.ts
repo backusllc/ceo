@@ -34,7 +34,7 @@ export const img: string = style({
 
 export const imageWrap: string = style({
     width: '100%',
-    flexBasis: '40%',
+    // flexBasis: '40%',
 })
 
 export const textDiv: string = style({
@@ -60,7 +60,8 @@ export const ul: string = style({
 
 export const li: string = style({
     position: 'relative',
-    flexBasis: '47%',
+    // flexBasis: '47%',
+    flexBasis: 'calc(50% - 1rem)',
     display: 'flex',
     flexDirection: 'column',
     paddingBottom: '2rem',
@@ -90,7 +91,8 @@ export const link: string = style({
 
 export const text: string = style({
     fontSize: '1.4rem',
-    height: '10%',
+    letterSpacing: '0.05em',
+    lineHeight: '1.57em',
     minHeight: '0%',
     wordBreak: 'break-all',
     marginBottom: '1rem',
@@ -103,6 +105,8 @@ export const text: string = style({
 
 export const description: string = style({
     fontSize: '1.2rem',
+    letterSpacing: '0.05em',
+    lineHeight: '1.57em',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '1.4rem',

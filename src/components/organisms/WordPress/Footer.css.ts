@@ -43,11 +43,21 @@ export const rights: string = style({
 });
 
 export const privacyText: string = style({
-    fontSize: '1.2rem',
+    fontSize: '1.3rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '1.2rem',
+        }
+    }
 });
 
 export const rightsText: string = style({
-    fontSize: '1.2rem',
+    fontSize: '1.1rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '1.2rem',
+        }
+    }
 });
 
 export const scrollTop: string = style({
@@ -56,9 +66,15 @@ export const scrollTop: string = style({
     right: 0,
     bottom: 0,
     backgroundColor: 'black',
-    width: '5.5rem',
-    height: '5.5rem',
+    width: '4.5rem',
+    height: '4.5rem',
     fontSize: '1.2rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            width: '5.5rem',
+            height: '5.5rem',
+        }
+    }
 });
 
 export const arrow: string = style({
@@ -79,4 +95,5 @@ export const arrow: string = style({
         display: 'inline-block',
         position: 'absolute',
     },
+
 });

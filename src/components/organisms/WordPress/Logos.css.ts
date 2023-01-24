@@ -2,10 +2,10 @@ import { style } from '@vanilla-extract/css';
 
 export const wrapDiv: string = style({
     marginTop: '3rem',
-    marginBottom: '14rem',
+    marginBottom: '0',
     '@media': {
         'screen and (min-width: 768px)': {
-            marginBottom: '14rem',
+            // marginBottom: '14rem',
         }
     }
 });
@@ -38,11 +38,9 @@ export const ul: string = style({
     justifyContent: 'flex-start',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    marginBottom: '4.8rem',
     gap: '2rem',
     '@media': {
         'screen and (min-width: 768px)': {
-            marginBottom: '9.2rem',
             gap: '2rem',
         }
     }

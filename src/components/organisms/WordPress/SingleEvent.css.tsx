@@ -22,43 +22,61 @@ export const topDiv: string = style({
 export const topInformationDiv: string = style({
     display: 'flex',
     justifyContent: 'flex-start',
-    alignItems: 'center',
     width: '100%',
-    columnGap: '4.4rem',
+    columnGap: '1rem',
+    flexDirection: 'column',
+    alignItems: 'start',
+    rowGap: '0.5rem',
     '@media': {
         'screen and (min-width: 768px)': {
+            flexDirection: 'row',
+            columnGap: '4.4rem',
+            alignItems: 'center',
         }
     },
 })
 
 export const breadcrumb: string = style({
-    display: 'flex',
+    display: 'none',
     '@media': {
         'screen and (min-width: 768px)': {
+            display: 'flex',
         }
     },
 })
 
 export const activeTag: string = style({
     display: 'inline-block',
-    fontSize: '1.5rem',
+    fontSize: '1.3rem',
     fontFamily: '"Noto Sans JP", sans-serif',
     backgroundColor: '#CD2C2E',
     color: '#FFFFFF',
-    padding: '1.5rem 2.3rem',
+    padding: '1.2rem 2.2rem',
     whiteSpace: 'nowrap',
     borderRadius: '4px',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '1.5rem',
+            padding: '1.2rem 3.6rem',
+        }
+    },
 })
 
 export const closeTag: string = style({
     display: 'inline-block',
-    fontSize: '1.5rem',
+    fontSize: '1.3rem',
     fontFamily: '"Noto Sans JP", sans-serif',
     backgroundColor: '#999999',
     color: '#FFFFFF',
-    padding: '1.5rem 2.3rem',
     whiteSpace: 'nowrap',
     borderRadius: '4px',
+    padding: '1.2rem 2.2rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '1.5rem',
+            padding: '1.2rem 3.6rem',
+        }
+    },
 })
 
 export const middleDiv: string = style({
@@ -79,8 +97,9 @@ export const dateDiv: string = style({
     margin: '0',
     flexDirection: 'column',
     zIndex: '2',
-    width: '6.5rem',
-    height: '6.5rem',
+    width: '5rem',
+    minWidth: '5rem',
+    height: '5rem',
     textAlign: 'center',
     justifyContent: 'center',
     color: 'white',
@@ -89,6 +108,7 @@ export const dateDiv: string = style({
     borderRadius: '2px 0 0 0',
     '@media': {
         'screen and (min-width: 768px)': {
+            minWidth: '12.5rem',
             width: '12.5rem',
             height: '12.5rem',
         }
@@ -132,7 +152,7 @@ export const day: string = style({
 export const dateText: string = style({
     display: 'flex',
     columnGap: '0.7rem',
-    fontSize: '1.4rem',
+    fontSize: '1.3rem',
     fontFamily: '"Noto Sans JP", sans-serif',
     color: '#999999',
     '@media': {
@@ -146,8 +166,8 @@ export const dateText: string = style({
 })
 
 export const titleText: string = style({
-    fontSize: '2.2rem',
-    lineHeight: '2em',
+    fontSize: '1.8rem',
+    lineHeight: '1.77em',
     letterSpacing: '0.05em',
     fontWeight: '500',
     fontFamily: '"Noto Sans JP", sans-serif',
@@ -155,6 +175,7 @@ export const titleText: string = style({
         'screen and (min-width: 768px)': {
             fontSize: '2.8rem',
             lineHeight: '1.6em',
+            letterSpacing: '0.05em',
         }
     },
 })
@@ -186,6 +207,7 @@ export const recruitingTag: string = style({
 export const tagList: string = style({
     display: 'flex',
     gap: '1rem',
+    flexWrap: 'wrap',
 })
 
 export const tag: string = style({

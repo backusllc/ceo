@@ -112,11 +112,18 @@ globalStyle('.page', {
 globalStyle('.page h2', {
   position: 'relative',
   marginBottom: "4rem",
-  fontSize: '2.8rem',
+  fontSize: '2rem',
   letterSpacing: '0.05em',
-  lineHeight: '1.3em',
+  lineHeight: '1.35em',
   fontWeight: '700',
-  padding: "0.25rem 2.2rem"
+  padding: "0.25rem 2.2rem",
+  '@media': {
+    'screen and (min-width: 768px)': {
+      fontSize: '2.8rem',
+      letterSpacing: '0.05em',
+      lineHeight: '1.3em',
+    }
+  }
 });
 
 globalStyle('.page h2:before', {
@@ -124,7 +131,7 @@ globalStyle('.page h2:before', {
   top: '0px',
   left: '0px',
   width: '4px',
-  height: '28px',
+  height: '32px',
   position: 'absolute',
   backgroundColor: '#CD2C2E',
   transform: 'scaleX(1)',
@@ -132,38 +139,66 @@ globalStyle('.page h2:before', {
 
 globalStyle('.page h3', {
   backgroundColor: '#F7F7F7',
-  fontSize: '2.2rem',
-  letterSpacing: '0.05em',
-  lineHeight: '1.3em',
-  fontWeight: '700',
-  marginBottom: "2rem",
-  padding: "0.25rem 1rem"
-});
-
-globalStyle('.page h4', {
   fontSize: '1.8rem',
   letterSpacing: '0.05em',
   lineHeight: '1.3em',
   fontWeight: '700',
   marginBottom: "2rem",
   padding: "0.25rem 1rem",
-  borderBottom: '1px solid #CA2C33',
+  '@media': {
+    'screen and (min-width: 768px)': {
+      fontSize: '2.2rem',
+      letterSpacing: '0.05em',
+      lineHeight: '1.3em',
+    }
+  }
 });
 
-globalStyle('.page h5', {
+globalStyle('.page h4', {
   fontSize: '1.6rem',
   letterSpacing: '0.05em',
   lineHeight: '1.3em',
   fontWeight: '700',
   marginBottom: "2rem",
   padding: "0.25rem 1rem",
+  borderBottom: '1px solid #CA2C33',
+  '@media': {
+    'screen and (min-width: 768px)': {
+      fontSize: '1.8rem',
+      letterSpacing: '0.05em',
+      lineHeight: '1.3em',
+    }
+  }
+});
+
+globalStyle('.page h5', {
+  fontSize: '1.5rem',
+  letterSpacing: '0.05em',
+  lineHeight: '1.3em',
+  fontWeight: '700',
+  marginBottom: "2rem",
+  padding: "0.25rem 1rem",
+  '@media': {
+    'screen and (min-width: 768px)': {
+      fontSize: '1.6rem',
+      letterSpacing: '0.05em',
+      lineHeight: '1.3em',
+    }
+  }
 });
 
 globalStyle('.page p', {
-  fontSize: '1.6rem',
-  lineHeight: '2em',
-  letterSpacing: '0.1em',
+  fontSize: '1.4rem',
+  lineHeight: '1.71em',
+  letterSpacing: '0.05em',
   marginBottom: '4rem',
+  '@media': {
+    'screen and (min-width: 768px)': {
+      fontSize: '1.6rem',
+      lineHeight: '2em',
+      letterSpacing: '0.1em',
+    }
+  }
 });
 
 globalStyle('.page ul', {

@@ -22,6 +22,12 @@ export const multiColumnGrid: string = style({
 export const multiColumnTileBottom: string = style({
     flexBasis: '60%',
     zIndex: '1',
+    paddingLeft: '2rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            paddingLeft: '0',
+        }
+    }
 });
 
 export const multiColumnTileTop: string = style({
@@ -98,11 +104,13 @@ export const descriptionClass: string = style({
     fontSize: '1.4rem',
     lineHeight: '2em',
     letterSpacing: '0.05em',
+    marginBottom: '9rem',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '1.6rem',
             lineHeight: '2em',
             letterSpacing: '0.1em',
+            marginBottom: '6rem',
         }
     }
 });
@@ -120,9 +128,16 @@ export const delegateName: string = style({
 export const backgroundDiv: string = style({
     backgroundColor: '#F7F7F7',
     position: 'absolute',
-    width: '80%',
+    width: '95%',
     height: '100%',
-    marginTop: '7.5rem',
-    paddingLeft: '10rem',
+    marginTop: '2rem',
     zIndex: '0',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            width: '80%',
+            height: '100%',
+            marginTop: '7.5rem',
+            paddingLeft: '10rem',
+        }
+    }
 });

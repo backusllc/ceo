@@ -8,7 +8,7 @@ import Title from './Title';
 import { filterWrap, filterDiv, filterContainer, filter, filterButton, selectedButton, filterTagDiv, filterText, filterTagLists } from './Activity.css'
 
 const categoryFilter = [
-    { seq: 0, id: "all", name: "全て" },
+    { seq: 0, id: "all", name: "全サービス" },
     { seq: 1, id: "dGVybTo1MDk=", name: "教育" },
     { seq: 2, id: "dGVybTozOQ==", name: "イベント" },
     { seq: 3, id: "dGVybTo1MTI=", name: "コミュニティ" },
@@ -99,7 +99,7 @@ const Activity = React.memo(({ hash }: any) => {
                     >
                         <div className={filterDiv} >
                             <div className={filter} onClick={() => changeEvent(0)}>
-                                <div className={`${categoryStatus === 0 ? selectedButton : ""} ${filterButton}`}>全て</div>
+                                <div className={`${categoryStatus === 0 ? selectedButton : ""} ${filterButton}`}>全サービス</div>
                             </div>
                             <div className={filter} onClick={() => changeEvent(1)}>
                                 <div className={`${categoryStatus === 1 ? selectedButton : ""} ${filterButton}`}>教育</div>

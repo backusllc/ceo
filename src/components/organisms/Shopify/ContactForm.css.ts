@@ -24,11 +24,12 @@ export const formDiv: string = style({
   display: 'flex',
   flexDirection: 'column',
   columnGap: '15rem',
-  rowGap: '3rem',
+  rowGap: '1rem',
   padding: '3rem 0',
   borderTop: '1px solid #E0E0E0',
   '@media': {
     'screen and (min-width: 768px)': {
+      rowGap: '3rem',
       flexDirection: 'row',
       alignItems: 'center',
       padding: '6rem 0',

@@ -2,11 +2,11 @@ import { style } from '@vanilla-extract/css';
 
 export const wrapDiv: string = style({
     marginTop: '3rem',
-    marginBottom: '14rem',
+    marginBottom: '15rem',
     '@media': {
         'screen and (min-width: 768px)': {
             flexDirection: 'row',
-            marginBottom: '14rem',
+            marginBottom: '21.7rem',
         }
     }
 });
@@ -56,9 +56,8 @@ export const ul: string = style({
 export const li: string = style({
     flexBasis: '47%',
     display: 'flex',
-    // flexWrap: 'wrap',
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     position: 'relative',
     marginBottom: '1rem',
     width: '100%',
@@ -70,7 +69,7 @@ export const li: string = style({
 })
 
 export const text: string = style({
-    height: '10%',
+    // height: '10%',
     minHeight: '0%',
     wordBreak: 'break-all',
     marginBottom: '1rem',
@@ -88,10 +87,32 @@ export const more: string = style({
     }
 })
 
-export const tagList: string = style({
+export const newsList: string = style({
     display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     gap: '1rem',
     marginBottom: '1.4rem',
+    flexDirection: 'row',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+        }
+    }
+})
+
+export const tagList: string = style({
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    gap: '1rem',
+    // marginBottom: '1.4rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            flexBasis: '23%',
+        }
+    }
 })
 
 export const tag: string = style({

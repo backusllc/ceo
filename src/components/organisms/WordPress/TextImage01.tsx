@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import { multiColumnGrid, multiColumnTile, titleContainer, descriptionContainer, bgWrap, title, description, img } from './TextImage01.css'
+import { multiColumnGrid, multiColumnTileTop, multiColumnTileBottom, titleContainer, descriptionContainer, bgWrap, title, description, imageContainer, img } from './TextImage01.css'
 import ViewMoreButton from './ViewMoreButton';
 
 const TextImage01 = React.memo(() => {
@@ -23,7 +23,7 @@ const TextImage01 = React.memo(() => {
             <section >
                 <div className="">
                     <div className={multiColumnGrid} >
-                        <div className={multiColumnTile} >
+                        <div className={multiColumnTileTop} >
                             <div className={titleContainer}
                                 ref={domRef}>
                                 <span className={bgStyle}><span className={title}>社会を継続可能にするために、</span></span><br />
@@ -46,14 +46,8 @@ const TextImage01 = React.memo(() => {
                             </div>
                             <ViewMoreButton />
                         </div>
-                        <div className={multiColumnTile} >
-                            <div className="imageContainer" style={{
-                                overflow: 'hidden',
-                                maxWidth: '100%',
-                                maxHeight: '100%',
-                                marginBottom: '1rem',
-                            }}
-                            >
+                        <div className={multiColumnTileBottom} >
+                            <div className={imageContainer}>
                                 <GatsbyImage
                                     image={getImage(data.allFile.edges[0].node.childrenImageSharp[0]) as IGatsbyImageData}
                                     alt={"flag"}

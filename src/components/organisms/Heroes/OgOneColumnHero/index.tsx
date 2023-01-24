@@ -1,12 +1,9 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import { gsap, TweenMax, Power2, TimelineMax } from 'gsap';
+import { gsap } from 'gsap';
 
 import React, { useEffect, useState } from 'react';
 
-import THREE, { Texture, WebGLRenderer, TextureLoader, Scene, Color, ShaderMaterial, LinearFilter, OrthographicCamera, Mesh, PlaneGeometry } from 'three'
-
-import { section, gridDiv, topDiv, sliderWrapper, bottomDiv, title, subTitle, img, pagination } from './index.css'
+import { Texture, WebGLRenderer, TextureLoader, Scene, Color, ShaderMaterial, LinearFilter, OrthographicCamera, Mesh, PlaneGeometry } from 'three'
+import { section, sectionInner, gridDiv, topDiv, sliderWrapper, bottomDiv, title, subTitle, img, pagination } from './index.css'
 
 const displacementSlider = function (opts) {
 
@@ -203,18 +200,20 @@ export const OgOneColumnHero = () => {
   return (
     <>
       <section className={`${section}`}>
-        <div id="slider" >
-          <div className={bottomDiv}>
-            <div className={title}>Producing presidents<br />
-              creates a sustainable society.</div>
-            <div className={subTitle}>社長を輩出することが<br className="sp" />持続可能な社会を作り出す。</div>
+        <div className={sectionInner}>
+          <div id="slider" >
+            <div className={bottomDiv}>
+              <div className={title}>Producing presidents<br />
+                creates a sustainable society.</div>
+              <div className={subTitle}>社長を輩出することが<br className="sp" />持続可能な社会を作り出す。</div>
+            </div>
           </div>
-        </div>
-        <div id="slider-wrapper" className={sliderWrapper}>
-          <div id="pagination" className={pagination}>
-            <button id="btn0" className="active" data-slide="0"></button>
-            <button id="btn1" data-slide="1"></button>
-            <button id="btn2" data-slide="2"></button>
+          <div id="slider-wrapper" className={sliderWrapper}>
+            <div id="pagination" className={pagination}>
+              <button id="btn0" className="active" data-slide="0"></button>
+              <button id="btn1" data-slide="1"></button>
+              <button id="btn2" data-slide="2"></button>
+            </div>
           </div>
         </div>
       </section>

@@ -14,8 +14,13 @@ export const wrapDiv: string = style({
 export const imgDiv: string = style({
     position: 'relative',
     paddingTop: '56.25%',
-    marginBottom: '1.4rem',
-    overflow: 'hidden'
+    marginBottom: '1.8rem',
+    overflow: 'hidden',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            marginBottom: '2.1rem',
+        }
+    }
 })
 
 export const img: string = style({
@@ -52,7 +57,7 @@ export const link: string = style({
 })
 
 export const li: string = style({
-    flexBasis: '45%',
+    flexBasis: 'calc(50% - 2rem)',
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
@@ -61,18 +66,31 @@ export const li: string = style({
 })
 
 export const text: string = style({
-    height: '10%',
     minHeight: '0%',
     wordBreak: 'break-all',
-    marginBottom: '1rem',
-    fontSize: '2rem',
+    marginBottom: '1.8rem',
+    fontSize: '1.6rem',
+    letterSpacing: '0.05em',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            marginBottom: '1.5rem',
+            fontSize: '2rem',
+            letterSpacing: '0.1em',
+        }
+    }
 })
 
 export const description: string = style({
-    fontSize: '1.6rem',
+    fontSize: '1.4rem',
     fontWeight: '500',
     letterSpacing: '0.05em',
-    lineHeight: '1.75em',
+    lineHeight: '2em',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '1.6rem',
+            lineHeight: '1.75em',
+        }
+    }
 })
 
 export const activeTag: string = style({

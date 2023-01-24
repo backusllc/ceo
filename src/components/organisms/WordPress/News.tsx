@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import dateFormat from "dateformat";
 
-import { wrapDiv, ul, li, img, link, imgDiv, text, more, tagList, tag } from './News.css'
+import { wrapDiv, ul, li, img, link, imgDiv, text, more, newsList, tagList, tag } from './News.css'
 
 interface Props {
     title: string,
@@ -37,18 +37,20 @@ const News = React.memo(({ dataSrc, slug, title, displayCount, isDisplayTitle = 
                                             </picture>
                                         </div>
                                         {isDisplayTitle && <h3 className={text}>{item.node.title}</h3>}
-                                        <div className={tagList} >
-                                            {item.node.tags?.edges.map((tagItem: any) => {
-                                                return <>
-                                                    <div id={tagItem.node.id} className={tag}>{tagItem.node.name}</div>
-                                                </>
+                                        <div className={newsList}>
+                                            <div className={tagList} >
+                                                {item.node.tags?.edges.map((tagItem: any) => {
+                                                    return <>
+                                                        <div id={tagItem.node.id} className={tag}>{tagItem.node.name}</div>
+                                                    </>
 
-                                            })}
+                                                })}
+                                                {item.node.tags?.edges.length ? null : <div></div>}
+                                            </div>
+                                            <div style={{ color: "#999999" }}>
+                                                Posted  {dateFormat(item.node.date, "yyyy.mm.dd")}
+                                            </div>
                                         </div>
-                                        <div style={{ color: "#999999" }}>
-                                            Posted  {dateFormat(item.node.date, "yyyy.mm.dd")}
-                                        </div>
-                                        {/* {isDisplayTitle && <h3 className={text}>{item.node.title}</h3>} */}
                                     </li>
                                 </>
                             })

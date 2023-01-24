@@ -33,11 +33,16 @@ export const multiColumnGrid: string = style({
     flexWrap: 'nowrap',
     columnGap: '0rem',
     rowGap: '2rem',
-    padding: '7.2rem 0',
+    padding: '4.9rem 0 4.5rem 0',
     borderBottom: '1px solid #E5E5E5',
     borderTop: '1px solid #E5E5E5',
     ':last-child': {
         marginBottom: '14rem',
+    },
+    '@media': {
+        'screen and (min-width: 768px)': {
+            padding: '7.2rem 0',
+        }
     }
 });
 
@@ -66,10 +71,20 @@ export const titleClass: string = style({
 });
 
 export const concept: string = style({
-    fontSize: '2.4rem',
-    lineHeight: '3.2rem',
-    letterSpacing: '0.13em',
+    fontSize: '1.8rem',
+    lineHeight: '1.66em',
+    letterSpacing: '0.05em',
     fontWeight: '600',
+    marginBottom: '4.2rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '2.4rem',
+            lineHeight: '1.33em',
+            letterSpacing: '0.1em',
+            fontWeight: '600',
+            marginBottom: '3.3rem',
+        }
+    }
 });
 
 export const description: string = style({

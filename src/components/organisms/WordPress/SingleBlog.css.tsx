@@ -24,9 +24,10 @@ export const topInformationDiv: string = style({
     justifyContent: 'flex-start',
     alignItems: 'center',
     width: '100%',
-    columnGap: '4.4rem',
+    columnGap: '2.1rem',
     '@media': {
         'screen and (min-width: 768px)': {
+            columnGap: '3.9rem',
         }
     },
 })
@@ -63,7 +64,7 @@ export const closeTag: string = style({
 
 export const middleDiv: string = style({
     display: 'flex',
-    marginBottom: '8.5rem',
+    marginBottom: '8.4rem',
     alignItems: 'center',
     columnGap: '2rem',
     '@media': {
@@ -132,7 +133,7 @@ export const day: string = style({
 export const dateText: string = style({
     display: 'flex',
     columnGap: '0.7rem',
-    fontSize: '1.4rem',
+    fontSize: '1.3rem',
     fontFamily: '"Noto Sans JP", sans-serif',
     color: '#999999',
     '@media': {
@@ -146,8 +147,8 @@ export const dateText: string = style({
 })
 
 export const titleText: string = style({
-    fontSize: '2.2rem',
-    lineHeight: '1.6em',
+    fontSize: '1.8rem',
+    lineHeight: '1.77em',
     letterSpacing: '0.05em',
     fontWeight: '500',
     fontFamily: '"Noto Sans JP", sans-serif',
@@ -156,6 +157,7 @@ export const titleText: string = style({
         'screen and (min-width: 768px)': {
             fontSize: '2.8rem',
             lineHeight: '1.6em',
+            letterSpacing: '0.05em',
         }
     },
 })
@@ -170,10 +172,10 @@ export const bottomDiv: string = style({
 })
 
 export const thumbnailDiv: string = style({
-    marginBottom: '6.2rem',
+    marginBottom: '4rem',
     '@media': {
         'screen and (min-width: 768px)': {
-            marginBottom: '12.4rem',
+            marginBottom: '4.8rem',
         }
     },
 })
@@ -193,10 +195,16 @@ export const tag: string = style({
     fontFamily: '"Noto Sans JP", sans-serif',
     border: '1px solid #CD2C2E',
     borderRadius: '4px',
-    padding: '1.2rem 3.6rem',
+    padding: '1.2rem 2.2rem',
     whiteSpace: 'nowrap',
-    fontSize: '1.5rem',
+    fontSize: '1.3rem',
     color: '#CD2C2E',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '1.5rem',
+            padding: '1.2rem 3.6rem',
+        }
+    },
 })
 
 
