@@ -29,7 +29,7 @@ const News = React.memo(({ dataSrc, slug, title, displayCount, isDisplayTitle = 
                                         data-aos-duration="1000"
                                         data-aos-easing="ease"
                                     >
-                                        <Link className={link} to={item.node.uri}></Link>
+                                        <Link className={link} to={item.node.uri.replace('blog','blog/post')}></Link>
                                         <div className={imgDiv}>
                                             <picture>
                                                 <source type="image/webp" srcSet={`${item.node.featuredImage?.node.sourceUrl}.webp`} />
