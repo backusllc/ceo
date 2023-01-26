@@ -16,7 +16,7 @@ export async function getServerData(context: any) {
 
     const res = await getEventDataServerSide(context.params.name);
 
-    try {
+    // try {
         return {
             props: { singlePost: res },
             status: 200,
@@ -24,7 +24,7 @@ export async function getServerData(context: any) {
                 "Cache-Control": "public, max-age=120",
             },
         };
-    }
+    // }
     // catch {
     //     return {
     //         singlePost: [],
