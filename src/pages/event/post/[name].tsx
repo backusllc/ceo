@@ -24,12 +24,13 @@ export async function getServerData(context: any) {
                 "Cache-Control": "public, max-age=120",
             },
         };
-    } catch {
-        return {
-            singlePost: [],
-            status: 500,
-        };
     }
+    // catch {
+    //     return {
+    //         singlePost: [],
+    //         status: 500,
+    //     };
+    // }
 }
 
 export async function config() {
