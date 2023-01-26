@@ -19,7 +19,7 @@ const SEO = ({
   img = 'https://ceo.gatsbyjs.io/images/icon.png',
 }: Props) => {
   const { pathname } = useLocation();
-  const canonical = `https://ceo.gatsbyjs.io${pathname}/`
+  const canonical = `https://ceo.gatsbyjs.io${pathname}`
 
   // useEffect(() => {
   //   let parentNode = document.head;
