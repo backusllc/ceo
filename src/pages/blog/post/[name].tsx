@@ -32,7 +32,7 @@ export async function getServerData(context: any) {
             props: { singleData: res },
             status: 200,
             headers: {
-                "Cache-Control": "public, max-age=120",
+                "Cache-Control": 'public, max-age=10, s-maxage=60, stale-while-revalidate=240',
             },
         };
     } catch {
