@@ -1,12 +1,22 @@
 import React from 'react';
 
+import SEO from '../../../utils/seo';
 import SingleEvent from '../../../components/organisms/WordPress/SingleEvent';
 import { getEventDataServerSide } from '../../../ssr/eventClient'
 
 const EventPage = ({ serverData: { singlePost } }) => {
 
     return (
-        <SingleEvent post={singlePost} />
+        <>
+            <SEO
+                title={singlePost.title}
+                lang={'ja'}
+                description={singlePost.content}
+                img={singlePost.featuredImage.node.sourceUrl}
+                alt={singlePost.title}
+            />
+            <SingleEvent post={singlePost} />
+        </>
     )
 }
 
