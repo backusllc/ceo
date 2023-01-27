@@ -133,7 +133,7 @@ export const humburgerButton: string = style({
 export const span: string = style({
     display: 'inline-block',
     transition: 'all .4s',
-    height: '1px',
+    height: '0.5px',
     position: 'absolute',
     left: '15px',
     top: '30px',
