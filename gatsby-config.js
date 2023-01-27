@@ -11,7 +11,7 @@ require('dotenv').config({
 const path = require('path');
 
 module.exports = {
-  trailingSlash: "ignore",
+  // trailingSlash: "ignore",
   siteMetadata: {
     title: "一般社団法人日本CEO協会",
     description: `優秀な経営者・起業家を輩出することで、社会課題を解決し、持続可能な社会の実現を目指す。一般社団法人日本CEO協会のサービスをご紹介します。`,
