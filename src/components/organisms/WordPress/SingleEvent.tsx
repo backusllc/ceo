@@ -33,7 +33,7 @@ const SingleEvent = React.memo(({ post }: Props) => {
                             <div className={tagList} >
                                 {post.tags?.edges.map((tagItem: any) => {
                                     return <>
-                                        <div id={tagItem.node.id} className={tag}>{tagItem.node.name}</div>
+                                        <div key={tagItem.node.id} className={tag}>{tagItem.node.name}</div>
                                     </>
 
                                 })}
@@ -73,7 +73,6 @@ const SingleEvent = React.memo(({ post }: Props) => {
                 <p dangerouslySetInnerHTML={{ __html: post.content }}
                 />
             </div >
-            {/* <LinkButton link="news" text="← お知らせ一覧に戻る" /> */}
         </>
     );
 });

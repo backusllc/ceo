@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Link } from 'gatsby';
 
 import CategoryProducts from '../../../components/organisms/Shopify/CategoryProducts';
 import { useGetWordpressEvents } from '../../../hooks/useGetWordpressEvents';
@@ -12,7 +11,7 @@ import SNS from '../../../components/organisms/WordPress/SNS';
 
 import { filterWrap, filterDiv, filterContainer, filter, filterButton, selectedButton, filterTagDiv, filterText, eventWrap, filterTagLists } from './Events.css'
 
-const Events = React.memo(({ hash }: string) => {
+const Events = React.memo(({ hash }: any) => {
     const [tagIn, SetTagIn] = useState([]);
     const [eventStatus, SetEventStatus] = useState(0);
     const [events, setEvents] = useState();

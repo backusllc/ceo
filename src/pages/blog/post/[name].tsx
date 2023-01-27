@@ -5,7 +5,7 @@ import { useWordPressBlogSettings } from '../../../hooks/useWordPressBlogSetting
 import SingleBlog from '../../../components/organisms/WordPress/SingleBlog';
 import { getBlogDataServerSide } from '../../../ssr/blogClient'
 
-const EventPage = ({ serverData: { singleData } }) => {
+const EventPage = ({ serverData: { singleData } }: any) => {
 
     return (
         <>
@@ -44,7 +44,7 @@ export async function getServerData(context: any) {
 }
 
 export async function config() {
-    return (props) => {
+    return (props: any) => {
         return {
             defer: true,
         };
