@@ -6,10 +6,12 @@ import { useGetWordpressMenuSettings } from '../../../../hooks/useGetWordpressMe
 import { Navigation } from '../../../../components/organisms/WordPress/Navigation';
 import { h1, humburgerButton, span, header, divHeader, liMenu, aMenu, navHeader, ulMegaMenu, liMegaMenu, aMegaMenu, quantityDiv } from './index.css';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from "@reach/router"
 
 export const OgMegaHeader = () => {
-    const { isSidebarOpen, showSidebar } = useContext(GatsbyContext);
+    const location = useLocation();
     const [isShowMegaMenu, setIsShowMegaMenu] = useState(false);
+    const { isSidebarOpen, showSidebar } = useContext(GatsbyContext);
     const { loading: menuLoading, data: menuLists } = useGetWordpressMenuSettings("MAIN");
     const data = useStaticQuery(query);
 

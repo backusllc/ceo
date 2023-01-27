@@ -51,7 +51,7 @@ export const li: string = style({
     width: '100%',
     '@media': {
         'screen and (min-width: 768px)': {
-            flexBasis: '20%',
+            flexBasis: '25%',
         }
     }
 })

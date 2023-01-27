@@ -42,11 +42,3 @@ export async function getServerData(context: any) {
         };
     }
 }
-
-export async function config() {
-    return (props: any) => {
-        return {
-            defer: true,
-        };
-    };
-}

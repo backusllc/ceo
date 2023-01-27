@@ -37,16 +37,8 @@ export async function getServerData(context: any) {
     }
     catch {
         return {
-            props: { singlePost: [] },
-            status: 200,
+            props: [],
+            status: 500,
         };
     }
-}
-
-export async function config() {
-    return (props) => {
-        return {
-            defer: true,
-        };
-    };
 }

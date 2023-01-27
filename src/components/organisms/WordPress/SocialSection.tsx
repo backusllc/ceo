@@ -13,8 +13,8 @@ const SocialSection = () => {
         const facebook = document.createElement("script");
         facebook.setAttribute("src", "https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v10.0");
         facebook.setAttribute("nonce", "F5crYADj");
-        facebook.setAttribute("async", "");
-        facebook.setAttribute("defer", "");
+        facebook.setAttribute("async", "true");
+        facebook.setAttribute("defer", "true");
         facebook.setAttribute("crossorigin", "anonymous");
         facebook.setAttribute("loading", "lazy");
         document.head.appendChild(facebook);
@@ -79,8 +79,13 @@ export default SocialSection;
 // export function Head() {
 //     return (
 //         <>
-//             <script src="https://platform.twitter.com/widgets.js" />
-//             <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v15.0" nonce="YsV1HiKb"></script>
+//             <script
+//                 async
+//                 defer
+//                 crossOrigin="anonymous"
+//                 src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v10.0"
+//                 nonce="F5crYADj"
+//             />
 //         </>
 //     )
 // }

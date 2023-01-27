@@ -34,7 +34,11 @@ export const img: string = style({
 
 export const imageWrap: string = style({
     width: '100%',
-    // flexBasis: '40%',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            flexBasis: '40%',
+        }
+    }
 })
 
 export const textDiv: string = style({

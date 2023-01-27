@@ -13,7 +13,7 @@ export const wrapDiv: string = style({
 export const imgDiv: string = style({
     position: 'relative',
     paddingTop: '35%',
-    marginBottom: '1.4rem',
+    // marginBottom: '1.4rem',
     backgroundColor: '#fff',
     border: '1px solid #F0F0F0',
 })
@@ -51,7 +51,6 @@ export const li: string = style({
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-    marginBottom: '1rem',
     width: '100%',
     '@media': {
         'screen and (min-width: 768px)': {
