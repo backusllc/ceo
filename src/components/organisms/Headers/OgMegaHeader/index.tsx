@@ -4,7 +4,6 @@ import { GatsbyContext } from "../../../../context/context";
 import { sprinkles } from '../../../../styles/sprinkles.css';
 import { useGetWordpressMenuSettings } from '../../../../hooks/useGetWordpressMenuSettings';
 import { Navigation } from '../../../../components/organisms/WordPress/Navigation';
-import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { h1, humburgerButton, span, header, divHeader, liMenu, aMenu, navHeader, ulMegaMenu, liMegaMenu, aMegaMenu, quantityDiv } from './index.css';
 import { Helmet } from 'react-helmet-async';
 
