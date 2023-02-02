@@ -47,7 +47,8 @@ query GetPostByCategory($slug: [String] = "", $after: String, $first: Int) {
             }
           }
         }
-        supports (where: {orderby: {order: DESC, field: DATE}}) {
+        supports (first: $first
+          ,where: {orderby: {order: DESC, field: DATE}}) {
           edges {
             node {
               id

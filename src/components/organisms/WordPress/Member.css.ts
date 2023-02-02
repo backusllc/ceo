@@ -15,6 +15,11 @@ export const imgDiv: string = style({
     aspectRatio: '1/1',
     marginBottom: '1.4rem',
     overflow: 'hidden',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            marginBottom: '2.1rem',
+        }
+    }
 })
 
 export const img: string = style({
@@ -47,7 +52,7 @@ export const li: string = style({
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-    marginBottom: '1rem',
+    marginBottom: '1.8rem',
     width: '100%',
     '@media': {
         'screen and (min-width: 768px)': {
@@ -56,10 +61,13 @@ export const li: string = style({
     }
 })
 
+export const textWrap: string = style({
+    marginBottom: '1.3rem',
+})
+
 export const text: string = style({
     minHeight: '0%',
     wordBreak: 'break-all',
-    marginBottom: '1.2rem',
     lineHeight: '1.5em',
     fontSize: '1.2rem',
     letterSpacing: '0.015rem',
@@ -67,7 +75,7 @@ export const text: string = style({
         'screen and (min-width: 768px)': {
             fontSize: '1.3rem',
         }
-    }
+    },
 })
 
 export const postTitle: string = style({

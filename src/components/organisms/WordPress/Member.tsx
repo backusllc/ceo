@@ -1,5 +1,5 @@
 import React from 'react';
-import { wrapDiv, ul, li, img, imgDiv, postTitle, text, titleClass, titleContainer, } from './Member.css'
+import { wrapDiv, ul, li, img, imgDiv, postTitle, textWrap, text, titleClass, titleContainer, } from './Member.css'
 
 interface Props {
     dataSrc: any,
@@ -22,14 +22,16 @@ const Member = React.memo(({ categoryName, dataSrc }: Props) => {
                                     <div className={imgDiv}>
                                         <picture>
                                             <source type="image/webp" srcSet={`${item.node.featuredImage?.node.sourceUrl}.webp`} />
-                                            <img className={img} src={item.node.featuredImage.node.sourceUrl} alt={item.node.title} loading="lazy" />
+                                            <img className={img} src={item.node.featuredImage?.node.sourceUrl} alt={item.node.title} loading="lazy" />
                                         </picture>
                                     </div>
-                                    {item.node.tags.edges.map((item: any) => {
-                                        return <>
-                                            <div id={item.node.id} className={text}>{item.node.name}</div>
-                                        </>
-                                    })}
+                                    <div className={textWrap}>
+                                        {item.node.tags.edges.map((item: any) => {
+                                            return <>
+                                                <div id={item.node.id} className={text}>{item.node.name}</div>
+                                            </>
+                                        })}
+                                    </div>
                                     <div className={postTitle}>{item.node.title}</div>
                                 </li>
                             </>
