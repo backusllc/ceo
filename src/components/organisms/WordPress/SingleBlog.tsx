@@ -52,8 +52,8 @@ const SingleBlog = React.memo(({ blog }: Props) => {
                 </div>
                 <div className={thumbnailDiv}>
                     <picture>
-                        <source type="image/webp" srcSet={`${blog.featuredImage.node.sourceUrl}.webp`} />
-                        <img src={blog.featuredImage.node.sourceUrl} alt={blog.title} loading="lazy" />
+                        <source type="image/webp" srcSet={`${blog.featuredImage?.node.sourceUrl}.webp`} />
+                        <img src={blog.featuredImage?.node.sourceUrl} alt={blog.title} loading="lazy" />
                     </picture>
                 </div>
                 <p dangerouslySetInnerHTML={{ __html: blog.content }}

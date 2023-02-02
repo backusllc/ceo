@@ -52,7 +52,7 @@ globalStyle('*, ::after,::before', {
 
 globalStyle('ul', { listStyleType: 'none' });
 globalStyle('ol', { listStyleType: 'none' });
-globalStyle('a', { textDecoration: 'none', wordBreak: 'normal', display: 'block', color: '#000' });
+globalStyle('a', { textDecoration: 'none', wordBreak: 'normal', display: 'block', color: '#000', fontSize: '1.6rem' });
 globalStyle('img', {
   width: '100%',
   display: 'block',
@@ -210,6 +210,9 @@ globalStyle('.page li', {
   fontSize: '1.6rem',
   lineHeight: '2em',
   letterSpacing: '0.1em',
+});
+globalStyle('.page a', {
+  textDecorationLine: 'underline',
 });
 
 globalStyle('.page h1,.page h2,.page h3,.term_page h1,.term_page h2,.term_page h3', {

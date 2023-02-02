@@ -13,7 +13,7 @@ const EventPage = ({ serverData: { singleData } }: any) => {
                 title={singleData.title}
                 lang={'ja'}
                 description={singleData.content}
-                img={singleData.featuredImage.node.sourceUrl}
+                img={singleData.featuredImage?.node.sourceUrl}
                 alt={singleData.title}
             />
             <SingleBlog blog={singleData} />
