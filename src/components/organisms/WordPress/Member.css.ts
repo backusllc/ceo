@@ -36,8 +36,8 @@ export const ul: string = style({
     '@media': {
         'screen and (min-width: 768px)': {
             marginBottom: '9.2rem',
-            flexWrap: 'nowrap',
-            gap: '4rem',
+            // flexWrap: 'nowrap',
+            gap: '2rem',
         }
     }
 })
@@ -51,7 +51,7 @@ export const li: string = style({
     width: '100%',
     '@media': {
         'screen and (min-width: 768px)': {
-            flexBasis: '25%',
+            flexBasis: 'calc(20% - 1.6rem)',
         }
     }
 })
