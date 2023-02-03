@@ -12,7 +12,7 @@ export const wrapDiv: string = style({
 
 export const imgDiv: string = style({
     position: 'relative',
-    paddingTop: '37%',
+    paddingTop: '35%',
     // marginBottom: '1.4rem',
     backgroundColor: '#fff',
     // border: '1px solid #F0F0F0',
