@@ -2,7 +2,6 @@ import React from 'react';
 import { multiColumnGrid, multiColumnTile, container, textContainer, imageContainer, image, titleClass, contentClass, descriptionClass, backgroundDiv, marginLeft, marginRight } from './TextImage02.css'
 import { sprinkles, Sprinkles } from '../../../styles/sprinkles.css';
 import ViewMoreButton from './ViewMoreButton';
-import { FadeInOnScroll } from '../../../hooks/FadeInOnScroll';
 
 interface Props {
     title: string,
@@ -14,6 +13,7 @@ interface Props {
     right?: number,
     left?: number,
     flexDirection: Sprinkles['flexDirection'],
+    toLink: string,
 }
 
 const TextImage02 = React.memo(({
@@ -25,7 +25,8 @@ const TextImage02 = React.memo(({
     textAlign,
     right,
     left,
-    flexDirection }: Props) => {
+    flexDirection,
+    toLink }: Props) => {
 
     const spMultiColumnGrid = sprinkles({
         flexDirection: {
@@ -60,7 +61,7 @@ const TextImage02 = React.memo(({
                                     {description}
                                 </p>
                             </div>
-                            <ViewMoreButton />
+                            <ViewMoreButton toLink={toLink} />
                         </div>
                     </div>
                     <div className={backgroundDiv} style={{ right: right, left: left }} />

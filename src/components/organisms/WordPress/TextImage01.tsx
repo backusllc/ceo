@@ -44,7 +44,7 @@ const TextImage01 = React.memo(() => {
                                     今を生きる 人たちが輝けば、未来も輝くものになるはずだから。
                                 </p>
                             </div>
-                            <ViewMoreButton />
+                            <ViewMoreButton toLink="/about" />
                         </div>
                         <div className={multiColumnTileBottom} >
                             <div className={imageContainer}>

@@ -3,7 +3,11 @@ import { Link } from 'gatsby';
 import { buttonContainer, buttonInner, button, buttonWrap, link, buttonHidden, arrow, arrowDiv, buttonCircleCover } from './ViewMoreButton.css'
 import { gsap, TweenMax, Power2, TimelineMax } from 'gsap';
 
-const ViewMoreButton = React.memo(() => {
+interface Props {
+    toLink: string,
+}
+
+const ViewMoreButton = React.memo(({ toLink }: Props) => {
     const ref = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLDivElement>(null);
     const buttonHiddenRef = useRef<HTMLDivElement>(null);
@@ -71,7 +75,7 @@ const ViewMoreButton = React.memo(() => {
                         <div ref={ref} className={buttonCircleCover} >
                         </div>
                     </div>
-                    <Link className={link} to='/activity' />
+                    <Link className={link} to={toLink} />
                 </div>
             </div>
         </>

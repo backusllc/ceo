@@ -1,7 +1,6 @@
 import React from 'react';
 import { multiColumnGrid, multiColumnTileBottom, multiColumnTileTop, container, textContainer, imageContainer, image, titleClass, subTitle, descriptionClass, delegate, delegateName, backgroundDiv } from './TextImage03.css'
 import { sprinkles, Sprinkles } from '../../../styles/sprinkles.css';
-import ViewMoreButton from './ViewMoreButton';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 

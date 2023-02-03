@@ -15,6 +15,8 @@ const Layout = React.memo(({ children }: Props) => {
   useEffect(() => {
     hideSidebar();
 
+    window.scrollTo({ top: 0, behavior: "auto" });
+
     if (!location.hash) { return }
     const targetEl = document.querySelector(location.hash);
     targetEl?.scrollIntoView({ behavior: 'smooth' })

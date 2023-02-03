@@ -26,11 +26,12 @@ const Member = React.memo(({ categoryName, dataSrc }: Props) => {
                                         </picture>
                                     </div>
                                     <div className={textWrap}>
-                                        {item.node.tags.edges.map((item: any) => {
+                                        <div className={text} dangerouslySetInnerHTML={{ __html: item.node.content }} />
+                                        {/* {item.node.tags.edges.map((item: any) => {
                                             return <>
                                                 <div id={item.node.id} className={text}>{item.node.name}</div>
                                             </>
-                                        })}
+                                        })} */}
                                     </div>
                                     <div className={postTitle}>{item.node.title}</div>
                                 </li>

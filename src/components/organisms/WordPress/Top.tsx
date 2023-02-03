@@ -64,7 +64,8 @@ export default function Index() {
                                     imageAlt={"教育活動"}
                                     title="EDUCATION"
                                     content="教育活動"
-                                    description="この激しい変化の真っ只中にある現代社会に必要とされるのは、変化を好機ととらえ、主体的に考え実践、実装していく人間だ。" />
+                                    description="この激しい変化の真っ只中にある現代社会に必要とされるのは、変化を好機ととらえ、主体的に考え実践、実装していく人間だ。"
+                                    toLink="/activity#education" />
                                 <TextImage02 flexDirection={"row-reverse"}
                                     textAlign={"left"}
                                     left={0}
@@ -72,7 +73,8 @@ export default function Index() {
                                     imageAlt={"コミュニティ"}
                                     title="COMMUNITY"
                                     content="コミュニティ"
-                                    description="この激しい変化の真っ只中にある現代社会に必要とされるのは、変化を好機ととらえ、主体的に考え実践、実装していく人間だ。" />
+                                    description="この激しい変化の真っ只中にある現代社会に必要とされるのは、変化を好機ととらえ、主体的に考え実践、実装していく人間だ。"
+                                    toLink="/activity#community" />
                                 <TextImage02 flexDirection={"row"}
                                     textAlign={"right"}
                                     right={0}
@@ -80,7 +82,8 @@ export default function Index() {
                                     imageAlt={"イベント"}
                                     title="EVENT"
                                     content="イベント"
-                                    description="この激しい変化の真っ只中にある現代社会に必要とされるのは、変化を好機ととらえ、主体的に考え実践、実装していく人間だ。" />
+                                    description="この激しい変化の真っ只中にある現代社会に必要とされるのは、変化を好機ととらえ、主体的に考え実践、実装していく人間だ。"
+                                    toLink="/activity#event" />
                                 <section className={eventSection}>
                                     <div className="inner">
                                         <TopTitle Tag='h2' title='EVENT' subTitle='イベント情報' />
