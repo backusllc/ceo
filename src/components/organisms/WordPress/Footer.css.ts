@@ -4,7 +4,12 @@ export const footer: string = style({
 });
 
 export const footerContainer: string = style({
-    padding: '4rem 0 10rem',
+    padding: '4rem 0 3.5rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            padding: '4rem 0 10rem',
+        }
+    }
 });
 
 export const ul: string = style({
@@ -12,12 +17,22 @@ export const ul: string = style({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    rowGap: '1rem',
+    rowGap: '2rem',
     columnGap: '4rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            rowGap: '1rem',
+        }
+    }
 });
 
 export const topContainer: string = style({
-    // flexBasis: "70%",
+    width: '231px',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            width: '268px',
+        }
+    }
 });
 
 export const link: string = style({
@@ -28,7 +43,7 @@ export const link: string = style({
 export const rights: string = style({
     position: 'relative',
     marginBottom: '2.4rem',
-    rowGap: '5.4rem',
+    rowGap: '5.6rem',
     columnGap: '4.9rem',
     display: 'flex',
     alignItems: 'flex-start',

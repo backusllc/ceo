@@ -54,34 +54,56 @@ export const topTitleContainer: string = style({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    height: '5rem',
+    height: '2.6rem',
     backgroundColor: '#000000',
-    paddingLeft: '1.8rem',
+    paddingLeft: '0.9rem',
     marginBottom: '0.5rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            height: '5rem',
+            paddingLeft: '1.8rem',
+        }
+    }
 });
 
 export const topTitle: string = style({
-    fontSize: '3.2rem',
+    fontSize: '1.6rem',
     fontFamily: '"Bebas", cursive',
     fontWeight: '600',
     color: '#FFFFFF',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '3.2rem',
+        }
+    }
 });
 
 export const bottomTitleContainer: string = style({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    height: '5rem',
+    height: '2.6rem',
     backgroundColor: '#000000',
-    paddingLeft: '1.8rem',
+    paddingLeft: '0.9rem',
     marginBottom: '0.5rem',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            height: '5rem',
+            paddingLeft: '1.8rem',
+        }
+    }
 });
 
 export const bottomTitle: string = style({
-    fontSize: '3.2rem',
+    fontSize: '1.6rem',
     fontFamily: '"Bebas", cursive',
     fontWeight: '600',
     color: '#FFFFFF',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '3.2rem',
+        }
+    }
 });
 
 export const topContentContainer: string = style({

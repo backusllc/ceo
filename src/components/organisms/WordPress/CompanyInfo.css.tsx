@@ -158,6 +158,15 @@ export const gridMap: string = style({
     }
 });
 
+export const map: string = style({
+    height: '180px',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            height: '380px',
+        }
+    }
+});
+
 export const ul: string = style({
     paddingLeft: '1rem',
 });

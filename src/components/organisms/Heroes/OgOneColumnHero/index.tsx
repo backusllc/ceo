@@ -167,7 +167,8 @@ export const OgOneColumnHero = () => {
     let i = 1;
     let timer = setInterval(func, interval);
 
-    const canvasEl = document.querySelector('canvas');
+    const canvasEl = document.querySelector('#slider-wrapper canvas');
+    canvasEl?.classList.add("firstview");
     const slideTitleEl = document.querySelector(`.${bottomDiv}`);
 
     gsap.timeline().fromTo

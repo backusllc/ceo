@@ -39,9 +39,11 @@ export const filterContainer: string = style({
 export const filter: string = style({
     textAlign: 'center',
     flexBasis: 'calc(50% - 0.5rem)',
+    height: '40px',
     '@media': {
         'screen and (min-width: 768px)': {
             flexBasis: '33%',
+            height: '59px',
         }
     }
 })
@@ -49,11 +51,13 @@ export const filter: string = style({
 export const filterButton: string = style({
     fontSize: '1.3rem',
     width: '100%',
-    padding: '2rem 0',
-    display: 'inline-block',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     color: '#999999',
     border: '1px solid #E5E5E5',
-    cursor : 'pointer',
+    cursor: 'pointer',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '1.5rem',
@@ -65,6 +69,7 @@ export const selectedButton: string = style({
     backgroundColor: '#000000',
     border: '1px solid #000000',
     color: '#FFFFFF',
+    height: '100%',
 });
 
 export const filterTagDiv: string = style({

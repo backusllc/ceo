@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { Link, navigate } from 'gatsby';
 
-import { titleWrapClose, titleWrapOpen, title, ul, li, link, accordionHeightActive, accordionHeightNotActive } from './Accordion.css'
+import { baseWrap, titleWrapClose, titleWrapOpen, title, ul, li, link, accordionHeightActive, accordionHeightNotActive } from './Accordion.css'
 
 interface Props {
   menu: any;
@@ -26,8 +26,8 @@ const Accordion = React.memo(({ menu, hideSidebar }: Props) => {
 
   return (
     <>
-      <div className={titleWrap}>
-        <div className={`${title} sp`} onClick={toggleAccordion}>{menu.title}</div>
+      <div className={menu.listMenu.length == 1 ? baseWrap : titleWrap}>
+        <div className={`${title} sp`} onClick={menu.listMenu.length == 1 ? () => { handleClick(menu.link) } : toggleAccordion}>{menu.title}</div>
         <Link to={menu.link} className={`${title} pc`} >{menu.title}</Link>
       </div>
       <ul className={`${ul} ${accordionHeight}`} onClick={toggleAccordion}>

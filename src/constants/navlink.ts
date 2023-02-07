@@ -93,9 +93,9 @@ export default [
         "link": "/contact",
         "listMenu": [
             {
-                "id": 5.1,
-                "text": "お問い合わせ",
-                "link": "/contact",
+                // "id": 5.1,
+                // "text": "お問い合わせ",
+                // "link": "/contact",
             },
         ],
     },

@@ -134,9 +134,16 @@ export const checkLabel: string = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  color: '#999999',
+  color: '#333333',
   fontSize: '1.4rem',
   whiteSpace: 'nowrap',
+})
+
+export const checkLink: string = style({
+  color: '#333333',
+  fontSize: '1.4rem',
+  whiteSpace: 'nowrap',
+  textDecoration: 'underline',
 })
 
 export const submit: string = style({

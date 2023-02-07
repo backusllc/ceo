@@ -104,7 +104,7 @@ export const descriptionClass: string = style({
     fontSize: '1.4rem',
     lineHeight: '2em',
     letterSpacing: '0.05em',
-    marginBottom: '9rem',
+    marginBottom: '4.6rem',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '1.6rem',

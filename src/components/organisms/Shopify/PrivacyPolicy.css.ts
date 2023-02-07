@@ -47,7 +47,7 @@ export const text: string = style({
 })
 
 export const ol: string = style({
-  listStyle: 'auto',
+  listStyle: 'decimal',
   paddingLeft: '22px',
   '@media': {
     'screen and (min-width: 768px)': {

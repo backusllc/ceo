@@ -62,6 +62,16 @@ globalStyle('#slider canvas', {
   display: 'none',
 });
 
+globalStyle('.firstview', {
+  zoom: '1.4',
+  // marginLeft: '-42rem',
+  '@media': {
+    'screen and (min-width: 768px)': {
+      zoom: '1',
+    }
+  }
+});
+
 globalStyle('table', {
   borderCollapse: 'collapse',
   marginBottom: '2rem',
@@ -295,9 +305,14 @@ globalStyle('section', {
 
 globalStyle('.inner', {
   position: 'relative',
-  width: '90%',
+  width: 'calc(100% - 40px)',
   maxWidth: '1200px',
   margin: '0 auto',
+  '@media': {
+    'screen and (min-width: 768px)': {
+      width: '90%',
+    }
+  }
 })
 
 globalStyle('.description p', {

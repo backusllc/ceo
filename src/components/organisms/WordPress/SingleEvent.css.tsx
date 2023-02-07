@@ -82,7 +82,7 @@ export const closeTag: string = style({
 export const middleDiv: string = style({
     display: 'flex',
     marginBottom: '3rem',
-    alignItems: 'center',
+    alignItems: 'baseline',
     columnGap: '2rem',
     '@media': {
         'screen and (min-width: 768px)': {

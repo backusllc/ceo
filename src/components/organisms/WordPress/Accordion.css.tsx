@@ -1,4 +1,18 @@
-import { style, globalStyle, keyframes } from '@vanilla-extract/css'
+import { style } from '@vanilla-extract/css'
+
+export const baseWrap: string = style({
+    padding: '1.5rem 0',
+    position: 'relative',
+
+
+    '@media': {
+        'screen and (min-width: 768px)': {
+            padding: '1.5rem 0',
+            marginBottom: '1.5rem',
+            borderBottom: '1px solid #E5E5E5',
+        },
+    }
+})
 
 export const titleWrapClose: string = style({
     padding: '1.5rem 0',
@@ -40,6 +54,7 @@ export const titleWrapClose: string = style({
         }
     },
 })
+
 export const titleWrapOpen: string = style({
     padding: '1.5rem 0',
     position: 'relative',

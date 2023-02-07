@@ -76,7 +76,7 @@ export const title: string = style({
     color: '#ffffff',
     display: 'inline',
     position: 'relative',
-    padding: '.5rem 0.8rem .5rem 0.8rem',
+    padding: '.5rem 0rem .5rem 0.8rem',
     marginBottom: '1rem',
     whiteSpace: 'nowrap',
     boxDecorationBreak: 'clone',

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { formWrapper, cautionText, label, formDiv, input, abbr, radioWrap, radio, radioLabel, textarea, submitDiv, checkWrap, check, checkLabel, submit } from './ContactForm.css'
+import { formWrapper, cautionText, label, formDiv, input, abbr, radioWrap, radio, radioLabel, textarea, submitDiv, checkWrap, check, checkLabel, checkLink, submit } from './ContactForm.css'
 import { navigate } from 'gatsby';
 
 import Title from '../WordPress/Title';
@@ -149,7 +149,7 @@ const ContactForm = React.memo(() => {
           </div>
           <div className={checkWrap}>
             <label htmlFor='agreement' className={checkLabel} >
-              <input type="checkbox" value="agreement" name="agreement" id="agreement" className={check} checked={checkboxStatus} onChange={handleCheckboxChange} />個人情報の取り扱いについて同意する
+              <input type="checkbox" value="agreement" name="agreement" id="agreement" className={check} checked={checkboxStatus} onChange={handleCheckboxChange} /><a href="/policy" className={checkLink}>個人情報の取り扱いについて</a>同意する
             </label>
           </div>
           <div className={submitDiv}>
