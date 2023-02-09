@@ -68,9 +68,6 @@ const Activity = React.memo(({ hash }: any) => {
             // }
         })
 
-        console.log(activity);
-        console.log(result);
-
         return result;
     }, [categoryStatus, activityLists]);
 
