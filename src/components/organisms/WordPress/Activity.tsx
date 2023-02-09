@@ -17,7 +17,6 @@ const categoryFilter = [
 const Activity = React.memo(({ hash }: any) => {
     const [categoryStatus, setCategoryStatus] = useState(0);
     const [activity, setActivity] = useState();
-    const [page, setPage] = useState(1);
 
     const { loading: activityLoading, data: activityLists } = useGetWordpressActivity();
     const initialData = activityLists?.allActivity.edges;
@@ -48,7 +47,6 @@ const Activity = React.memo(({ hash }: any) => {
     }, [activityLists])
 
     const filteredEvents = useMemo(() => {
-        setPage(1);
 
         if (categoryStatus === 0) return initialData;
 
@@ -65,17 +63,20 @@ const Activity = React.memo(({ hash }: any) => {
                     return result.push(e);
                 }
             }
-            else {
-                return result.push(e);
-            }
+            // else {
+            //     return result.push(e);
+            // }
         })
+
+        console.log(activity);
+        console.log(result);
 
         return result;
     }, [categoryStatus, activityLists]);
 
     if (activityLoading) { return <div className="full-height"></div>; }
 
-    const lastBlogIndex = page * blogLimit;
+    const lastBlogIndex = blogLimit;
     const firstBlogIndex = lastBlogIndex - blogLimit;
     const currentActivity = filteredEvents?.slice(firstBlogIndex, lastBlogIndex);
 
