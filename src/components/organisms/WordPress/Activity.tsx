@@ -22,7 +22,7 @@ const Activity = React.memo(({ hash }: any) => {
     const { loading: activityLoading, data: activityLists } = useGetWordpressActivity();
     const initialData = activityLists?.allActivity.edges;
 
-    const blogLimit = 6;
+    const blogLimit = 999;
 
     useEffect(() => {
         let defaultCategoryStatus = 0;
