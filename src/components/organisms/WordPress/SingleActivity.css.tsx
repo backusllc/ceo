@@ -176,6 +176,14 @@ export const thumbnailDiv: string = style({
     },
 })
 
+export const overLay: string = style({
+    position: 'absolute',
+    backgroundColor: 'black',
+    opacity: '0.2',
+    inset: 0,
+    zIndex: 1,
+})
+
 export const img: string = style({
     position: 'absolute',
     objectFit: 'cover',

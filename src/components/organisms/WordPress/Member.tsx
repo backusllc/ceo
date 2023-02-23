@@ -1,5 +1,6 @@
 import React from 'react';
 import { wrapDiv, ul, li, img, imgDiv, postTitle, textWrap, text, titleClass, titleContainer, } from './Member.css'
+import { Modal } from './Modal';
 
 interface Props {
     dataSrc: any,
@@ -7,6 +8,13 @@ interface Props {
 }
 
 const Member = React.memo(({ categoryName, dataSrc }: Props) => {
+    const [shoModal, setShoModal] = React.useState(false);
+    const [imgSrc, setImgSrc] = React.useState("");
+
+    const handleShowModal = (src: string) => {
+        setShoModal(true);
+        setImgSrc(src);
+    };
 
     return (
         <>
@@ -18,7 +26,7 @@ const Member = React.memo(({ categoryName, dataSrc }: Props) => {
                     {
                         dataSrc.edges.map((item: any) => {
                             return <>
-                                <li key={item.node.id} className={li}>
+                                <li key={item.node.id} className={li} onClick={() => handleShowModal(item.node.featuredImage?.node.sourceUrl)}>
                                     <div className={imgDiv}>
                                         <picture>
                                             <source type="image/webp" srcSet={`${item.node.featuredImage?.node.sourceUrl}.webp`} />
@@ -40,6 +48,13 @@ const Member = React.memo(({ categoryName, dataSrc }: Props) => {
                     }
                 </ul>
             </div >
+            <Modal isShown={shoModal} onClose={() => setShoModal(false)}>
+                <picture>
+                    <source type="image/webp" srcSet={`${imgSrc}.webp`} />
+                    <img src={imgSrc} alt={"modal"} loading="lazy" />
+                </picture>
+                {/* <img src={imgSrc} /> */}
+            </Modal>
         </>
     );
 });

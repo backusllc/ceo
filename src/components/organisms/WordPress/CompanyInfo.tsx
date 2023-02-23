@@ -44,9 +44,15 @@ const CompanyInfo = React.memo(() => {
                     </div>
                     <div className={multiColumnTileRight} >
                         <ul className={ul}>
-                            <li className={description}>プロ経営者の育成</li>
-                            <li className={description}>大学生に対するビジネスサークル</li>
-                            <li className={description}>ビジネスモデルコンテスト</li>
+                            <li className={description}>経営者思考、経営者座学のプログラム</li>
+                            <li className={description}>ワークショップ</li>
+                            <li className={description}>セミナー・イベント企画・運営</li>
+                            <li className={description}>ワンデー講座</li>
+                            <li className={description}>年間講座</li>
+                            <li className={description}>子供向け起業家教育事業</li>
+                            <li className={description}>クラブ活動（起業クラブの顧問を派遣します。）</li>
+                            <li className={description}>ビジネスプランコンテスト</li>
+                            <li className={description}>大学生向けビジネスサークル</li>
                             <li className={description}>メンタリング</li>
                         </ul>
                     </div>

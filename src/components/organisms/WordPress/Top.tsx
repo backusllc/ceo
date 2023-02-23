@@ -16,6 +16,7 @@ import { useGetWordpressPostByCategorySettings } from '../../../hooks/useGetWord
 import SocialSection from '../../../components/organisms/WordPress/SocialSection';
 import Loading from "../../../components/organisms/Loading";
 import Layout from '../../../components/organisms/WordPress/Layout';
+import { Modal } from './Modal';
 import SEO from '../../../utils/seo';
 
 
@@ -25,18 +26,23 @@ export default function Index() {
 
     const { loading: postLoading, data: postLists } = useGetWordpressPostByCategorySettings({ slug: "event", count: 3, nextId: "" });
     const { loading: directorPostLoading, data: directorPostLists } = useGetWordpressPostByCategorySettings({ slug: "director", count: 999, nextId: "" });
+    const { loading: memberPostLoading, data: memberPostLists } = useGetWordpressPostByCategorySettings({ slug: "member", count: 999, nextId: "" });
     const { loading: supporterPostLoading, data: supporterPostLists } = useGetWordpressPostByCategorySettings({ slug: "supporter", count: 999, nextId: "" });
     const { loading: customPostLoading, data: customPostLists } = useGetWordpressPostByCustomCategorySettings({ blogCount: 4, eventCount: 3, supportCount: 999, logoCount: 999 });
     const { isSidebarOpen } = useContext(GatsbyContext);
+    // const [blockSelectorIsOpen, setBlockSelectorIsOpen] = React.useState(false);
 
     if (postLoading) { return <Loading /> }
+    if (memberPostLoading) { return <Loading /> }
     if (directorPostLoading) { return <Loading /> }
     if (supporterPostLoading) { return <Loading /> }
     if (customPostLoading) { return <Loading /> }
 
     const postItems = postLists.categories.edges[0].node.posts.edges;
     const directorPostItems = directorPostLists.categories.edges[0].node.supports;
+    const memberPostItems = memberPostLists.categories.edges[0].node.supports;
     const supporterPostItems = supporterPostLists.categories.edges[0].node.supports;
+    const memberName = memberPostLists.categories.edges[0].node.name;
     const directorName = directorPostLists.categories.edges[0].node.name;
     const supporterName = supporterPostLists.categories.edges[0].node.name;
 
@@ -101,12 +107,17 @@ export default function Index() {
                                         <TopTitle Tag='h2' title='MEMBER' subTitle='メンバー一覧' />
                                     </div>
                                     <Member categoryName={directorName} dataSrc={directorPostItems} />
+                                    <Member categoryName={memberName} dataSrc={memberPostItems} />
                                     <Member categoryName={supporterName} dataSrc={supporterPostItems} />
                                     <Logos dataSrc={logoItems} />
                                 </section>
                                 <SocialSection />
                                 <SNS />
                             </div >
+
+                            {/* <Modal isShown={blockSelectorIsOpen} onClose={() => setBlockSelectorIsOpen(false)}>
+                                <div >これが表示されるよ</div>
+                            </Modal> */}
                         </>
                     }
                 </Layout>

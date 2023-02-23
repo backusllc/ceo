@@ -75,14 +75,14 @@ export const concept: string = style({
     lineHeight: '1.66em',
     letterSpacing: '0.05em',
     fontWeight: '600',
-    marginBottom: '4.2rem',
+    // marginBottom: '4.2rem',
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '2.4rem',
             lineHeight: '1.33em',
             letterSpacing: '0.1em',
             fontWeight: '600',
-            marginBottom: '3.3rem',
+            // marginBottom: '3.3rem',
         }
     }
 });

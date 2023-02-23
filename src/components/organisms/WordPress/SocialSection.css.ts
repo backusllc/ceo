@@ -6,10 +6,12 @@ export const flexDiv: string = style({
     flexWrap: 'wrap',
     gap: '4rem',
     flexDirection: 'column',
+    marginBottom: '6rem',
+
     '@media': {
         'screen and (min-width: 768px)': {
             fontSize: '2.9rem',
-            marginBottom: '10rem',
+            marginBottom: '16.8rem',
             flexDirection: 'row',
         }
     }
@@ -116,4 +118,49 @@ export const bottomContentContainer: string = style({
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '340px',
+});
+
+export const followContainer: string = style({
+    marginBottom: '10rem',
+    textAlign: 'center',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            marginBottom: '19.8rem',
+        }
+    }
+});
+
+export const followContent: string = style({
+    fontFamily: '"Bebas", cursive',
+    fontSize: '2.2rem',
+    fontWeight: 'bold',
+    letterSpacing: '0.05em',
+    marginBottom: '2.8rem',
+
+    '@media': {
+        'screen and (min-width: 768px)': {
+            fontSize: '2.8rem',
+        }
+    }
+});
+
+export const followInner: string = style({
+    display: 'flex',
+    columnGap: '2rem',
+    justifyContent: 'center',
+    '@media': {
+        'screen and (min-width: 768px)': {
+            columnGap: '4rem',
+        }
+    }
+});
+
+export const socialLink: string = style({
+    display: 'inline-block',
+});
+
+export const img: string = style({
+    width: '65px',
+    height: '65px',
+    borderRadius: '50%',
 });

@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useRef } from 'react';
-import { flexDiv, title, topDiv, bottomDiv, topTitleContainer, bottomTitleContainer, topTitle, bottomTitle, topContentContainer, bottomContentContainer } from './SocialSection.css'
+import React, { useEffect, useRef } from 'react';
+import { flexDiv, title, topDiv, bottomDiv, topTitleContainer, bottomTitleContainer, topTitle, bottomTitle, topContentContainer, bottomContentContainer, followContainer, followContent, followInner, socialLink, img } from './SocialSection.css'
 
 const SocialSection = () => {
     const ref = useRef(null)
@@ -66,6 +66,29 @@ const SocialSection = () => {
                                     href="https://twitter.com/CEO86364606"
                                 >Tweets by @CEO86364606</a>
                             </div>
+                        </div>
+                    </div>
+                    <div className={followContainer}>
+                        <div className={followContent}>Follow Us</div>
+                        <div className={followInner}>
+                            <a className={socialLink} href="https://www.facebook.com/jceoa2019/" target={"_blank"} >
+                                <picture>
+                                    <source type="image/webp" srcSet={'/images/facebook_icon.webp'} />
+                                    <img className={img} src="/images/facebook_icon.png" alt="facebook icon" loading="lazy" />
+                                </picture>
+                            </a>
+                            <a className={socialLink} href="https://twitter.com/CEO86364606" target={"_blank"}>
+                                <picture>
+                                    <source type="image/webp" srcSet={'/images/twitter_icon.webp'} />
+                                    <img className={img} src="/images/twitter_icon.png" alt="twitter icon" loading="lazy" />
+                                </picture>
+                            </a>
+                            <a className={socialLink} href="https://www.instagram.com/ceo86364606/" target={"_blank"}>
+                                <picture>
+                                    <source type="image/webp" srcSet={'/images/instagram_icon.webp'} />
+                                    <img className={img} src="/images/instagram_icon.png" alt="instagram icon" loading="lazy" />
+                                </picture>
+                            </a>
                         </div>
                     </div>
                 </div >
