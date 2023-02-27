@@ -12,8 +12,8 @@ const Member = React.memo(({ categoryName, dataSrc }: Props) => {
     const [imgSrc, setImgSrc] = React.useState("");
 
     const handleShowModal = (src: string) => {
-        setShoModal(true);
-        setImgSrc(src);
+        // setShoModal(true);
+        // setImgSrc(src);
     };
 
     return (

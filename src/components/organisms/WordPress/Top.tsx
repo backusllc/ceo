@@ -70,7 +70,7 @@ export default function Index() {
                                     imageAlt={"教育活動"}
                                     title="EDUCATION"
                                     content="教育活動"
-                                    description="この激しい変化の真っ只中にある現代社会に必要とされるのは、変化を好機ととらえ、主体的に考え実践、実装していく人間だ。"
+                                    description="様々な世代の経営者や経営者を目指す方々に対してビジネスの最新動向や経営について学べる機会を提供しています。"
                                     toLink="/activity#education" />
                                 <TextImage02 flexDirection={"row-reverse"}
                                     textAlign={"left"}
@@ -79,7 +79,7 @@ export default function Index() {
                                     imageAlt={"コミュニティ"}
                                     title="COMMUNITY"
                                     content="コミュニティ"
-                                    description="この激しい変化の真っ只中にある現代社会に必要とされるのは、変化を好機ととらえ、主体的に考え実践、実装していく人間だ。"
+                                    description="経営者同士のネットワーク形成を目指したものや、経営者を目指す方々同士のネットワーキング形成を目指したものなど、様々なコミュニティを運営しています。"
                                     toLink="/activity#community" />
                                 <TextImage02 flexDirection={"row"}
                                     textAlign={"right"}
@@ -88,7 +88,7 @@ export default function Index() {
                                     imageAlt={"イベント"}
                                     title="EVENT"
                                     content="イベント"
-                                    description="この激しい変化の真っ只中にある現代社会に必要とされるのは、変化を好機ととらえ、主体的に考え実践、実装していく人間だ。"
+                                    description="経営者や経営者を目指す方々にとって新たなビジネスの可能性や機会を発見し、ビジネスの発展に貢献できるようなイベントを開催しています。"
                                     toLink="/activity#event" />
                                 <section className={eventSection}>
                                     <div className="inner">

@@ -54,7 +54,7 @@ export const li: string = style({
     position: 'relative',
     marginBottom: '1.8rem',
     width: '100%',
-    cursor: 'pointer',
+    // cursor: 'pointer',
     '@media': {
         'screen and (min-width: 768px)': {
             flexBasis: 'calc(20% - 1.6rem)',
