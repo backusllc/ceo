@@ -17,7 +17,25 @@ const ContactForm = React.memo(() => {
   }
 
   function handleRadioChange(e: any) {
+    switch (e.target.value) {
+      case "active":
+        value[e.target.id] = "活動"
+        break;
+      case "event":
+        value[e.target.id] = "イベント"
+        break;
+      case "lecture":
+        value[e.target.id] = "講演"
+        break;
+      case "other":
+        value[e.target.id] = "その他"
+        break;
+      default:
+        value[e.target.id] = ""
+        break;
+    }
     setRadioStatus(e.target.value);
+    console.log(value);
   }
 
   function handleCheckboxChange(e: any) {
@@ -57,10 +75,10 @@ const ContactForm = React.memo(() => {
               問い合わせ種別
             </label>
             <div className={radioWrap}>
-              <label htmlFor='active' className={radioLabel} ><input type="radio" value="active" name="active" id="active" className={radio} checked={radioStatus == "active"} onChange={handleRadioChange} />活動について</label>
-              <label htmlFor='event' className={radioLabel} ><input type="radio" value="event" name="event" id="event" className={radio} checked={radioStatus == "event"} onChange={handleRadioChange} />イベントについて</label>
-              <label htmlFor='lecture' className={radioLabel} ><input type="radio" value="lecture" name="lecture" id="lecture" className={radio} checked={radioStatus == "lecture"} onChange={handleRadioChange} />講演</label>
-              <label htmlFor='other' className={radioLabel} ><input type="radio" value="other" name="other" id="other" className={radio} checked={radioStatus == "other"} onChange={handleRadioChange} />その他</label>
+              <label htmlFor='active' className={radioLabel} ><input type="radio" value="active" name="active" id="contactKinds" className={radio} checked={radioStatus == "active"} onChange={handleRadioChange} />活動について</label>
+              <label htmlFor='event' className={radioLabel} ><input type="radio" value="event" name="event" id="contactKinds" className={radio} checked={radioStatus == "event"} onChange={handleRadioChange} />イベントについて</label>
+              <label htmlFor='lecture' className={radioLabel} ><input type="radio" value="lecture" name="lecture" id="contactKinds" className={radio} checked={radioStatus == "lecture"} onChange={handleRadioChange} />講演</label>
+              <label htmlFor='other' className={radioLabel} ><input type="radio" value="other" name="other" id="contactKinds" className={radio} checked={radioStatus == "other"} onChange={handleRadioChange} />その他</label>
             </div>
           </div>
           <div className={formDiv}>

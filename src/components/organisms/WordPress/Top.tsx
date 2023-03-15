@@ -70,7 +70,7 @@ export default function Index() {
                                     imageAlt={"教育活動"}
                                     title="EDUCATION"
                                     content="教育活動"
-                                    description="様々な世代の経営者や経営者を目指す方々に対してビジネスの最新動向や経営について学べる機会を提供しています。"
+                                    description="子供から大人まで起業家的素養について学べる場や、経営者を目指す方・経営者の方に対して様々な経営を学べる場を提供しています。"
                                     toLink="/activity#education" />
                                 <TextImage02 flexDirection={"row-reverse"}
                                     textAlign={"left"}
