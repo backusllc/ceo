@@ -46,7 +46,6 @@ const wrapRootElement = ({ element }) => (
                                 crossOrigin="anonymous"
                                 type="font/woff2"
                             /> */}
-                            <meta name="robots" content="noindex"></meta>
                         </Helmet>
                     </HelmetProvider>
                     {element}
