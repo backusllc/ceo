@@ -12,6 +12,7 @@ export default function event({ location }: any) {
     <>
       <SEO
         title={"活動概要"}
+        description={""}
       />
       <Layout >
         <Activity hash={hash} />

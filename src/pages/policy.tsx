@@ -9,6 +9,7 @@ export default function contact() {
     <>
       <SEO
         title={"プライバシーポリシー"}
+        description={""}
       />
       <Layout >
         < PrivacyPolicy />

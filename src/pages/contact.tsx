@@ -9,6 +9,7 @@ export default function contact() {
     <>
       <SEO
         title={"お問い合わせ"}
+        description={"お問い合わせは、下記フォームに必要事項をご記入のうえ、メッセージを送信してください。"}
       />
       <Layout >
         < ContactForm />

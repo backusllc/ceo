@@ -10,6 +10,7 @@ export default function event() {
     <>
       <SEO
         title={"ニュース"}
+        description={""}
       />
       <Layout >
         <NewsPage />

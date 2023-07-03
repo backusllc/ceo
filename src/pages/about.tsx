@@ -15,6 +15,7 @@ export default function service(props: GatsbyLinkProps<{}>) {
     <>
       <SEO
         title={"私たちについて"}
+        description={"社会を牽引する意欲ある人に対し、起業、事業承継、プロ経営、どんな形であれ経営者として活躍する機会を提供し、社会に優秀な経営者を輩出していくことは、結果として社会の課題を解決することに繋がり、持続可能な社会の実現に貢献します"}
       />
       <Layout >
         <div className='inner' id="greeting">
