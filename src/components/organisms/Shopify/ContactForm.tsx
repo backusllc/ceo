@@ -43,7 +43,7 @@ const ContactForm = React.memo(() => {
   }
 
   async function onSubmit(e: any) {
-    e.preventDefault()
+    e.preventDefault();
     const response = await window
       .fetch('/api/contact', {
         method: 'POST',
@@ -53,9 +53,14 @@ const ContactForm = React.memo(() => {
         body: JSON.stringify(value),
       })
       .then((res) => {
+        debugger;
         if (res.status === 200) {
           console.log("送信が成功しました");
           navigate('/thanks', { state: { id: 1 } });
+        }
+        else {
+          alert('問題が発生しました。お手数ですが再度お問い合わせを入力ください。')
+          navigate('/contact');
         }
       });
   }

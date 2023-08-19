@@ -1,5 +1,3 @@
-
-
 export default function sendmail(req: any, res: any) {
   let nodemailer = require("nodemailer");
 
@@ -9,7 +7,10 @@ export default function sendmail(req: any, res: any) {
     host: "smtp22.gmoserver.jp",
     auth: {
       user: "info@jceoa.org",
-      pass: 'btwr8#ay',
+      pass: `btwr8#ay`,
+    },
+    tls: {
+      rejectUnauthorized: false,
     },
     secure: true,
   });
@@ -26,7 +27,7 @@ export default function sendmail(req: any, res: any) {
         <p>-----------------------------------------</p>
         <h2>お問い合わせ内容</h2>
         <p>【問い合わせ種別】</p>
-        <p>${req.body.contactKinds  }</p>
+        <p>${req.body.contactKinds}</p>
         <p>【会社名】</p>
         <p>${req.body.company}</p>
         <p>【お名前】</p>
@@ -75,14 +76,35 @@ export default function sendmail(req: any, res: any) {
   };
 
   // 送信する
-  transporter.sendMail(toHostMailData, function (err: any, info: any) {
-    if (err) console.log(err);
-    else console.log(info);
-  });
-  transporter.sendMail(toGuestMailData, function (err: any, info: any) {
-    if (err) console.log(err);
-    else console.log(info);
+  const sendToHost = new Promise((resolve, reject) => {
+    transporter.sendMail(toHostMailData, function (err: any, info: any) {
+      if (err) {
+        console.log(err);
+        reject(err);
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
   });
 
-  res.send('success');
+  const sendToGuest = new Promise((resolve, reject) => {
+    transporter.sendMail(toGuestMailData, function (err: any, info: any) {
+      if (err) {
+        console.log(err);
+        reject(err);
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
+  });
+
+  Promise.all([sendToHost, sendToGuest])
+    .then((results) => {
+      res.status(200).send(results);
+    })
+    .catch((err) => {
+      res.status(500).send(err);
+    });
 }
