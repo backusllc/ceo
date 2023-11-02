@@ -1,8 +1,5 @@
 {
   "name": "ceo",
-  "engines": {
-    "node": "18.12.1"
-  },
   "private": true,
   "description": "CEO ",
   "version": "0.0.1",
