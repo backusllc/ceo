@@ -6,14 +6,14 @@
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 const path = require('path');
 
 module.exports = {
-  trailingSlash: "never",
+  trailingSlash: 'never',
   siteMetadata: {
-    title: "一般社団法人日本CEO協会",
+    title: '一般社団法人日本CEO協会',
     description: `優秀な経営者・起業家を輩出することで、社会課題を解決し、持続可能な社会の実現を目指す。一般社団法人日本CEO協会のサービスをご紹介します。`,
     siteUrl: `https://jceoa.org/`,
   },
@@ -22,6 +22,7 @@ module.exports = {
     `gatsby-plugin-vanilla-extract`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-next-seo`,
@@ -47,7 +48,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /assets/,
@@ -61,4 +62,4 @@ module.exports = {
       },
     },
   ],
-}
+};
