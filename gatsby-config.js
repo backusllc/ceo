@@ -6,17 +6,21 @@
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 const path = require('path');
+const adapter = require('gatsby-adapter-netlify');
 
 module.exports = {
-  trailingSlash: "never",
+  trailingSlash: 'never',
   siteMetadata: {
-    title: "一般社団法人日本CEO協会",
+    title: '一般社団法人日本CEO協会',
     description: `優秀な経営者・起業家を輩出することで、社会課題を解決し、持続可能な社会の実現を目指す。一般社団法人日本CEO協会のサービスをご紹介します。`,
     siteUrl: `https://jceoa.org/`,
   },
+  adapter: adapter({
+    excludeDatastoreFromEngineFunction: false,
+  }),
   /* Your site config here */
   plugins: [
     `gatsby-plugin-vanilla-extract`,
@@ -31,7 +35,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /assets/,
@@ -45,4 +49,4 @@ module.exports = {
       },
     },
   ],
-}
+};
