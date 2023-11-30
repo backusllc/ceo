@@ -24,22 +24,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-plugin-next-seo`,
-      options: {
-        openGraph: {
-          type: 'website',
-          locale: 'ja',
-          url: 'https://jceoa.org/',
-          site_name: '一般社団法人日本CEO協会',
-        },
-        twitter: {
-          handle: '@handle',
-          site: '@site',
-          cardType: 'summary_large_image',
-        },
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

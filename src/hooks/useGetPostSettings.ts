@@ -1,10 +1,10 @@
-import gql from 'graphql-tag';
-import { useQuery } from "@apollo/react-hooks";
+import { useQuery, gql } from '@apollo/client';
 
-export const useGetPostSettings = () => useQuery(query, { context: { clientName: 'wordpress' } });
+export const useGetPostSettings = () =>
+  useQuery(query, { context: { clientName: 'wordpress' } });
 
 const query = gql`
-query GetPosts {
+  query GetPosts {
     posts(first: 12) {
       edges {
         node {
@@ -14,4 +14,4 @@ query GetPosts {
       }
     }
   }
-`
+`;

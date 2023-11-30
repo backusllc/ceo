@@ -1,8 +1,4 @@
 import React from "react";
-import { Dimmer, Loader, Segment } from "semantic-ui-react";
-import { Helmet } from "react-helmet-async";
-
-
 
 // import 'semantic-ui-css/semantic.min.css'
 

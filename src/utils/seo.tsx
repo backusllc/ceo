@@ -1,14 +1,13 @@
-import React, { useEffect } from "react"
-import { GatsbySeo } from 'gatsby-plugin-next-seo';
-import { useLocation } from "@reach/router"
-import { Helmet } from "react-helmet-async";
+import React, { useEffect } from 'react';
+import { useLocation } from '@reach/router';
+import { Helmet } from 'react-helmet-async';
 
 interface Props {
-  lang?: string,
-  alt?: string,
-  title?: string,
-  description?: string,
-  img?: string,
+  lang?: string;
+  alt?: string;
+  title?: string;
+  description?: string;
+  img?: string;
 }
 
 const SEO = ({
@@ -19,7 +18,7 @@ const SEO = ({
   img = 'https://ceo.gatsbyjs.io/images/icon.png',
 }: Props) => {
   const { pathname } = useLocation();
-  const canonical = `https://ceo.gatsbyjs.io${pathname}`
+  const canonical = `https://ceo.gatsbyjs.io${pathname}`;
 
   // useEffect(() => {
   //   let parentNode = document.head;
@@ -35,47 +34,37 @@ const SEO = ({
   //     });
   // }, []);
 
-  const displayTitle = title ? `${title} | 一般社団法人日本CEO協会` : "一般社団法人日本CEO協会";
-  const displayDescription = description ? description.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '').substr(0, 80) : description;
+  const displayTitle = title
+    ? `${title} | 一般社団法人日本CEO協会`
+    : '一般社団法人日本CEO協会';
+  const displayDescription = description
+    ? description.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '').substr(0, 80)
+    : description;
 
   return (
     <>
       <Helmet>
-        <html lang="ja" />
+        <html lang={lang} />
+        <title>{displayTitle}</title>
+        <meta name="description" content={displayDescription} />
         {canonical && <link rel="canonical" href={canonical} />}
+        <meta property="og:url" content="https://jceoa.org/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={displayTitle} />
+        <meta property="og:description" content={displayDescription} />
+        <meta property="og:image" content={img} />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:image:alt" content={alt} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@handle" />
+        <meta name="twitter:site" content="@site" />
+        <meta name="twitter:title" content={displayTitle} />
+        <meta name="twitter:description" content={displayDescription} />
+        <meta name="twitter:image" content={img} />
       </Helmet>
-      <GatsbySeo
-        title={displayTitle}
-        description={displayDescription}
-        language={lang}
-        openGraph={{
-          url: 'https://jceoa.org/',
-          title: displayTitle,
-          description: displayDescription,
-          images: [
-            {
-              url: img,
-              width: 800,
-              height: 600,
-              alt: alt,
-            },
-            {
-              url: img,
-              width: 900,
-              height: 800,
-              alt: alt,
-            },
-          ],
-          site_name: '一般社団法人日本CEO協会',
-        }}
-        twitter={{
-          handle: '@handle',
-          site: '@site',
-          cardType: 'summary_large_image',
-        }}
-      />
     </>
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;
