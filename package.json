@@ -79,8 +79,7 @@
     "semantic-ui-react": "^2.1.4",
     "slick-carousel": "^1.8.1",
     "three": "^0.147.0",
-    "tsconfig-paths-webpack-plugin": "^3.5.2",
-    "webpack-filter-warnings-plugin": "^1.2.1"
+    "tsconfig-paths-webpack-plugin": "^3.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
